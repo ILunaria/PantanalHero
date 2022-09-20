@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,8 +5,8 @@ public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rb;
 
-    public float jumpForce;
-    public bool isGrounded = true;
+    [SerializeField] private float jumpForce;
+    [SerializeField] private bool isGrounded = true;
 
     private void Awake()
     {
