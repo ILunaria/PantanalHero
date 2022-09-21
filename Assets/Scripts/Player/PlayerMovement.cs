@@ -5,40 +5,23 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Player Gameobject")]
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private PlayerData Data;
     [SerializeField] private Transform groundCheck;
-    [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private Vector2 groundCheckSize;
 
-    [Header("Movement Presets")]
-    public float moveSpeed;
-    public float moveInput;
-    public float acceleration;
-    public float desacceleration;
+    private Rigidbody2D rb;
+
+    private float moveInput;
     private bool isFacingRight = true;
 
-    [Header ("Jump Presets")]
-    public float jumpForce;
-    public float onGroundGravity;
-    public float fallGravityMultiplier;
-    public bool isGrounded = true;
-
-    [Header("Coyote Time")]
-    public float coyoteTime;
-    public float coyoteTimeCounter;
-
-    [Header("Jump Buffering")]
-    public float jumpBufferTime;
-    public float jumpBufferCounter;
+    private float coyoteTimeCounter;
+    private float jumpBufferCounter;
 
     private bool isJumping;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = onGroundGravity;
-
+        rb.gravityScale = Data.onGroundGravity;     
     }
 
     private void Update()
@@ -47,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (IsGrounded())
         {
-            coyoteTimeCounter = coyoteTime;
+            coyoteTimeCounter = Data.coyoteTime;
         }
         else
         {
@@ -56,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            jumpBufferCounter = jumpBufferTime;
+            jumpBufferCounter = Data.jumpBufferTime;
         }
         else if (!IsGrounded())
         {
@@ -70,10 +53,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        float targetSpeed = moveInput * moveSpeed;
+        float targetSpeed = moveInput * Data.moveSpeed;
         float speedDif = targetSpeed - rb.velocity.x;
 
-        float accelrate = (Mathf.Abs(targetSpeed) > 0.01f) ? acceleration : desacceleration;
+        float accelrate = (Mathf.Abs(targetSpeed) > 0.01f) ? Data.acceleration : Data.desacceleration;
         float movement = speedDif * accelrate;
 
         rb.AddForce(movement * Vector2.right);
@@ -82,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (coyoteTimeCounter > 0f && jumpBufferCounter > 0f && !isJumping)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            rb.velocity = new Vector2(rb.velocity.x, Data.jumpForce);
             jumpBufferCounter = 0f;
             StartCoroutine(JumpCooldown());
         }
@@ -114,18 +97,15 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsGrounded()
     {
-        if (Physics2D.OverlapBox(groundCheck.position, groundCheckSize, 0, groundLayer))
+        if (Physics2D.OverlapBox(groundCheck.position, Data.groundCheckSize, 0, Data.groundLayer))
         {
-            rb.gravityScale = onGroundGravity;
-            isGrounded = true;
+            rb.gravityScale = Data.onGroundGravity;
             return true;
         }
         else
         {
-            rb.gravityScale = onGroundGravity * fallGravityMultiplier;
-            isGrounded = false;
+            rb.gravityScale = Data.onGroundGravity * Data.fallGravityMultiplier;
             return false;
         }
-           
     }
 }
