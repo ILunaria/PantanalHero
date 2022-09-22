@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f967d7ef514fc4a46be28d5c540bada0, type: 3}
   m_Name: PlayerDataSO
   m_EditorClassIdentifier: 
-  moveSpeed: 30
-  acceleration: 0.05
+  moveSpeed: 50
+  acceleration: 0.1
   desacceleration: 0.05
   jumpForce: 20
   onGroundGravity: 1
