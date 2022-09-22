@@ -58,6 +58,4 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-/[Uu]serSettings/
-UserSettings/Layouts/default-2021.dwlt
-UserSettings/EditorUserSettings.asset
+UserSettings/
