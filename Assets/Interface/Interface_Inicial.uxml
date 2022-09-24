@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Interface/USS/Interface.uss?fileID=7433441132597879392&amp;guid=aa19b5757864ca145bd319c358b2e0dd&amp;type=3#Interface" />
+    <ui:VisualElement style="height: 1080px; width: 1920px; align-items: flex-start; justify-content: flex-end; background-color: rgba(58, 82, 94, 255);">
+        <ui:VisualElement name="PantanlHero" style="height: 205px; width: 805px; position: relative; top: 220px; left: 1030px; -unity-text-align: upper-left; align-items: center; justify-content: center;">
+            <ui:TextField picking-mode="Ignore" label="Pantanal Hero" style="height: 136px; -unity-font: url(&apos;project://database/Assets/Fonts/Rancho-Regular.ttf?fileID=12800000&amp;guid=907fe4763479a39459019eb9beb695b9&amp;type=3#Rancho-Regular&apos;); font-size: 150px; white-space: nowrap; -unity-text-align: middle-center; -unity-font-style: normal; color: rgb(255, 255, 255); width: 676px; -unity-font-definition: none; align-items: center; flex-direction: column; position: relative; top: auto; left: auto; justify-content: center; overflow: hidden;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Butaos" style="width: 50%; height: 70%; align-items: center; flex-direction: column; position: relative; top: auto; left: auto; justify-content: center; visibility: visible; display: flex; overflow: visible;">
+            <ui:Button text="Novo Jogo" display-tooltip-when-elided="true" name="Novojogo" class="menubuttom" />
+            <ui:Button text="Continuar" display-tooltip-when-elided="true" name="Continuar" class="menubuttom" />
+            <ui:Button text="Configuração" display-tooltip-when-elided="true" name="Configuracao" class="menubuttom" />
+            <ui:Button text="Sair" display-tooltip-when-elided="true" name="Sair" class="menubuttom" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

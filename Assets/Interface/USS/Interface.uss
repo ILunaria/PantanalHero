@@ -1,0 +1,42 @@
+.menubuttom {
+    width: 475px;
+    height: 115px;
+    -unity-font: url('project://database/Assets/Fonts/Rancho-Regular.ttf?fileID=12800000&guid=907fe4763479a39459019eb9beb695b9&type=3#Rancho-Regular');
+    -unity-font-definition: none;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 255);
+    -unity-text-align: middle-center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-left-color: rgba(38, 38, 38, 255);
+    border-right-color: rgba(38, 38, 38, 255);
+    border-top-color: rgba(38, 38, 38, 255);
+    border-bottom-color: rgba(38, 38, 38, 255);
+    -unity-text-outline-color: rgba(51, 51, 51, 255);
+    background-color: rgba(65, 65, 65, 255);
+}
+
+.menubuttom:hover {
+    background-color: rgba(99, 99, 99, 255);
+    scale: 1.1 1.1;
+}
+
+.menubuttom :active {
+    transition-duration: 0.1s;
+    -unity-background-image-tint-color: rgba(57, 255, 0, 255);
+    -unity-background-scale-mode: stretch-to-fill;
+}
