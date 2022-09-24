@@ -79,7 +79,6 @@ public class PlayerData : ScriptableObject
 	[Range(0.01f, 0.5f)] public float dashInputBufferTime;
     #endregion
 
-
     //Unity Callback, called when the inspector updates
     private void OnValidate()
 	{

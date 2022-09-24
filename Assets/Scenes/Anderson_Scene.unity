@@ -457,7 +457,7 @@ GameObject:
   - component: {fileID: 1711418610}
   - component: {fileID: 1711418609}
   - component: {fileID: 1711418608}
-  - component: {fileID: 1711418607}
+  - component: {fileID: 1711418612}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -465,29 +465,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1711418607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1711418606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 668ac784c208a1d46b43ba1e9c7ddf1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Data: {fileID: 11400000, guid: b8db773792a6dfb4c98ad72ed5f3bd83, type: 2}
-  IsJumping: 0
-  LastOnGroundTime: 0
-  _isJumpCut: 0
-  _isJumpFalling: 0
-  LastPressedJumpTime: 0
-  _groundCheckPoint: {fileID: 676815089}
-  _groundCheckSize: {x: 0.35, y: 0.03}
-  _groundLayer:
-    serializedVersion: 2
-    m_Bits: 128
 --- !u!50 &1711418608
 Rigidbody2D:
   serializedVersion: 4
@@ -605,3 +582,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1711418612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711418606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85f78013895a51f40934070ceb5e18ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Data: {fileID: 11400000, guid: b8db773792a6dfb4c98ad72ed5f3bd83, type: 2}
+  _groundCheckPoint: {fileID: 676815089}
+  _groundCheckSize: {x: 0.35, y: 0.03}
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 128
