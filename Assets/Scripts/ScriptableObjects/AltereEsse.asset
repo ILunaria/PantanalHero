@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f967d7ef514fc4a46be28d5c540bada0, type: 3}
   m_Name: AltereEsse
   m_EditorClassIdentifier: 
-  gravityStrength: -40
-  gravityScale: 4.0774717
+  gravityStrength: -24
+  gravityScale: 2.4464831
   fallGravityMult: 1
   maxFallSpeed: 25
   fastFallGravityMult: 2
@@ -26,9 +26,13 @@ MonoBehaviour:
   accelInAir: 1
   deccelInAir: 0.5
   doConserveMomentum: 1
-  jumpHeight: 5
+  jumpHeight: 3
   jumpTimeToApex: 0.5
-  jumpForce: 20
+  jumpForce: 12
+  wallJumpForce: {x: 7, y: 10}
+  wallJumpRunLerp: 0.5
+  wallJumpTime: 0.1
+  doTurnOnWallJump: 1
   jumpCutGravityMult: 3
   jumpHangGravityMult: 1
   jumpHangTimeThreshold: 1
@@ -39,7 +43,7 @@ MonoBehaviour:
   dashAmount: 1
   dashSpeed: 30
   dashSleepTime: 0
-  dashAttackTime: 0.15
+  dashDragTime: 0.15
   dashEndTime: 0.15
   dashEndSpeed: {x: 8, y: 10}
   dashEndRunLerp: 0.5

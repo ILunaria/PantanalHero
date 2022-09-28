@@ -372,7 +372,7 @@ public class PlayerMovementBackup : MonoBehaviour
 			SetGravityScale(0);
 
 			//We keep the player's velocity at the dash speed during the "attack" phase (in celeste the first 0.15s)
-			while (Time.time - startTime <= Data.dashAttackTime)
+			while (Time.time - startTime <= Data.dashDragTime)
 			{
 				RB.velocity =  dir.normalized * Data.dashSpeed;
 				//Pauses the loop until the next frame, creating something of a Update loop. 
