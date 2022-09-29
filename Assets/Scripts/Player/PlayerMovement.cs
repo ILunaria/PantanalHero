@@ -96,12 +96,10 @@ public class PlayerMovement : MonoBehaviour
 	{
 		if (context.started)
 		{
-			Debug.Log("Jump Started");
 			OnJumpInput();
 		}
 		else if (context.canceled)
 		{
-			Debug.Log("Jump Canceled");
 			OnJumpUpInput();
 		}
 	}
