@@ -10,6 +10,7 @@ public class Interface_Menu : MonoBehaviour
     public Button Continuar;
     public Button Sair;
     public Button Config;
+    public Button Back;
     
 
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public class Interface_Menu : MonoBehaviour
         Continuar = root.Q<Button>("Continuar");
         Config = root.Q<Button>("Configuracao");
         Sair = root.Q<Button>("Sair");
+        Back = root.Q<Button>("Back");
 
         NovoJogo.clicked += NovoJogoPressed;
         Continuar.clicked += ContinuarPressed;
@@ -43,6 +45,8 @@ public class Interface_Menu : MonoBehaviour
        Application.Quit();
        Debug.Log("Saiu");
    }
+
+
 
 
 }
