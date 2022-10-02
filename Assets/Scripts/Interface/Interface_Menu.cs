@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Interface_Menu : MonoBehaviour
 {
+    private UIDocument rot;
     public Button NovoJogo;
     public Button Continuar;
     public Button Sair;
@@ -14,18 +15,19 @@ public class Interface_Menu : MonoBehaviour
     
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        var root = GetComponent<UIDocument>().rootVisualElement;
+        rot = GetComponent<UIDocument>();
 
-        NovoJogo = root.Q<Button>("Novojogo");
-        Continuar = root.Q<Button>("Continuar");
-        Config = root.Q<Button>("Configuracao");
-        Sair = root.Q<Button>("Sair");
-        Back = root.Q<Button>("Back");
+        NovoJogo = rot.rootVisualElement.Q<Button>("Novojogo");
+        Continuar = rot.rootVisualElement.Q<Button>("Continuar");
+        Config = rot.rootVisualElement.Q<Button>("Configuracao");
+        Sair = rot.rootVisualElement.Q<Button>("Sair");
+        Back = rot.rootVisualElement.Q<Button>("Back");
 
         NovoJogo.clicked += NovoJogoPressed;
         Continuar.clicked += ContinuarPressed;
+        Config.clicked += ConfigPressed;
         Sair.clicked += SairPressed;
         
     }
@@ -44,6 +46,11 @@ public class Interface_Menu : MonoBehaviour
    {
        Application.Quit();
        Debug.Log("Saiu");
+   }
+
+   void ConfigPressed()
+   {
+       
    }
 
 
