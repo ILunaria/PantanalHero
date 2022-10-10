@@ -11,24 +11,31 @@ public class Interface_Menu : MonoBehaviour
     public Button Continuar;
     public Button Sair;
     public Button Config;
-    public Button Back;
+    public Button Back;    
+    public VisualElement configu;
+
+    public VisualElement Menu;
     
 
     // Start is called before the first frame update
     void Awake()
     {
-        rot = GetComponent<UIDocument>();
+        var rot = GetComponent<UIDocument>();
 
         NovoJogo = rot.rootVisualElement.Q<Button>("Novojogo");
         Continuar = rot.rootVisualElement.Q<Button>("Continuar");
         Config = rot.rootVisualElement.Q<Button>("Configuracao");
         Sair = rot.rootVisualElement.Q<Button>("Sair");
         Back = rot.rootVisualElement.Q<Button>("Back");
+        configu = rot.rootVisualElement.Q<VisualElement>("Configurar");
+        Menu = rot.rootVisualElement.Q<VisualElement>("MainMenu");
+
 
         NovoJogo.clicked += NovoJogoPressed;
         Continuar.clicked += ContinuarPressed;
         Config.clicked += ConfigPressed;
         Sair.clicked += SairPressed;
+        Back.clicked += BackPressed;
         
     }
 
@@ -50,7 +57,12 @@ public class Interface_Menu : MonoBehaviour
 
    void ConfigPressed()
    {
-       
+       configu.style.display = DisplayStyle.Flex;
+   }
+
+   void BackPressed()
+   {
+       configu.style.display = DisplayStyle.None;
    }
 
 
