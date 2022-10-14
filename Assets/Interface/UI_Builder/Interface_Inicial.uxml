@@ -1,5 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/Interface/USS/Interface.uss?fileID=7433441132597879392&amp;guid=aa19b5757864ca145bd319c358b2e0dd&amp;type=3#Interface" />
+    <Style src="project://database/Assets/Interface/USS/Interface_Menu.uss?fileID=7433441132597879392&amp;guid=8e623b02957344848b97efbdf5da50b6&amp;type=3#Interface_Menu" />
     <ui:VisualElement name="MainMenu" style="height: 1080px; width: 1920px; align-items: flex-start; justify-content: flex-end; background-color: rgb(58, 82, 94); display: flex;">
         <ui:VisualElement name="PantanlHero" style="height: 237px; width: 929px; position: relative; top: 148px; left: 902px; -unity-text-align: upper-left; align-items: center; justify-content: center; display: flex;">
             <ui:Label text="Pantanal Hero" display-tooltip-when-elided="true" style="height: 207px; width: 783px; align-items: center; justify-content: center; -unity-font-definition: none; -unity-font: url(&apos;project://database/Assets/Fonts/Rancho-Regular.ttf?fileID=12800000&amp;guid=907fe4763479a39459019eb9beb695b9&amp;type=3#Rancho-Regular&apos;); font-size: 150px; -unity-text-align: middle-center; color: rgb(255, 255, 255); position: relative;" />
@@ -11,7 +12,7 @@
             <ui:Button text="Sair" display-tooltip-when-elided="true" name="Sair" class="menubuttom" />
         </ui:VisualElement>
     </ui:VisualElement>
-    <ui:VisualElement name="Configurar" style="position: absolute; height: 1080px; width: 1920px; background-color: rgb(58, 82, 94); top: 0; left: 0; border-left-color: rgba(0, 0, 0, 0.92); border-right-color: rgba(0, 0, 0, 0.92); border-top-color: rgba(0, 0, 0, 0.92); border-bottom-color: rgba(0, 0, 0, 0.92); display: flex;">
+    <ui:VisualElement name="Configurar" style="position: absolute; height: 1080px; width: 1920px; background-color: rgb(58, 82, 94); top: 0; left: 0; border-left-color: rgba(0, 0, 0, 0.92); border-right-color: rgba(0, 0, 0, 0.92); border-top-color: rgba(0, 0, 0, 0.92); border-bottom-color: rgba(0, 0, 0, 0.92); display: none;">
         <ui:VisualElement name="Back_Label_Config" style="height: 174px; width: 464px; position: absolute; top: 66px; left: 746px; background-color: rgba(41, 59, 67, 0.47); border-left-width: 10px; border-right-width: 10px; border-top-width: 10px; border-bottom-width: 10px; border-top-left-radius: 25px; border-bottom-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; align-items: center; justify-content: center; -unity-text-align: middle-center;">
             <ui:Label text="Configurações" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255); -unity-font: url(&apos;project://database/Assets/Fonts/Rancho-Regular.ttf?fileID=12800000&amp;guid=907fe4763479a39459019eb9beb695b9&amp;type=3#Rancho-Regular&apos;); -unity-font-definition: none; font-size: 100px; align-items: center; height: 122px; width: 440px; position: absolute; top: 14px; left: -1px; justify-content: center;" />
         </ui:VisualElement>

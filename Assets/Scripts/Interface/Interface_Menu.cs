@@ -13,7 +13,6 @@ public class Interface_Menu : MonoBehaviour
     public Button Config;
     public Button Back;    
     public VisualElement configu;
-
     public VisualElement Menu;
     
 
@@ -28,8 +27,7 @@ public class Interface_Menu : MonoBehaviour
         Sair = rot.rootVisualElement.Q<Button>("Sair");
         Back = rot.rootVisualElement.Q<Button>("Back");
         configu = rot.rootVisualElement.Q<VisualElement>("Configurar");
-        Menu = rot.rootVisualElement.Q<VisualElement>("MainMenu");
-
+ 
 
         NovoJogo.clicked += NovoJogoPressed;
         Continuar.clicked += ContinuarPressed;
