@@ -36,7 +36,7 @@
 }
 
 .menubuttom:active {
-    background-color: rgba(56, 56, 56, 255);
+    background-color: rgb(56, 56, 56);
 }
 
 .ButtomConfig {
@@ -64,10 +64,59 @@
 }
 
 .ButtomConfig:hover {
-    background-color: rgba(75, 75, 75, 255);
+    background-color: rgb(75, 75, 75);
     scale: 1.1 1.1;
 }
 
 .ButtomConfig:active {
-    background-color: rgba(56, 56, 56, 255);
+    background-color: rgb(56, 56, 56);
+}
+
+.Creditos {
+    -unity-font-definition: none;
+    -unity-font: url('project://database/Assets/Fonts/Rancho-Regular.ttf?fileID=12800000&guid=907fe4763479a39459019eb9beb695b9&type=3#Rancho-Regular');
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.Creditos {
+    -unity-font-definition: none;
+    -unity-font: url('project://database/Assets/Fonts/Rancho-Regular.ttf?fileID=12800000&guid=907fe4763479a39459019eb9beb695b9&type=3#Rancho-Regular');
+}
+
+.nomes {
+    font-size: 70px;
+    color: rgba(255, 255, 255, 255);
+    -unity-font: url('project://database/Assets/Fonts/Rancho-Regular.ttf?fileID=12800000&guid=907fe4763479a39459019eb9beb695b9&type=3#Rancho-Regular');
+    -unity-font-definition: none;
+    -unity-text-align: middle-center;
+}
+
+.buttoncred {
+    font-size: 45px;
+    -unity-font-definition: none;
+    -unity-font: url('project://database/Assets/Fonts/Rancho-Regular.ttf?fileID=12800000&guid=907fe4763479a39459019eb9beb695b9&type=3#Rancho-Regular');
+    color: rgba(255, 255, 255, 255);
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-top-left-radius: 10.5px;
+    border-bottom-left-radius: 10.5px;
+    border-top-right-radius: 10.5px;
+    border-bottom-right-radius: 10.5px;
+    background-color: rgba(50, 71, 81, 255);
+}
+
+.buttoncred:active {
+    background-color: rgba(58, 106, 116, 255);
+    transition-duration: 0.1s;
+}
+
+.buttoncred:hover {
+    background-color: rgba(53, 88, 105, 255);
+    transition-duration: 0.1s;
+    scale: 1.1 1.1;
 }

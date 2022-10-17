@@ -11,9 +11,12 @@ public class Interface_Menu : MonoBehaviour
     public Button Continuar;
     public Button Sair;
     public Button Config;
-    public Button Back;    
+    public Button Back;  
+    public Button Cred;
+    public Button Vol;  
     public VisualElement configu;
     public VisualElement Menu;
+    public VisualElement Credi;
     
 
     // Start is called before the first frame update
@@ -26,7 +29,10 @@ public class Interface_Menu : MonoBehaviour
         Config = rot.rootVisualElement.Q<Button>("Configuracao");
         Sair = rot.rootVisualElement.Q<Button>("Sair");
         Back = rot.rootVisualElement.Q<Button>("Back");
+        Vol = rot.rootVisualElement.Q<Button>("Vol");
+        Cred = rot.rootVisualElement.Q<Button>("Credito");
         configu = rot.rootVisualElement.Q<VisualElement>("Configurar");
+        Credi = rot.rootVisualElement.Q<VisualElement>("Cred");
  
 
         NovoJogo.clicked += NovoJogoPressed;
@@ -34,6 +40,8 @@ public class Interface_Menu : MonoBehaviour
         Config.clicked += ConfigPressed;
         Sair.clicked += SairPressed;
         Back.clicked += BackPressed;
+        Vol.clicked += VolPressed;
+        Cred.clicked += CredPressed;
         
     }
 
@@ -61,6 +69,16 @@ public class Interface_Menu : MonoBehaviour
    void BackPressed()
    {
        configu.style.display = DisplayStyle.None;
+   }
+
+   void VolPressed()
+   {
+       Credi.style.display = DisplayStyle.None;
+   }
+
+   void CredPressed()
+   {
+       Credi.style.display = DisplayStyle.Flex;
    }
 
 
