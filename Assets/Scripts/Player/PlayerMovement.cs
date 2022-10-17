@@ -229,7 +229,7 @@ public class PlayerMovement : MonoBehaviour
 			else
 				_lastDashDir = IsFacingRight ? Vector2.right : Vector2.left;
 
-
+			animator.SetTrigger("Dash");
 
 			IsDashing = true;
 			IsJumping = false;
