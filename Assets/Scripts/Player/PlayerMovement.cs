@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
 	public PlayerData Data;
+	private Animator animator;
 
 	public PlayerInputActions _playerInputActions;
 
@@ -70,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
 
 	private void Awake()
 	{
+		animator = GetComponent<Animator>();
 		RB = GetComponent<Rigidbody2D>();
 
 		#region INPUT SYSTEM
@@ -386,7 +388,7 @@ public class PlayerMovement : MonoBehaviour
 		//Calculate force along x-axis to apply to thr player
 
 		float movement = speedDif * accelRate;
-
+		animator.SetFloat("Speed", movement);
 		//Convert this to a vector and apply to rigidbody
 		RB.AddForce(movement * Vector2.right, ForceMode2D.Force);
 	}
