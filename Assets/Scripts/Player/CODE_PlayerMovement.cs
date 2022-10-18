@@ -70,6 +70,7 @@ namespace CHARACTERS
 				if (Physics2D.OverlapBox(_groundCheckPoint.position, _groundCheckSize, 0, _groundLayer) && !IsJumping) //checks if set box overlaps with ground
 				{
 					LastOnGroundTime = Data.coyoteTime; //if so sets the lastGrounded to coyoteTime
+					ANIM.SetBool("isGrounded", true);
 				}
 
 				//Left Wall Check
@@ -92,6 +93,7 @@ namespace CHARACTERS
 			if (IsJumping && RB.velocity.y < 0)
 			{
 				IsJumping = false;
+				ANIM.SetTrigger("Fall");
 				if (!IsWallJumping)
 					_isJumpFalling = true;
 			}
@@ -183,7 +185,8 @@ namespace CHARACTERS
             if (CanBlock() && LastPressedBlockTime > 0)
             {
 				IsBlocking = true;
-				StartCoroutine(nameof(StartBlock));
+                ANIM.SetTrigger("Defense");
+                StartCoroutine(nameof(StartBlock));
 			}
 
 			#endregion
