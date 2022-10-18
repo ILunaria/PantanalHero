@@ -12,6 +12,7 @@ namespace CHARACTERS
 
 		#region COMPONENTS
 		public Rigidbody2D RB { get; protected set; }
+		public Animator ANIM { get; protected set; }
 		//Script to handle all player animations, all references can be safely removed if you're importing into your own project.
 		#endregion
 
@@ -219,6 +220,7 @@ namespace CHARACTERS
 
 			float movement = speedDif * accelRate;
 
+			ANIM.SetFloat("Speed", Mathf.Abs(RB.velocity.x));
 			//Convert this to a vector and apply to rigidbody
 			RB.AddForce(movement * Vector2.right, ForceMode2D.Force);
 		}
@@ -269,6 +271,7 @@ namespace CHARACTERS
 		//Dash Coroutine
 		protected IEnumerator StartDash(Vector2 dir) // For Multi Direction Dash Use This: private IEnumerator StartDash(Vector2 dir)
 		{
+			
 			dir = dir.normalized * Vector2.right; // Horizontal Dash Only
 												  //Overall this method of dashing aims to mimic Celeste, if you're looking for
 												  // a more physics-based approach try a method similar to that used in the jump
@@ -279,8 +282,11 @@ namespace CHARACTERS
 
 			_dashesLeft--;
 			_isDashAttacking = true;
+			
 
 			SetGravityScale(0);
+
+			ANIM.SetBool("IsDashing", _isDashAttacking);
 
 			//We keep the player's velocity at the dash speed during the "attack" phase (in celeste the first 0.15s)
 			while (Time.time - startTime <= Data.dashDragTime)
@@ -294,6 +300,8 @@ namespace CHARACTERS
 			startTime = Time.time;
 
 			_isDashAttacking = false;
+
+			ANIM.SetBool("IsDashing", _isDashAttacking);
 
 			//Begins the "end" of our dash where we return some control to the player but still limit run acceleration (see Update() and Run())
 			SetGravityScale(Data.gravityScale);

@@ -9,6 +9,7 @@ namespace CHARACTERS
 		private void Awake()
 		{
 			RB = GetComponent<Rigidbody2D>();
+			ANIM = GetComponent<Animator>();
 
 			#region INPUT SYSTEM
 
@@ -150,8 +151,9 @@ namespace CHARACTERS
 
 
 				IsDashing = true;
+				
 				IsJumping = false;
-				//IsWallJumping = false;
+				IsWallJumping = false;
 				_isJumpCut = false;
 
 				StartCoroutine(nameof(StartDash), _lastDashDir);
@@ -233,7 +235,6 @@ namespace CHARACTERS
 		private void FixedUpdate()
 		{
 			//Handle Run
-
 			if (!IsDashing)
 			{
 				if (IsWallJumping)
