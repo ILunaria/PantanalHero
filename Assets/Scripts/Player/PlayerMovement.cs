@@ -388,7 +388,7 @@ public class PlayerMovement : MonoBehaviour
 		//Calculate force along x-axis to apply to thr player
 
 		float movement = speedDif * accelRate;
-		animator.SetFloat("Speed", movement);
+		animator.SetFloat("Speed", RB.velocity.magnitude);
 		//Convert this to a vector and apply to rigidbody
 		RB.AddForce(movement * Vector2.right, ForceMode2D.Force);
 	}
