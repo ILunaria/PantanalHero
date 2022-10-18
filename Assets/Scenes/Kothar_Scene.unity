@@ -123,6 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &31949641
 GameObject:
   m_ObjectHideFlags: 0
@@ -2038,6 +2039,8 @@ BoxCollider2D:
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of 484301e (Blocagem Fase 1 (TESTE))
 --- !u!1 &1882055611
 GameObject:
   m_ObjectHideFlags: 0
@@ -2124,6 +2127,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 --- !u!114 &1882055615
@@ -2581,3 +2585,5 @@ BoxCollider2D:
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of 484301e (Blocagem Fase 1 (TESTE))
