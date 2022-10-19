@@ -86,11 +86,11 @@ namespace CHARACTERS
 				//Two checks needed for both left and right walls since whenever the play turns the wall checkPoints swap sides
 				LastOnWallTime = Mathf.Max(LastOnWallLeftTime, LastOnWallRightTime);
 			}
-			#endregion
+            #endregion 
 
-			#region JUMP CHECKS
-			// Check if the player is falling
-			if (IsJumping && RB.velocity.y < 0)
+            #region JUMP CHECKS
+            // Check if the player is falling
+            if (IsJumping && RB.velocity.y < 0)
 			{
 				IsJumping = false;
 				ANIM.SetTrigger("Fall");
