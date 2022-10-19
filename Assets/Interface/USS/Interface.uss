@@ -4,7 +4,7 @@
     -unity-font: url('project://database/Assets/Fonts/Rancho-Regular.ttf?fileID=12800000&guid=907fe4763479a39459019eb9beb695b9&type=3#Rancho-Regular');
     -unity-font-definition: none;
     font-size: 50px;
-    color: rgba(255, 255, 255, 255);
+    color: rgb(255, 255, 255);
     -unity-text-align: middle-center;
     margin-left: 10px;
     margin-right: 10px;
@@ -22,21 +22,101 @@
     border-bottom-left-radius: 30px;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
-    border-left-color: rgba(38, 38, 38, 255);
-    border-right-color: rgba(38, 38, 38, 255);
-    border-top-color: rgba(38, 38, 38, 255);
-    border-bottom-color: rgba(38, 38, 38, 255);
-    -unity-text-outline-color: rgba(51, 51, 51, 255);
-    background-color: rgba(65, 65, 65, 255);
+    border-left-color: rgb(38, 38, 38);
+    border-right-color: rgb(38, 38, 38);
+    border-top-color: rgb(38, 38, 38);
+    border-bottom-color: rgb(38, 38, 38);
+    -unity-text-outline-color: rgb(51, 51, 51);
+    background-color: rgb(65, 65, 65);
 }
 
 .menubuttom:hover {
-    background-color: rgba(99, 99, 99, 255);
+    background-color: rgb(99, 99, 99);
     scale: 1.1 1.1;
 }
 
-.menubuttom :active {
+.menubuttom:active {
+    background-color: rgb(56, 56, 56);
+}
+
+.ButtomConfig {
+    position: absolute;
+    height: 74px;
+    width: 229px;
+    top: 520px;
+    left: 1440px;
+    -unity-font: url('project://database/Assets/Fonts/Rancho-Regular.ttf?fileID=12800000&guid=907fe4763479a39459019eb9beb695b9&type=3#Rancho-Regular');
+    -unity-font-definition: none;
+    font-size: 45px;
+    background-color: rgb(31, 44, 50);
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom-color: rgb(31, 31, 31);
+    border-top-color: rgb(31, 31, 31);
+    border-right-color: rgb(31, 31, 31);
+    border-left-color: rgb(31, 31, 31);
+}
+
+.ButtomConfig:hover {
+    background-color: rgb(75, 75, 75);
+    scale: 1.1 1.1;
+}
+
+.ButtomConfig:active {
+    background-color: rgb(56, 56, 56);
+}
+
+.Creditos {
+    -unity-font-definition: none;
+    -unity-font: url('project://database/Assets/Fonts/Rancho-Regular.ttf?fileID=12800000&guid=907fe4763479a39459019eb9beb695b9&type=3#Rancho-Regular');
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.Creditos {
+    -unity-font-definition: none;
+    -unity-font: url('project://database/Assets/Fonts/Rancho-Regular.ttf?fileID=12800000&guid=907fe4763479a39459019eb9beb695b9&type=3#Rancho-Regular');
+}
+
+.nomes {
+    font-size: 70px;
+    color: rgba(255, 255, 255, 255);
+    -unity-font: url('project://database/Assets/Fonts/Rancho-Regular.ttf?fileID=12800000&guid=907fe4763479a39459019eb9beb695b9&type=3#Rancho-Regular');
+    -unity-font-definition: none;
+    -unity-text-align: middle-center;
+}
+
+.buttoncred {
+    font-size: 45px;
+    -unity-font-definition: none;
+    -unity-font: url('project://database/Assets/Fonts/Rancho-Regular.ttf?fileID=12800000&guid=907fe4763479a39459019eb9beb695b9&type=3#Rancho-Regular');
+    color: rgba(255, 255, 255, 255);
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-top-left-radius: 10.5px;
+    border-bottom-left-radius: 10.5px;
+    border-top-right-radius: 10.5px;
+    border-bottom-right-radius: 10.5px;
+    background-color: rgba(50, 71, 81, 255);
+}
+
+.buttoncred:active {
+    background-color: rgba(58, 106, 116, 255);
     transition-duration: 0.1s;
-    -unity-background-image-tint-color: rgba(57, 255, 0, 255);
-    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.buttoncred:hover {
+    background-color: rgba(53, 88, 105, 255);
+    transition-duration: 0.1s;
+    scale: 1.1 1.1;
 }
