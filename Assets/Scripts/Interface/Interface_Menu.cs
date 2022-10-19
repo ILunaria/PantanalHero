@@ -47,7 +47,7 @@ public class Interface_Menu : MonoBehaviour
 
    void NovoJogoPressed() 
    {
-       SceneManager.LoadScene("Anderson_Scene");
+       SceneManager.LoadScene(1,LoadSceneMode.Single);
    }
 
    void ContinuarPressed() 
