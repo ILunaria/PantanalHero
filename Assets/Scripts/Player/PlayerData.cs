@@ -16,13 +16,32 @@ public class PlayerData : ScriptableObject
 	[Tooltip("Larger multiplier to the player's gravityScale when they are falling and pressing downwards.")]
 	public float fastFallGravityMult;
 	[Tooltip("Maximum fall speed of the player when performing a faster fall.")]
-	public float maxFastFallSpeed; 
+	public float maxFastFallSpeed;
 
 	[Space(20)]
-    #endregion
+	#endregion
 
-    #region RUN
-    [Header("Run")]
+	#region ATTACK
+	[Header("Attack")]
+	[Tooltip("Time between next attack.")]
+	public float attackInputBufferTime;
+
+	[Space(20)]
+	#endregion
+
+	#region BLOCK
+	[Header("Block")]
+	[Tooltip("Time between next block.")]
+	public float blockInputBufferTime;
+	public float blockTimeAmount;
+	public int blockAmount;
+	public float blockRefillTime;
+
+	[Space(20)]
+	#endregion
+
+	#region RUN
+	[Header("Run")]
 	[Tooltip("Target speed we want the player to reach.")]
 	public float runMaxSpeed;
 	[Tooltip("The speed at which the player accelerates to max speed.")]

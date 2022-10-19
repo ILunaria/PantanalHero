@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f967d7ef514fc4a46be28d5c540bada0, type: 3}
-  m_Name: AltereEsse
+  m_Name: AltereEsse 1
   m_EditorClassIdentifier: 
   gravityStrength: -24
   gravityScale: 2.4464831
@@ -20,14 +20,14 @@ MonoBehaviour:
   maxFastFallSpeed: 30
   attackInputBufferTime: 1
   blockInputBufferTime: 2
-  blockTimeAmount: 0.5
+  blockTimeAmount: 1
   blockAmount: 2
   blockRefillTime: 1
-  runMaxSpeed: 40
+  runMaxSpeed: 30
   runAcceleration: 0.8
-  runAccelAmount: 1
+  runAccelAmount: 1.3333334
   runDecceleration: 0.5
-  runDeccelAmount: 0.625
+  runDeccelAmount: 0.8333333
   accelInAir: 1
   deccelInAir: 0.5
   doConserveMomentum: 1
