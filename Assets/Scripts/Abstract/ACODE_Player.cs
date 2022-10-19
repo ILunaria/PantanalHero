@@ -241,8 +241,10 @@ namespace CHARACTERS
 				force -= RB.velocity.y;
 
 			RB.AddForce(Vector2.up * force, ForceMode2D.Impulse);
-			#endregion
-		}
+			ANIM.SetTrigger("Jump");
+            ANIM.SetBool("isGrounded", false);
+            #endregion
+        }
 
 		protected void WallJump(int dir)
 		{
@@ -321,9 +323,7 @@ namespace CHARACTERS
 			LastPressedBlockTime = 0;
 			float startTime = Time.time;
 			_blocksLeft--;
-
 			//blockHitBox.gameObject.SetActive(true);
-
 			while (Time.time - startTime <= Data.blockTimeAmount)
 			{
 				yield return null;
@@ -331,7 +331,7 @@ namespace CHARACTERS
 
 			//blockHitBox.gameObject.SetActive(false);
 			IsBlocking = false;
-		}
+        }
 
 		protected void StartAttack()
         {
