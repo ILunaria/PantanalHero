@@ -10,6 +10,8 @@ namespace CHARACTERS
 
 		public PlayerInputActions _playerInputActions;
 
+		public GameObject _playerAttackSprite;
+
 		#region COMPONENTS
 		public Rigidbody2D RB { get; protected set; }
 		public Animator ANIM { get; protected set; }
@@ -28,6 +30,8 @@ namespace CHARACTERS
 		public bool IsAttacking;
 
 		public bool AttackInput = false;
+
+		public bool IsGrounded = true;
 		public bool IsWallJumping { get; protected set; }
 
 		//Timers
@@ -113,10 +117,15 @@ namespace CHARACTERS
 
 		public void AttackAction_Performed(InputAction.CallbackContext context)
         {
-			if(context.started)
-            {
+			if (context.started)
+			{
 				AttackInput = true;
+			}
+			else
+            {
+				AttackInput = false;
             }
+			
         }
 
 		public void BlockAction_Performed(InputAction.CallbackContext context)
@@ -318,31 +327,6 @@ namespace CHARACTERS
 			IsDashing = false;
 		}
 
-		protected IEnumerator StartBlock()
-        {
-			LastPressedBlockTime = 0;
-			float startTime = Time.time;
-			_blocksLeft--;
-			//blockHitBox.gameObject.SetActive(true);
-			while (Time.time - startTime <= Data.blockTimeAmount)
-			{
-				yield return null;
-			}
-
-			//blockHitBox.gameObject.SetActive(false);
-			IsBlocking = false;
-        }
-
-		protected void StartAttack()
-        {
-			Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-
-			foreach(Collider2D enemy in hitEnemies)
-            {
-				Debug.Log("We Hit" + enemy.name);
-            }
-        }
-
 		//Short period before the player is able to dash again
 		private IEnumerator RefillDash() // int amount
 		{
@@ -354,20 +338,52 @@ namespace CHARACTERS
 		}
 		#endregion
 
+		#region BLOCK METHODS
+		protected IEnumerator StartBlock()
+		{
+			LastPressedBlockTime = 0;
+			float startTime = Time.time;
+			_blocksLeft--;
+			//blockHitBox.gameObject.SetActive(true);
+			while (Time.time - startTime <= Data.blockTimeAmount)
+			{
+				yield return null;
+			}
+
+			//blockHitBox.gameObject.SetActive(false);
+			IsBlocking = false;
+		}
+
 		private IEnumerator RefillBlock() // int amount
 		{
-			
+
 			_blockRefilling = true;
 			yield return new WaitForSeconds(Data.blockRefillTime);
 			_blockRefilling = false;
 			_blocksLeft = Mathf.Min(Data.blockAmount, _blocksLeft + 1);
 		}
 
+		#endregion
+
+		#region ATTACK METHODS
+		protected void StartAttack()
+		{
+			Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+
+			foreach (Collider2D enemy in hitEnemies)
+			{
+				Debug.Log("We Hit" + enemy.name);
+			}
+		}
+
+		#endregion
+
+
 		#region CHECK METHODS
 		// LastOnGrounTime refers to the player staying on the ground or if he's fallen from the platform but still is able to jump for some time.
 		protected bool CanJump()
 		{
-			return LastOnGroundTime > 0 && !IsJumping;
+			return LastOnGroundTime > 0 && !IsJumping && !IsBlocking;
 		}
 
 		private bool CanJumpCut()
@@ -386,7 +402,7 @@ namespace CHARACTERS
 
 		protected bool CanAttack()
         {
-			return !IsDashing && !IsWallJumping;
+			return  AttackInput && !IsDashing && !IsWallJumping && !IsBlocking && !IsAttacking;
         }
 
 		protected bool CanBlock()

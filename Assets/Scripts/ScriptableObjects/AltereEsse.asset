@@ -20,7 +20,7 @@ MonoBehaviour:
   maxFastFallSpeed: 30
   attackInputBufferTime: 1
   blockInputBufferTime: 2
-  blockTimeAmount: 1
+  blockTimeAmount: 0.5
   blockAmount: 2
   blockRefillTime: 1
   runMaxSpeed: 40

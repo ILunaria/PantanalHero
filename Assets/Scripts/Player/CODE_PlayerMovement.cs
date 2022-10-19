@@ -95,7 +95,10 @@ namespace CHARACTERS
 				IsJumping = false;
 				ANIM.SetTrigger("Fall");
 				if (!IsWallJumping)
+                {
 					_isJumpFalling = true;
+				}
+					
 			}
 
 			if (IsWallJumping && Time.time - _wallJumpStartTime > Data.wallJumpTime)
@@ -106,15 +109,18 @@ namespace CHARACTERS
 			// Check if the player is on ground
 			if (LastOnGroundTime > 0 && !IsJumping) // if (LastOnGroundTime > 0 && !IsJumping && !IsWallJumping)
 			{
+				ANIM.SetBool("isGrounded", true);
+				IsGrounded = true;
 				_isJumpCut = false;
 				_isJumpFalling = false;
 			}
 
-			if (!IsDashing)
+			if (!IsDashing && !IsBlocking)
 			{
 				//JUMP
 				if (CanJump() && LastPressedJumpTime > 0) // return LastOnGroundTime > 0 && !IsJumping;
 				{
+					IsGrounded = false;
 					IsJumping = true;
 					IsWallJumping = false;
 					_isJumpCut = false;
@@ -130,6 +136,10 @@ namespace CHARACTERS
 					_isJumpCut = false;
 					_isJumpFalling = false;
 
+					IsGrounded = false;
+
+					//ANIM.SetTrigger("Jump");
+
 					_wallJumpStartTime = Time.time;
 					_lastWallJumpDir = (LastOnWallRightTime > 0) ? -1 : 1;
 
@@ -139,7 +149,7 @@ namespace CHARACTERS
 			#endregion
 
 			#region DASH CHECKS
-			if (CanDash() && LastPressedDashTime > 0)
+			if (CanDash() && LastPressedDashTime > 0 && !IsBlocking)
 			{
 				//Freeze game for split second. Adds juiciness and a bit of forgiveness over directional input
 				Sleep(Data.dashSleepTime);
@@ -164,28 +174,33 @@ namespace CHARACTERS
 
             #region ATTACK CHECK
 
-            if (Time.time >= nextAttackTime)
-            {
-                if (AttackInput && CanAttack())
+                if (CanAttack() && Time.time > nextAttackTime)
                 {
 					AttackInput = false;
                     IsAttacking = true;
                     StartAttack();
                     nextAttackTime = Time.time + 1f / _attackRate;
-                }
+					Transform attackSprite = Instantiate(_playerAttackSprite, attackPoint.transform.position, attackPoint.transform.rotation).transform;
+
+					Vector3 scale = transform.localScale;
+					attackSprite.localScale = scale;
+
+					attackSprite.parent = null;
+				}
 				else
                 {
 					IsAttacking = false;
 				}
-            }
+   
             #endregion
 
             #region BLOCK CHECK
 
-            if (CanBlock() && LastPressedBlockTime > 0)
+            if (CanBlock() && LastPressedBlockTime > 0 && RB.velocity.y == 0)
             {
 				IsBlocking = true;
-                ANIM.SetTrigger("Defense");
+				RB.velocity = new Vector2(0f, RB.velocity.y);
+				ANIM.SetTrigger("Defense");
                 StartCoroutine(nameof(StartBlock));
 			}
 
@@ -197,6 +212,7 @@ namespace CHARACTERS
 				//Higher gravity if we've released the jump input or are falling
 				if (RB.velocity.y < 0 && _moveInput.y < 0) // else if
 				{
+					ANIM.SetTrigger("Fall");
 					//Much higher gravity if holding down
 					SetGravityScale(Data.gravityScale * Data.fastFallGravityMult);
 					//Caps maximum fall speed, so when falling over large distances we don't accelerate to insanely high speeds
@@ -218,8 +234,6 @@ namespace CHARACTERS
 					SetGravityScale(Data.gravityScale * Data.fallGravityMult);
 					//Caps maximum fall speed, so when falling over large distances we don't accelerate to insanely high speeds
 					RB.velocity = new Vector2(RB.velocity.x, Mathf.Max(RB.velocity.y, -Data.maxFallSpeed));
-
-
 				}
 				else
 				{
@@ -238,16 +252,19 @@ namespace CHARACTERS
 		private void FixedUpdate()
 		{
 			//Handle Run
-			if (!IsDashing)
-			{
-				if (IsWallJumping)
-					Run(Data.wallJumpRunLerp);
-				else
-					Run(1);
-			}
-			else if (_isDashAttacking)
-			{
-				Run(Data.dashEndRunLerp); // Reduces Player Target Speed Whilst Dashing
+			if(!IsBlocking)
+            {
+				if (!IsDashing)
+				{
+					if (IsWallJumping)
+						Run(Data.wallJumpRunLerp);
+					else
+						Run(1);
+				}
+				else if (_isDashAttacking)
+				{
+					Run(Data.dashEndRunLerp); // Reduces Player Target Speed Whilst Dashing
+				}
 			}
 		}
 
@@ -283,9 +300,6 @@ namespace CHARACTERS
                 {
 					GameObject enemy = trigger.transform.parent.gameObject;
 					CODE_EnemyMateiro enemyCode = enemy.GetComponent<CODE_EnemyMateiro>();
-
-					//enemyCode.isCooling = true;
-					//enemyCode.isChasing = false;
 
 					Vector2 knockbackDir = new Vector2(transform.position.x - enemy.transform.position.x, 0f);
 					RB.velocity = new Vector2(knockbackDir.x, 0f) * 4f;
