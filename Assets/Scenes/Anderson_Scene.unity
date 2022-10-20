@@ -592,10 +592,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5010926940596373284, guid: 3f15bf93069cf22499571cf51b0c6119, type: 3}
-      propertyPath: _playerAttackSprite
-      value: 
-      objectReference: {fileID: 4943977620603457183, guid: 0e248eb8bfa40a843b3bf05d9ba52bb4, type: 3}
     - target: {fileID: 5010926940596373310, guid: 3f15bf93069cf22499571cf51b0c6119, type: 3}
       propertyPath: m_Name
       value: Player
@@ -669,6 +665,14 @@ PrefabInstance:
     - target: {fileID: 6926162049222807669, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926162049222807671, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926162049222807672, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6926162049222807674, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
       propertyPath: m_RootOrder

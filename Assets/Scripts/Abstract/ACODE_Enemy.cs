@@ -10,6 +10,8 @@ namespace CHARACTERS
 
         protected Rigidbody2D RB;
 
+        public bool IsGrounded;
+
         #region PATROL SETTINGS
         [Header("Enemy Patrol Settings")]
         public Transform[] patrolPoints;
@@ -101,14 +103,14 @@ namespace CHARACTERS
         {
             if (_distanceToPlayer > attackDistance)
             {
-                if(_IsFacingRight)
+                if (_IsFacingRight)
                     Debug.DrawRay(raycastTransform.position, transform.right * raycastLength, Color.red);
                 else
                     Debug.DrawRay(raycastTransform.position, -transform.right * raycastLength, Color.red);
             }
             else if (_distanceToPlayer <= attackDistance)
             {
-                if(_IsFacingRight)
+                if (_IsFacingRight)
                     Debug.DrawRay(raycastTransform.position, transform.right * raycastLength, Color.green);
                 else
                     Debug.DrawRay(raycastTransform.position, -transform.right * raycastLength, Color.green);
@@ -188,7 +190,7 @@ namespace CHARACTERS
                     }
                 }
             }
-            
+
         }
 
         protected void AttackCooldown()

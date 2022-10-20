@@ -49,6 +49,9 @@ namespace CHARACTERS
 			// Dash Timers
 			LastPressedDashTime -= Time.deltaTime;
 
+			// Attack Timers
+			LastPressedAttackTime -= Time.deltaTime;
+
 			// Block Timers
 			LastPressedBlockTime -= Time.deltaTime;
 
@@ -70,35 +73,47 @@ namespace CHARACTERS
 				if (Physics2D.OverlapBox(_groundCheckPoint.position, _groundCheckSize, 0, _groundLayer) && !IsJumping) //checks if set box overlaps with ground
 				{
 					LastOnGroundTime = Data.coyoteTime; //if so sets the lastGrounded to coyoteTime
+					IsWallSliding = false;
+					ANIM.SetBool("IsWallSliding", false);
 					ANIM.SetBool("isGrounded", true);
 				}
 
 				//Left Wall Check
 				if (((Physics2D.OverlapBox(_frontWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && this._IsFacingRight)
 					   || (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && !this._IsFacingRight)) && !IsWallJumping)
+				{
 					LastOnWallRightTime = Data.coyoteTime;
+					ANIM.SetBool("IsWallSliding", true);
+				}
+
 
 				//Right Wall Check
 				if (((Physics2D.OverlapBox(_frontWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && !this._IsFacingRight)
 					|| (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && this._IsFacingRight)) && !IsWallJumping)
+				{
 					LastOnWallLeftTime = Data.coyoteTime;
+					ANIM.SetBool("IsWallSliding", true);
+				}
+
 
 				//Two checks needed for both left and right walls since whenever the play turns the wall checkPoints swap sides
 				LastOnWallTime = Mathf.Max(LastOnWallLeftTime, LastOnWallRightTime);
 			}
-            #endregion 
+			#endregion
 
-            #region JUMP CHECKS
-            // Check if the player is falling
-            if (IsJumping && RB.velocity.y < 0)
+			#region JUMP CHECKS
+			// Check if the player is falling
+			if (IsJumping && RB.velocity.y < 0)
 			{
 				IsJumping = false;
 				ANIM.SetTrigger("Fall");
 				if (!IsWallJumping)
-                {
+				{
+					ANIM.SetBool("IsFalling", true);
+
 					_isJumpFalling = true;
 				}
-					
+
 			}
 
 			if (IsWallJumping && Time.time - _wallJumpStartTime > Data.wallJumpTime)
@@ -107,9 +122,10 @@ namespace CHARACTERS
 			}
 
 			// Check if the player is on ground
-			if (LastOnGroundTime > 0 && !IsJumping) // if (LastOnGroundTime > 0 && !IsJumping && !IsWallJumping)
+			if (LastOnGroundTime > 0 && !IsJumping && !IsWallJumping) // if (LastOnGroundTime > 0 && !IsJumping && !IsWallJumping)
 			{
 				ANIM.SetBool("isGrounded", true);
+				ANIM.SetBool("IsFalling", false);
 				IsGrounded = true;
 				_isJumpCut = false;
 				_isJumpFalling = false;
@@ -125,6 +141,7 @@ namespace CHARACTERS
 					IsWallJumping = false;
 					_isJumpCut = false;
 					_isJumpFalling = false;
+
 					Jump();
 
 				}
@@ -138,7 +155,8 @@ namespace CHARACTERS
 
 					IsGrounded = false;
 
-					//ANIM.SetTrigger("Jump");
+					ANIM.SetTrigger("Jump");
+					ANIM.SetBool("IsFalling", false);
 
 					_wallJumpStartTime = Time.time;
 					_lastWallJumpDir = (LastOnWallRightTime > 0) ? -1 : 1;
@@ -146,6 +164,21 @@ namespace CHARACTERS
 					WallJump(_lastWallJumpDir);
 				}
 			}
+			#endregion
+
+			#region WALL SLIDING CHECKS
+
+			if (LastOnWallTime == Data.coyoteTime && RB.velocity.y < 0)
+			{
+				IsWallSliding = true;
+				ANIM.SetBool("IsWallSliding", true);
+			}
+			else
+			{
+				IsWallSliding = false;
+				ANIM.SetBool("IsWallSliding", false);
+			}
+
 			#endregion
 
 			#region DASH CHECKS
@@ -163,49 +196,32 @@ namespace CHARACTERS
 
 
 				IsDashing = true;
-				
+
 				IsJumping = false;
 				IsWallJumping = false;
 				_isJumpCut = false;
 
 				StartCoroutine(nameof(StartDash), _lastDashDir);
 			}
-            #endregion
+			#endregion
 
-            #region ATTACK CHECK
+			#region ATTACK CHECK
 
-                if (CanAttack() && Time.time > nextAttackTime)
-                {
-					AttackInput = false;
-                    IsAttacking = true;
-                    StartAttack();
-                    nextAttackTime = Time.time + 1f / _attackRate;
-					Transform attackSprite = Instantiate(_playerAttackSprite, attackPoint.transform.position, attackPoint.transform.rotation).transform;
+			if (CanAttack() && LastPressedAttackTime > 0)
+			{
+				IsAttacking = true;
+				StartCoroutine(nameof(StartAttack));
+			}
+			#endregion
 
-					if(transform.localScale.x < 0)
-					{
-						attackSprite.localScale = new Vector3 (-attackSprite.localScale.x, attackSprite.localScale.y, attackSprite.localScale.z);
-					}
-					//Vector3 scale = transform.localScale;
-					//attackSprite.localScale = scale;
+			#region BLOCK CHECK
 
-					attackSprite.parent = null;
-				}
-				else
-                {
-					IsAttacking = false;
-				}
-   
-            #endregion
-
-            #region BLOCK CHECK
-
-            if (CanBlock() && LastPressedBlockTime > 0 && RB.velocity.y == 0)
-            {
+			if (CanBlock() && LastPressedBlockTime > 0 && RB.velocity.y == 0)
+			{
 				IsBlocking = true;
 				RB.velocity = new Vector2(0f, RB.velocity.y);
 				ANIM.SetTrigger("Defense");
-                StartCoroutine(nameof(StartBlock));
+				StartCoroutine(nameof(StartBlock));
 			}
 
 			#endregion
@@ -217,6 +233,7 @@ namespace CHARACTERS
 				if (RB.velocity.y < 0 && _moveInput.y < 0) // else if
 				{
 					ANIM.SetTrigger("Fall");
+					ANIM.SetBool("IsFalling", true);
 					//Much higher gravity if holding down
 					SetGravityScale(Data.gravityScale * Data.fastFallGravityMult);
 					//Caps maximum fall speed, so when falling over large distances we don't accelerate to insanely high speeds
@@ -234,6 +251,7 @@ namespace CHARACTERS
 				}
 				else if (RB.velocity.y < 0)
 				{
+					ANIM.SetBool("IsFalling", true);
 					//Higher gravity if falling
 					SetGravityScale(Data.gravityScale * Data.fallGravityMult);
 					//Caps maximum fall speed, so when falling over large distances we don't accelerate to insanely high speeds
@@ -241,6 +259,7 @@ namespace CHARACTERS
 				}
 				else
 				{
+					ANIM.SetBool("IsFalling", false);
 					//Default gravity if standing on a platform or moving upwards
 					SetGravityScale(Data.gravityScale);
 				}
@@ -256,8 +275,8 @@ namespace CHARACTERS
 		private void FixedUpdate()
 		{
 			//Handle Run
-			if(!IsBlocking)
-            {
+			if (!IsBlocking)
+			{
 				if (!IsDashing)
 				{
 					if (IsWallJumping)
@@ -281,27 +300,27 @@ namespace CHARACTERS
 			Gizmos.DrawWireCube(_frontWallCheckPoint.position, _wallCheckSize);
 			Gizmos.DrawWireCube(_backWallCheckPoint.position, _wallCheckSize);
 
-			if(IsAttacking)
-            {
+			if (IsAttacking)
+			{
 				Gizmos.color = Color.green;
 				Gizmos.DrawWireSphere(attackPoint.position, attackRange);
 			}
 			else
-            {
+			{
 				Gizmos.color = Color.red;
 				Gizmos.DrawWireSphere(attackPoint.position, attackRange);
 			}
-				
+
 
 		}
-        #endregion
+		#endregion
 
-        private void OnTriggerEnter2D(Collider2D trigger)
-        {
-			if(trigger.gameObject.name == "Hit_Box")
-            {
-				if(IsBlocking)
-                {
+		private void OnTriggerEnter2D(Collider2D trigger)
+		{
+			if (trigger.gameObject.name == "Hit_Box")
+			{
+				if (IsBlocking)
+				{
 					GameObject enemy = trigger.transform.parent.gameObject;
 					CODE_EnemyMateiro enemyCode = enemy.GetComponent<CODE_EnemyMateiro>();
 
@@ -309,12 +328,12 @@ namespace CHARACTERS
 					RB.velocity = new Vector2(knockbackDir.x, 0f) * 4f;
 					enemy.GetComponent<Rigidbody2D>().velocity = new Vector2(-knockbackDir.x, 0f) * 4f;
 					Debug.Log("Attack Blocked");
-                }
-				else if(!IsBlocking)
-                {
+				}
+				else if (!IsBlocking)
+				{
 					Debug.Log("You are Dead");
-                }
-            }
-        }
-    }
+				}
+			}
+		}
+	}
 }

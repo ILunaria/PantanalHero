@@ -7,6 +7,8 @@ namespace CHARACTERS
 {
     public class CODE_EnemyMateiro : ACODE_Enemy
     {
+
+
         void Start()
         {
             this._checkSurroundings = transform.GetChild(0).GetComponent<CODE_PlayerTriggerZone>();
@@ -38,7 +40,8 @@ namespace CHARACTERS
                 }
             }
 
-            CheckAroundEnemy();
+            if (IsGrounded)
+                CheckAroundEnemy();
         }
 
         private void CheckAroundEnemy()
@@ -48,7 +51,7 @@ namespace CHARACTERS
                 isPatrolling = false;
                 outOfRadiusTimer = outOfRadiusDelay;
 
-                if(_IsFacingRight)
+                if (_IsFacingRight)
                     this._hit = Physics2D.Raycast(this.raycastTransform.position, transform.right, this.raycastLength, this.raycastMask);
                 else
                     this._hit = Physics2D.Raycast(this.raycastTransform.position, -transform.right, this.raycastLength, this.raycastMask);
@@ -56,7 +59,7 @@ namespace CHARACTERS
                 this._raycastTarget = _checkSurroundings.collisionTarget.transform;
                 RaycastDebugger();
 
-               
+
                 if (this._hit.collider != null)
                 {
                     EnemyAttackLogic();
@@ -82,6 +85,18 @@ namespace CHARACTERS
                     PerformChase();
                 }
             }
+        }
+
+        private void OnCollisionStay2D(Collision2D collision)
+        {
+            if (collision.gameObject.name.StartsWith("Ground"))
+                IsGrounded = true;
+        }
+
+        private void OnCollisionExit2D(Collision2D collision)
+        {
+            if (collision.gameObject.name.StartsWith("Ground"))
+                IsGrounded = false;
         }
     }
 }

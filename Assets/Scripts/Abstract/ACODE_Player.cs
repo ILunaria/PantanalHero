@@ -34,6 +34,8 @@ namespace CHARACTERS
 		public bool IsGrounded = true;
 		public bool IsWallJumping { get; protected set; }
 
+		public bool IsWallSliding;
+
 		//Timers
 		public float LastOnGroundTime { get; protected set; }
 		public float LastOnWallTime { get; protected set; }
@@ -41,6 +43,8 @@ namespace CHARACTERS
 		public float LastOnWallLeftTime { get; protected set; }
 		public float LastPressedJumpTime { get; protected set; }
 		public float LastPressedDashTime { get; protected set; }
+
+		public float LastPressedAttackTime { get; protected set; }
 
 		public float LastPressedBlockTime;
 
@@ -64,6 +68,9 @@ namespace CHARACTERS
 		protected bool _blockRefilling;
 
 		// Attack
+		protected int _attacksLeft;
+		protected bool _attackRefilling;
+
 		public Transform attackPoint;
 		public float attackRange;
 		public LayerMask enemyLayers;
@@ -116,25 +123,20 @@ namespace CHARACTERS
 		}
 
 		public void AttackAction_Performed(InputAction.CallbackContext context)
-        {
+		{
 			if (context.started)
 			{
-				AttackInput = true;
+				OnAttackInput();
 			}
-			else
-            {
-				AttackInput = false;
-            }
-			
-        }
+		}
 
 		public void BlockAction_Performed(InputAction.CallbackContext context)
-        {
-			if(context.started)
-            {
+		{
+			if (context.started)
+			{
 				OnBlockInput();
 			}
-        }
+		}
 
 		#endregion
 
@@ -146,10 +148,15 @@ namespace CHARACTERS
 			LastPressedJumpTime = Data.jumpInputBufferTime;
 		}
 
+		public void OnAttackInput()
+		{
+			LastPressedAttackTime = Data.attackInputBufferTime;
+		}
+
 		public void OnBlockInput()
-        {
+		{
 			LastPressedBlockTime = Data.blockInputBufferTime;
-        }
+		}
 
 		public void OnJumpUpInput()
 		{
@@ -251,9 +258,9 @@ namespace CHARACTERS
 
 			RB.AddForce(Vector2.up * force, ForceMode2D.Impulse);
 			ANIM.SetTrigger("Jump");
-            ANIM.SetBool("isGrounded", false);
-            #endregion
-        }
+			ANIM.SetBool("isGrounded", false);
+			#endregion
+		}
 
 		protected void WallJump(int dir)
 		{
@@ -282,7 +289,7 @@ namespace CHARACTERS
 		//Dash Coroutine
 		protected IEnumerator StartDash(Vector2 dir) // For Multi Direction Dash Use This: private IEnumerator StartDash(Vector2 dir)
 		{
-			
+
 			dir = dir.normalized * Vector2.right; // Horizontal Dash Only
 												  //Overall this method of dashing aims to mimic Celeste, if you're looking for
 												  // a more physics-based approach try a method similar to that used in the jump
@@ -293,7 +300,8 @@ namespace CHARACTERS
 
 			_dashesLeft--;
 			_isDashAttacking = true;
-			
+
+			gameObject.layer = LayerMask.NameToLayer("PlayerDashing");
 
 			SetGravityScale(0);
 
@@ -325,6 +333,8 @@ namespace CHARACTERS
 
 			//Dash over
 			IsDashing = false;
+
+			gameObject.layer = LayerMask.NameToLayer("Player");
 		}
 
 		//Short period before the player is able to dash again
@@ -363,17 +373,44 @@ namespace CHARACTERS
 			_blocksLeft = Mathf.Min(Data.blockAmount, _blocksLeft + 1);
 		}
 
+		private IEnumerator RefillAttack()
+		{
+			_attackRefilling = true;
+			yield return new WaitForSeconds(Data.attackRefillTime);
+			_attackRefilling = false;
+			_attacksLeft = Mathf.Min(Data.attackAmount, _attacksLeft + 1);
+		}
+
 		#endregion
 
 		#region ATTACK METHODS
-		protected void StartAttack()
+		protected IEnumerator StartAttack()
 		{
-			Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
-			foreach (Collider2D enemy in hitEnemies)
+			LastPressedAttackTime = 0f;
+			float startTime = Time.time;
+			_attacksLeft--;
+			IsAttacking = true;
+
+			Transform attackSprite = Instantiate(_playerAttackSprite, attackPoint.transform.position, attackPoint.transform.rotation).transform;
+			Vector3 scale = transform.localScale;
+			attackSprite.localScale = scale;
+
+			attackSprite.parent = null;
+
+			while (Time.time - startTime <= Data.attackTimeAmount)
 			{
-				Debug.Log("We Hit" + enemy.name);
+				Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+
+				foreach (Collider2D enemy in hitEnemies)
+				{
+					Debug.Log("We Hit" + enemy.name);
+				}
+				yield return null;
 			}
+
+			IsAttacking = false;
+
 		}
 
 		#endregion
@@ -401,14 +438,19 @@ namespace CHARACTERS
 		}
 
 		protected bool CanAttack()
-        {
-			return  AttackInput && !IsDashing && !IsWallJumping && !IsBlocking && !IsAttacking;
-        }
+		{
+			if (!IsAttacking && _attacksLeft < Data.attackAmount && !_attackRefilling && !IsDashing && !IsWallJumping && !IsBlocking)
+			{
+				StartCoroutine(nameof(RefillAttack));
+			}
+
+			return _attacksLeft > 0;
+		}
 
 		protected bool CanBlock()
 		{
 			if (!IsBlocking && _blocksLeft < Data.blockAmount && !_blockRefilling && !IsDashing)
-            {
+			{
 				StartCoroutine(nameof(RefillBlock));
 			}
 			return _blocksLeft > 0;
