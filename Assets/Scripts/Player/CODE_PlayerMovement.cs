@@ -86,11 +86,11 @@ namespace CHARACTERS
 				//Two checks needed for both left and right walls since whenever the play turns the wall checkPoints swap sides
 				LastOnWallTime = Mathf.Max(LastOnWallLeftTime, LastOnWallRightTime);
 			}
-			#endregion
+            #endregion 
 
-			#region JUMP CHECKS
-			// Check if the player is falling
-			if (IsJumping && RB.velocity.y < 0)
+            #region JUMP CHECKS
+            // Check if the player is falling
+            if (IsJumping && RB.velocity.y < 0)
 			{
 				IsJumping = false;
 				ANIM.SetTrigger("Fall");
@@ -182,8 +182,12 @@ namespace CHARACTERS
                     nextAttackTime = Time.time + 1f / _attackRate;
 					Transform attackSprite = Instantiate(_playerAttackSprite, attackPoint.transform.position, attackPoint.transform.rotation).transform;
 
-					Vector3 scale = transform.localScale;
-					attackSprite.localScale = scale;
+					if(transform.localScale.x < 0)
+					{
+						attackSprite.localScale = new Vector3 (-attackSprite.localScale.x, attackSprite.localScale.y, attackSprite.localScale.z);
+					}
+					//Vector3 scale = transform.localScale;
+					//attackSprite.localScale = scale;
 
 					attackSprite.parent = null;
 				}
