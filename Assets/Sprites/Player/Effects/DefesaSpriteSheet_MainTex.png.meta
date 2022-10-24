@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b3a2a0a0847698c4d8ee078ec78e1d6f
+guid: 3689e8618976e9c469f8c09f94f61843
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AtaqueSpriteSheet_Emission_0
+      name: DefesaSpriteSheet_MainTex_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1500
-        height: 800
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3997ba45e8f2e794796f2662110a62f8
-      internalID: 642198939
+      spriteID: a2c987434189e1b4d9f9e2fc6524290d
+      internalID: 1872090897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtaqueSpriteSheet_Emission_1
+      name: DefesaSpriteSheet_MainTex_1
       rect:
         serializedVersion: 2
-        x: 1500
+        x: 1000
         y: 0
-        width: 1500
-        height: 800
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48955552561eb72408af5d44889a773b
-      internalID: 468205809
+      spriteID: cca9029d361a21748b56959add8b2e39
+      internalID: -1077213486
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtaqueSpriteSheet_Emission_2
+      name: DefesaSpriteSheet_MainTex_2
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d72f980b5e1bff947ab5d6341df5a7a8
+      internalID: 1490801406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefesaSpriteSheet_MainTex_3
       rect:
         serializedVersion: 2
         x: 3000
         y: 0
-        width: 1500
-        height: 800
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cb8c37ebbdf341419f071c0a7c21030
-      internalID: 1733237548
+      spriteID: 88cdcde386808db4a8e19f2cd6ebc1b4
+      internalID: -1969152017
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtaqueSpriteSheet_Emission_3
+      name: DefesaSpriteSheet_MainTex_4
       rect:
         serializedVersion: 2
-        x: 4500
+        x: 4000
         y: 0
-        width: 1500
-        height: 800
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,29 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19d33ff3329967047949701410b8f775
-      internalID: -916585668
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AtaqueSpriteSheet_Emission_4
-      rect:
-        serializedVersion: 2
-        x: 6000
-        y: 0
-        width: 1500
-        height: 800
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f5e9daa2bb21c647b963709cb1715e0
-      internalID: 1625612917
+      spriteID: 12a7731fc045a8745a2e0a5eed9f7b38
+      internalID: -1234991818
       vertices: []
       indices: 
       edges: []
@@ -232,11 +232,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      AtaqueSpriteSheet_Emission_1: 468205809
-      AtaqueSpriteSheet_Emission_4: 1625612917
-      AtaqueSpriteSheet_Emission_0: 642198939
-      AtaqueSpriteSheet_Emission_2: 1733237548
-      AtaqueSpriteSheet_Emission_3: -916585668
+      DefesaSpriteSheet_MainTex_1: -1077213486
+      DefesaSpriteSheet_MainTex_4: -1234991818
+      DefesaSpriteSheet_MainTex_0: 1872090897
+      DefesaSpriteSheet_MainTex_2: 1490801406
+      DefesaSpriteSheet_MainTex_3: -1969152017
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

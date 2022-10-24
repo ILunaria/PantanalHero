@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b3a2a0a0847698c4d8ee078ec78e1d6f
+guid: 353f81f872f46754b8297c7b7f209ee9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AtaqueSpriteSheet_Emission_0
+      name: DashSpriteSheet_Emission_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1500
-        height: 800
+        width: 1150
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3997ba45e8f2e794796f2662110a62f8
-      internalID: 642198939
+      spriteID: 48f610662c3a43e48b3d9842a3874b2b
+      internalID: 1513570740
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtaqueSpriteSheet_Emission_1
+      name: DashSpriteSheet_Emission_1
       rect:
         serializedVersion: 2
-        x: 1500
+        x: 1150
         y: 0
-        width: 1500
-        height: 800
+        width: 1150
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48955552561eb72408af5d44889a773b
-      internalID: 468205809
+      spriteID: 35df6b05774c05e46966863774fa2176
+      internalID: -676375015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtaqueSpriteSheet_Emission_2
+      name: DashSpriteSheet_Emission_2
       rect:
         serializedVersion: 2
-        x: 3000
+        x: 2300
         y: 0
-        width: 1500
-        height: 800
+        width: 1150
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cb8c37ebbdf341419f071c0a7c21030
-      internalID: 1733237548
+      spriteID: e3e26045db706e04fb0fa32ab7db5cf5
+      internalID: -1128175333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtaqueSpriteSheet_Emission_3
+      name: DashSpriteSheet_Emission_3
       rect:
         serializedVersion: 2
-        x: 4500
+        x: 3450
         y: 0
-        width: 1500
-        height: 800
+        width: 1150
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19d33ff3329967047949701410b8f775
-      internalID: -916585668
+      spriteID: 1f45cce529cbba147af2bbdf9cd1e792
+      internalID: 1800948413
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtaqueSpriteSheet_Emission_4
+      name: DashSpriteSheet_Emission_4
       rect:
         serializedVersion: 2
-        x: 6000
+        x: 4600
         y: 0
-        width: 1500
-        height: 800
+        width: 1150
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,8 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f5e9daa2bb21c647b963709cb1715e0
-      internalID: 1625612917
+      spriteID: 6ebd229b588fda444b84b794dbfb26c2
+      internalID: 1397317986
       vertices: []
       indices: 
       edges: []
@@ -232,11 +232,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      AtaqueSpriteSheet_Emission_1: 468205809
-      AtaqueSpriteSheet_Emission_4: 1625612917
-      AtaqueSpriteSheet_Emission_0: 642198939
-      AtaqueSpriteSheet_Emission_2: 1733237548
-      AtaqueSpriteSheet_Emission_3: -916585668
+      DashSpriteSheet_Emission_3: 1800948413
+      DashSpriteSheet_Emission_2: -1128175333
+      DashSpriteSheet_Emission_0: 1513570740
+      DashSpriteSheet_Emission_4: 1397317986
+      DashSpriteSheet_Emission_1: -676375015
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
