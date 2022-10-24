@@ -695,8 +695,8 @@ MonoBehaviour:
   - {fileID: 3907410644179540581}
   - {fileID: 3907410644850136979}
   m_Bounds:
-    m_Center: {x: -0.010537624, y: -0.045419335, z: 0}
-    m_Extent: {x: 1.0749443, y: 0.88759303, z: 0}
+    m_Center: {x: -0.010537386, y: -0.045426965, z: 0}
+    m_Extent: {x: 1.0749443, y: 0.887593, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -869,8 +869,8 @@ MonoBehaviour:
   - {fileID: 3907410643899868174}
   - {fileID: 3907410643347085925}
   m_Bounds:
-    m_Center: {x: 0.020751, y: -0.009047508, z: 0}
-    m_Extent: {x: 4.7874365, y: 6.429731, z: 0}
+    m_Center: {x: 0.020751, y: -0.009055138, z: 0}
+    m_Extent: {x: 4.7874365, y: 6.4297304, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -1077,8 +1077,8 @@ MonoBehaviour:
   - {fileID: 3907410644958260703}
   - {fileID: 3907410644116399962}
   m_Bounds:
-    m_Center: {x: 0.49203336, y: -0.020160913, z: 0}
-    m_Extent: {x: 1.8926482, y: 3.4544513, z: 0}
+    m_Center: {x: 0.49203396, y: -0.020164967, z: 0}
+    m_Extent: {x: 1.8926494, y: 3.4544508, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -1280,8 +1280,8 @@ MonoBehaviour:
   - {fileID: 3907410644541156739}
   - {fileID: 3907410643479788863}
   m_Bounds:
-    m_Center: {x: 0.22774875, y: 0.33159566, z: 0}
-    m_Extent: {x: 1.8426824, y: 3.465776, z: 0}
+    m_Center: {x: 0.22774577, y: 0.3315916, z: 0}
+    m_Extent: {x: 1.8426821, y: 3.4657755, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -1513,8 +1513,8 @@ MonoBehaviour:
   - {fileID: 3907410643490136199}
   - {fileID: 3907410644179894612}
   m_Bounds:
-    m_Center: {x: 0.05517316, y: 0.18288004, z: 0}
-    m_Extent: {x: 1.1538262, y: 1.5212437, z: 0}
+    m_Center: {x: 0.05517316, y: 0.18287945, z: 0}
+    m_Extent: {x: 1.1538262, y: 1.5212439, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -1621,8 +1621,8 @@ MonoBehaviour:
   - {fileID: 3907410643731763976}
   - {fileID: 3907410643822301230}
   m_Bounds:
-    m_Center: {x: -0.0052227974, y: -0.015915394, z: 0}
-    m_Extent: {x: 1.029774, y: 7.209085, z: 0}
+    m_Center: {x: -0.005219102, y: -0.015917301, z: 0}
+    m_Extent: {x: 1.0297742, y: 7.209084, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -1827,8 +1827,8 @@ MonoBehaviour:
   - {fileID: 3907410643261858348}
   - {fileID: 3907410643633662854}
   m_Bounds:
-    m_Center: {x: 0.03287494, y: 0.038282514, z: 0}
-    m_Extent: {x: 1.1503441, y: 1.527242, z: 0}
+    m_Center: {x: 0.03287518, y: 0.0382818, z: 0}
+    m_Extent: {x: 1.1503441, y: 1.5272404, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -2334,8 +2334,8 @@ MonoBehaviour:
   - {fileID: 3907410644871627665}
   - {fileID: 3907410644834464469}
   m_Bounds:
-    m_Center: {x: 0.0016121864, y: 0.029424667, z: 0}
-    m_Extent: {x: 6.14839, y: 9.822578, z: 0}
+    m_Center: {x: 0.0016117096, y: 0.029426575, z: 0}
+    m_Extent: {x: 6.1483893, y: 9.822578, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -2698,8 +2698,8 @@ MonoBehaviour:
   - {fileID: 3907410644011477421}
   - {fileID: 3907410643066966458}
   m_Bounds:
-    m_Center: {x: 3.3232443, y: 1.8934911, z: 0}
-    m_Extent: {x: 3.8714168, y: 2.930547, z: 0}
+    m_Center: {x: 3.3232462, y: 1.8934871, z: 0}
+    m_Extent: {x: 3.8714154, y: 2.9305465, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -2715,7 +2715,7 @@ GameObject:
   - component: {fileID: 3907410644932488045}
   - component: {fileID: 3907410644932488046}
   m_Layer: 0
-  m_Name: RascunhoDash_0
+  m_Name: DashSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2729,8 +2729,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3907410644932488040}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.1424506, y: 0, z: 0}
-  m_LocalScale: {x: 0.97384214, y: 0.97384214, z: 0.97384214}
+  m_LocalPosition: {x: 0, y: 2.5, z: 0}
+  m_LocalScale: {x: 9, y: 9, z: 9}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3907410643192277515}
@@ -2777,7 +2777,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -598620342, guid: ddc5db3ce3acd7b4a9a3cbfb2a1a44f5, type: 3}
+  m_Sprite: {fileID: 1444030936, guid: e9ab3e5bf9b8ba64b884557c2ff09cce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2833,7 +2833,7 @@ TrailRenderer:
   m_Time: 0.1
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1.2
+    widthMultiplier: 1.8
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -2852,7 +2852,7 @@ TrailRenderer:
     colorGradient:
       serializedVersion: 2
       key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}

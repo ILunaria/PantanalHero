@@ -393,8 +393,11 @@ namespace CHARACTERS
 			IsAttacking = true;
 
 			Transform attackSprite = Instantiate(_playerAttackSprite, attackPoint.transform.position, attackPoint.transform.rotation).transform;
-			Vector3 scale = transform.localScale;
-			attackSprite.localScale = scale;
+			if(transform.localScale.x < 0)
+			{
+                Vector3 newScale = new Vector3( - attackSprite.localScale.x, attackSprite.localScale.y, attackSprite.localScale.z);
+				attackSprite.localScale = newScale;
+            }
 
 			attackSprite.parent = null;
 
