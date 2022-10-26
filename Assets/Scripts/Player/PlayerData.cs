@@ -3,26 +3,48 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerData", menuName = "ScriptableObjects/PlayerData")]
 public class PlayerData : ScriptableObject
 {
-    #region GRAVITY
+	#region GRAVITY
 	[HideInInspector] public float gravityStrength; //Downwards force (gravity) needed for the desired jumpHeight and jumpTimeToApex.
 	[HideInInspector] public float gravityScale; //Strength of the player's gravity as a multiplier of gravity (set in ProjectSettings/Physics2D).
 												 //Also the value the player's rigidbody2D.gravityScale is set to.
 	[Header("Gravity")]
 	[Tooltip("Multiplier to the player's gravityScale when falling.")]
 	public float fallGravityMult;
-	[Tooltip ("Maximum fall speed of the player when falling.")]
+	[Tooltip("Maximum fall speed of the player when falling.")]
 	public float maxFallSpeed;
 	[Space(5)]
 	[Tooltip("Larger multiplier to the player's gravityScale when they are falling and pressing downwards.")]
 	public float fastFallGravityMult;
 	[Tooltip("Maximum fall speed of the player when performing a faster fall.")]
-	public float maxFastFallSpeed; 
+	public float maxFastFallSpeed;
 
 	[Space(20)]
-    #endregion
+	#endregion
 
-    #region RUN
-    [Header("Run")]
+	#region ATTACK
+	[Header("Attack")]
+	[Tooltip("Time between next attack.")]
+	public float attackInputBufferTime;
+	public float attackTimeAmount;
+	public int attackAmount;
+	public float attackRefillTime;
+
+	[Space(20)]
+	#endregion
+
+	#region BLOCK
+	[Header("Block")]
+	[Tooltip("Time between next block.")]
+	public float blockInputBufferTime;
+	public float blockTimeAmount;
+	public int blockAmount;
+	public float blockRefillTime;
+
+	[Space(20)]
+	#endregion
+
+	#region RUN
+	[Header("Run")]
 	[Tooltip("Target speed we want the player to reach.")]
 	public float runMaxSpeed;
 	[Tooltip("The speed at which the player accelerates to max speed.")]
@@ -36,14 +58,14 @@ public class PlayerData : ScriptableObject
 	[Tooltip("Desacceleration multiplier applied to acceleration rate when airborne.")]
 	[Range(0f, 1)] public float deccelInAir;
 	[Space(5)]
-	[Tooltip ("Conserve momentum if the player is moving with the desired direction but at a greater speed than its maxSpeed.")]
+	[Tooltip("Conserve momentum if the player is moving with the desired direction but at a greater speed than its maxSpeed.")]
 	public bool doConserveMomentum = true;
 
 	[Space(20)]
-    #endregion
+	#endregion
 
-    #region JUMP
-    [Header("Jump")]
+	#region JUMP
+	[Header("Jump")]
 	[Tooltip("Height of the player's jump.")]
 	public float jumpHeight;
 	[Tooltip("Time necessary to reach the jump apex.")]
@@ -79,20 +101,20 @@ public class PlayerData : ScriptableObject
 	public float jumpHangMaxSpeedMult;
 
 	[Space(20)]
-    #endregion
+	#endregion
 
-    #region JUMP ASSISTS
-    [Header("Jump Assists")]
+	#region JUMP ASSISTS
+	[Header("Jump Assists")]
 	[Tooltip("Grace period after falling off a platform, where you can still jump.")]
 	[Range(0.01f, 0.5f)] public float coyoteTime;
 	[Tooltip("//Grace period after pressing jump where a jump will be automatically performed once the requirements (eg. being grounded) are met.")]
-	[Range(0.01f, 0.5f)] public float jumpInputBufferTime; 
+	[Range(0.01f, 0.5f)] public float jumpInputBufferTime;
 
 	[Space(20)]
-    #endregion
+	#endregion
 
-    #region DASH
-    [Header("Dash")]
+	#region DASH
+	[Header("Dash")]
 	[Tooltip("Number of dashes the player can perform in a period of time.")]
 	public int dashAmount;
 	[Tooltip("The actual dash force applied.")]
@@ -100,7 +122,7 @@ public class PlayerData : ScriptableObject
 	[Tooltip("Duration for which the game freezes when we press dash but before we read directional input and apply a force.")]
 	public float dashSleepTime;
 	[Space(5)]
-	
+
 	[Tooltip("We keep the player's velocity at the dash speed during the drag phase.")]
 	public float dashDragTime;
 	[Space(5)]
@@ -116,10 +138,10 @@ public class PlayerData : ScriptableObject
 	[Space(5)]
 	[Tooltip("Time necessary to press the dash button again.")]
 	[Range(0.01f, 0.5f)] public float dashInputBufferTime;
-    #endregion
+	#endregion
 
-    //Unity Callback, called when the inspector updates
-    private void OnValidate()
+	//Unity Callback, called when the inspector updates
+	private void OnValidate()
 	{
 		//Calculate gravity strength using the formula (gravity = 2 * jumpHeight / timeToJumpApex^2) 
 		gravityStrength = -(2 * jumpHeight) / (jumpTimeToApex * jumpTimeToApex);
