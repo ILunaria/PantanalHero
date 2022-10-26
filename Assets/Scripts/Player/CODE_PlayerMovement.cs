@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 namespace CHARACTERS
 {
@@ -83,7 +84,6 @@ namespace CHARACTERS
 					   || (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && !this._IsFacingRight)) && !IsWallJumping)
 				{
 					LastOnWallRightTime = Data.coyoteTime;
-					ANIM.SetBool("IsWallSliding", true);
 				}
 
 
@@ -92,7 +92,6 @@ namespace CHARACTERS
 					|| (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && this._IsFacingRight)) && !IsWallJumping)
 				{
 					LastOnWallLeftTime = Data.coyoteTime;
-					ANIM.SetBool("IsWallSliding", true);
 				}
 
 
@@ -107,13 +106,11 @@ namespace CHARACTERS
 			{
 				IsJumping = false;
 				ANIM.SetTrigger("Fall");
+				ANIM.SetBool("IsFalling", true);
 				if (!IsWallJumping)
 				{
-					ANIM.SetBool("IsFalling", true);
-
 					_isJumpFalling = true;
 				}
-
 			}
 
 			if (IsWallJumping && Time.time - _wallJumpStartTime > Data.wallJumpTime)
@@ -193,10 +190,7 @@ namespace CHARACTERS
 				else
 					_lastDashDir = this._IsFacingRight ? Vector2.right : Vector2.left;
 
-
-
 				IsDashing = true;
-
 				IsJumping = false;
 				IsWallJumping = false;
 				_isJumpCut = false;
@@ -310,8 +304,6 @@ namespace CHARACTERS
 				Gizmos.color = Color.red;
 				Gizmos.DrawWireSphere(attackPoint.position, attackRange);
 			}
-
-
 		}
 		#endregion
 
@@ -328,10 +320,12 @@ namespace CHARACTERS
 					RB.velocity = new Vector2(knockbackDir.x, 0f) * 4f;
 					enemy.GetComponent<Rigidbody2D>().velocity = new Vector2(-knockbackDir.x, 0f) * 4f;
 					Debug.Log("Attack Blocked");
+
 				}
 				else if (!IsBlocking)
 				{
 					Debug.Log("You are Dead");
+					SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 				}
 			}
 		}
