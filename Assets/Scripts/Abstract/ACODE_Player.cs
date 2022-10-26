@@ -406,14 +406,15 @@ namespace CHARACTERS
 				Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
 				foreach (Collider2D enemy in hitEnemies)
-				{
+				{				
 					Debug.Log("We Hit" + enemy.name);
+
+					Destroy(enemy.gameObject);
 				}
 				yield return null;
 			}
 
 			IsAttacking = false;
-
 		}
 
 		#endregion
@@ -469,5 +470,6 @@ namespace CHARACTERS
 			return IsWallJumping && RB.velocity.y > 0;
 		}
 		#endregion
+
 	}
 }
