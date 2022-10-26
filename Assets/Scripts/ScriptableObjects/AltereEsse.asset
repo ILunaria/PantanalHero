@@ -26,11 +26,11 @@ MonoBehaviour:
   blockTimeAmount: 0.5
   blockAmount: 2
   blockRefillTime: 1
-  runMaxSpeed: 40
+  runMaxSpeed: 25
   runAcceleration: 0.8
-  runAccelAmount: 1
+  runAccelAmount: 1.6
   runDecceleration: 0.5
-  runDeccelAmount: 0.625
+  runDeccelAmount: 1
   accelInAir: 1
   deccelInAir: 0.5
   doConserveMomentum: 1
