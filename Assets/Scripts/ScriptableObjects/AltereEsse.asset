@@ -18,11 +18,11 @@ MonoBehaviour:
   maxFallSpeed: 25
   fastFallGravityMult: 2
   maxFastFallSpeed: 30
-  attackInputBufferTime: 1
+  attackInputBufferTime: 0.1
   attackTimeAmount: 0.5
   attackAmount: 1
   attackRefillTime: 0.5
-  blockInputBufferTime: 2
+  blockInputBufferTime: 0.1
   blockTimeAmount: 0.5
   blockAmount: 2
   blockRefillTime: 1
@@ -49,7 +49,7 @@ MonoBehaviour:
   coyoteTime: 0.2
   jumpInputBufferTime: 0.2
   dashAmount: 1
-  dashSpeed: 50
+  dashSpeed: 40
   dashSleepTime: 0
   dashDragTime: 0.15
   dashEndTime: 0

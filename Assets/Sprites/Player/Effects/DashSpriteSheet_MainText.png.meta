@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b3a2a0a0847698c4d8ee078ec78e1d6f
+guid: e9ab3e5bf9b8ba64b884557c2ff09cce
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 2
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -117,106 +117,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AtaqueSpriteSheet_Emission_0
+      name: DashSpriteSheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1500
-        height: 800
+        width: 1150
+        height: 1000
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3997ba45e8f2e794796f2662110a62f8
-      internalID: 642198939
+      spriteID: 9ab0e83f154c16840b9d0b85c2bab784
+      internalID: 1444030936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtaqueSpriteSheet_Emission_1
+      name: DashSpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 1500
+        x: 1150
         y: 0
-        width: 1500
-        height: 800
+        width: 1150
+        height: 1000
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48955552561eb72408af5d44889a773b
-      internalID: 468205809
+      spriteID: fc8bddb4c5986f446ae6283fde65c979
+      internalID: 1637216796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtaqueSpriteSheet_Emission_2
+      name: DashSpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 3000
+        x: 2300
         y: 0
-        width: 1500
-        height: 800
+        width: 1150
+        height: 1000
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cb8c37ebbdf341419f071c0a7c21030
-      internalID: 1733237548
+      spriteID: 1ae3adf84c3c16a44bbbe1adaed61545
+      internalID: -2119013753
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtaqueSpriteSheet_Emission_3
+      name: DashSpriteSheet_3
       rect:
         serializedVersion: 2
-        x: 4500
+        x: 3450
         y: 0
-        width: 1500
-        height: 800
+        width: 1150
+        height: 1000
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19d33ff3329967047949701410b8f775
-      internalID: -916585668
+      spriteID: f993810f47d6f47448e4601c9dfc03d3
+      internalID: 640566762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtaqueSpriteSheet_Emission_4
+      name: DashSpriteSheet_4
       rect:
         serializedVersion: 2
-        x: 6000
+        x: 4600
         y: 0
-        width: 1500
-        height: 800
+        width: 1150
+        height: 1000
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f5e9daa2bb21c647b963709cb1715e0
-      internalID: 1625612917
+      spriteID: 968b0f13dbeb1454c84fe5840c6dc430
+      internalID: -1533359564
       vertices: []
       indices: 
       edges: []
@@ -230,13 +230,15 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 353f81f872f46754b8297c7b7f209ee9, type: 3}
+      name: _Emission
     nameFileIdTable:
-      AtaqueSpriteSheet_Emission_1: 468205809
-      AtaqueSpriteSheet_Emission_4: 1625612917
-      AtaqueSpriteSheet_Emission_0: 642198939
-      AtaqueSpriteSheet_Emission_2: 1733237548
-      AtaqueSpriteSheet_Emission_3: -916585668
+      DashSpriteSheet_3: 640566762
+      DashSpriteSheet_0: 1444030936
+      DashSpriteSheet_1: 1637216796
+      DashSpriteSheet_4: -1533359564
+      DashSpriteSheet_2: -2119013753
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
