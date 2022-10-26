@@ -1904,14 +1904,6 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6926162049222807672, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
-      propertyPath: m_AngularDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6926162049222807672, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
-      propertyPath: m_GravityScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6926162049222807674, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -3221,14 +3213,6 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6926162049222807672, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
-      propertyPath: m_AngularDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6926162049222807672, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
-      propertyPath: m_GravityScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6926162049222807674, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -4103,18 +4087,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 6926162049222807671, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6926162049222807672, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
-      propertyPath: m_AngularDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6926162049222807672, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
-      propertyPath: m_GravityScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6926162049222807674, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -4167,10 +4139,6 @@ PrefabInstance:
       propertyPath: leftLimit
       value: 
       objectReference: {fileID: 158645131}
-    - target: {fileID: 6926162049222807675, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
-      propertyPath: IsGrounded
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6926162049222807675, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
       propertyPath: rightLimit
       value: 
@@ -5372,14 +5340,6 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6926162049222807672, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
-      propertyPath: m_AngularDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6926162049222807672, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
-      propertyPath: m_GravityScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6926162049222807674, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -6369,18 +6329,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 6926162049222807671, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6926162049222807672, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
-      propertyPath: m_AngularDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6926162049222807672, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
-      propertyPath: m_GravityScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6926162049222807674, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -6433,10 +6381,6 @@ PrefabInstance:
       propertyPath: leftLimit
       value: 
       objectReference: {fileID: 491455467}
-    - target: {fileID: 6926162049222807675, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
-      propertyPath: IsGrounded
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6926162049222807675, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
       propertyPath: rightLimit
       value: 
@@ -6885,14 +6829,6 @@ PrefabInstance:
     - target: {fileID: 6926162049222807671, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
       propertyPath: m_IsTrigger
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6926162049222807672, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
-      propertyPath: m_AngularDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6926162049222807672, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
-      propertyPath: m_GravityScale
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6926162049222807674, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
       propertyPath: m_RootOrder
@@ -10080,14 +10016,6 @@ PrefabInstance:
     - target: {fileID: 6926162049222807671, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
       propertyPath: m_IsTrigger
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6926162049222807672, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
-      propertyPath: m_AngularDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6926162049222807672, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
-      propertyPath: m_GravityScale
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6926162049222807674, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
       propertyPath: m_RootOrder
