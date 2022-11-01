@@ -19,7 +19,7 @@ MonoBehaviour:
   fastFallGravityMult: 2
   maxFastFallSpeed: 30
   attackInputBufferTime: 0.1
-  attackTimeAmount: 0.5
+  attackTimeAmount: 0.1
   attackAmount: 1
   attackRefillTime: 0.5
   blockInputBufferTime: 0.1

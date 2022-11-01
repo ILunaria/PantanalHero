@@ -297,13 +297,22 @@ namespace CHARACTERS
 			if (IsAttacking)
 			{
 				Gizmos.color = Color.green;
-				Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+				//Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+
+				if(_IsFacingRight)
+					Gizmos.DrawWireCube(new Vector2(((attackPoint.position.x + (attackHitBox.x / 2)) - 0.8f), attackPoint.position.y), attackHitBox);
+				else
+					Gizmos.DrawWireCube(new Vector2(((attackPoint.position.x - (attackHitBox.x / 2)) + 0.8f), attackPoint.position.y), attackHitBox);
 			}
 			else
 			{
 				Gizmos.color = Color.red;
-				Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-			}
+				//Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+				if (_IsFacingRight)
+					Gizmos.DrawWireCube(new Vector2(((attackPoint.position.x + (attackHitBox.x / 2)) - 0.8f), attackPoint.position.y), attackHitBox);
+				else
+					Gizmos.DrawWireCube(new Vector2(((attackPoint.position.x - (attackHitBox.x / 2)) + 0.8f), attackPoint.position.y), attackHitBox);
+			} 
 		}
 		#endregion
 

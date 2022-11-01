@@ -25,6 +25,7 @@ namespace CHARACTERS
 		public bool IsJumping { get; protected set; }
 		public bool IsDashing { get; protected set; }
 
+		[Space(20)]
 		public bool IsBlocking;
 
 		public bool IsAttacking;
@@ -36,17 +37,19 @@ namespace CHARACTERS
 
 		public bool IsWallSliding;
 
+		
+
 		//Timers
+
+
 		public float LastOnGroundTime { get; protected set; }
 		public float LastOnWallTime { get; protected set; }
 		public float LastOnWallRightTime { get; protected set; }
 		public float LastOnWallLeftTime { get; protected set; }
 		public float LastPressedJumpTime { get; protected set; }
 		public float LastPressedDashTime { get; protected set; }
-
 		public float LastPressedAttackTime { get; protected set; }
-
-		public float LastPressedBlockTime;
+		public float LastPressedBlockTime { get; protected set; }
 
 		//Jump
 		public bool _isJumpCut { get; protected set; }
@@ -71,8 +74,12 @@ namespace CHARACTERS
 		protected int _attacksLeft;
 		protected bool _attackRefilling;
 
+		[Space(20)]
 		public Transform attackPoint;
 		public float attackRange;
+
+		public Vector2 attackHitBox;
+
 		public LayerMask enemyLayers;
 		public float _attackRate = 2f;
 		protected float nextAttackTime = 0f;
@@ -403,7 +410,12 @@ namespace CHARACTERS
 
 			while (Time.time - startTime <= Data.attackTimeAmount)
 			{
-				Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+				//Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+
+				Vector2 attackDir = _IsFacingRight ? new Vector2(((attackPoint.position.x + (attackHitBox.x / 2)) - 0.8f), attackPoint.position.y) : 
+					new Vector2(((attackPoint.position.x - (attackHitBox.x / 2)) + 0.8f), attackPoint.position.y);
+
+				Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackDir, attackHitBox, 0f, enemyLayers);
 
 				foreach (Collider2D enemy in hitEnemies)
 				{				

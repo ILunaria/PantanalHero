@@ -370,7 +370,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae0083bcec15e84b9aee7ac6a6d477c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newPosition: {x: 0, y: 0, z: 0}
+  player: {fileID: 7661637769811365595}
+  dampTime: 0.4
+  cameraOffsetX: 0
+  cameraOffsetY: 0
 --- !u!4 &819697611 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6242596588184413183, guid: f11908849a5059448ad878ea51a0ef00, type: 3}
@@ -581,6 +584,18 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5010926940596373283, guid: 3f15bf93069cf22499571cf51b0c6119, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5010926940596373283, guid: 3f15bf93069cf22499571cf51b0c6119, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5010926940596373283, guid: 3f15bf93069cf22499571cf51b0c6119, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5010926940596373283, guid: 3f15bf93069cf22499571cf51b0c6119, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -622,7 +637,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5010926940596373284, guid: 3f15bf93069cf22499571cf51b0c6119, type: 3}
       propertyPath: attackRange
-      value: 1.6
+      value: 1.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 5010926940596373284, guid: 3f15bf93069cf22499571cf51b0c6119, type: 3}
+      propertyPath: attackHitBox.x
+      value: 3.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5010926940596373284, guid: 3f15bf93069cf22499571cf51b0c6119, type: 3}
+      propertyPath: attackHitBox.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5010926940596373284, guid: 3f15bf93069cf22499571cf51b0c6119, type: 3}
       propertyPath: _playerSprites.Array.size
@@ -774,6 +797,14 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 7661637769811365595}
+    - target: {fileID: 6926162049222807675, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
+      propertyPath: chaseSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926162049222807675, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
+      propertyPath: patrolSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6926162049222807675, guid: 90ee2b8ee43622b46b6f8277a1e101e3, type: 3}
       propertyPath: patrolPoints.Array.data[0]
       value: 
