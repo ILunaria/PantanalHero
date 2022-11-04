@@ -33,6 +33,7 @@ public class Interface_Menu : MonoBehaviour
         Cred = rot.rootVisualElement.Q<Button>("Credito");
         configu = rot.rootVisualElement.Q<VisualElement>("Configurar");
         Credi = rot.rootVisualElement.Q<VisualElement>("Cred");
+        Menu = rot.rootVisualElement.Q<VisualElement>("MainMenu");
  
 
         NovoJogo.clicked += NovoJogoPressed;
@@ -64,21 +65,26 @@ public class Interface_Menu : MonoBehaviour
    void ConfigPressed()
    {
        configu.style.display = DisplayStyle.Flex;
+       Menu.style.display = DisplayStyle.None;
+
    }
 
    void BackPressed()
    {
        configu.style.display = DisplayStyle.None;
+       Menu.style.display = DisplayStyle.Flex;
    }
 
    void VolPressed()
    {
        Credi.style.display = DisplayStyle.None;
+       configu.style.display = DisplayStyle.Flex;
    }
 
    void CredPressed()
    {
        Credi.style.display = DisplayStyle.Flex;
+       configu.style.display = DisplayStyle.None;
    }
 
 
