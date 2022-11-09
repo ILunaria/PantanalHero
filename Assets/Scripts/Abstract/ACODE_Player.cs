@@ -6,7 +6,7 @@ namespace CHARACTERS
 {
 	public class ACODE_Player : ACODE_Characters
 	{
-		public PlayerData Data;
+		public CODE_PlayerData PlayerData;
 
 		public PlayerInputActions _playerInputActions;
 
@@ -81,8 +81,6 @@ namespace CHARACTERS
 		public Vector2 attackHitBox;
 
 		public LayerMask enemyLayers;
-		public float _attackRate = 2f;
-		protected float nextAttackTime = 0f;
 
 		#endregion
 
@@ -106,6 +104,7 @@ namespace CHARACTERS
 		#region LAYERS & TAGS
 		[Header("Layers & Tags")]
 		[SerializeField] protected LayerMask _groundLayer;
+		[SerializeField] protected LayerMask _wallLayer;
 		#endregion
 
 		#region INPUT SYSTEM
@@ -152,17 +151,17 @@ namespace CHARACTERS
 		// Jump Buffering
 		public void OnJumpInput()
 		{
-			LastPressedJumpTime = Data.jumpInputBufferTime;
+			LastPressedJumpTime = PlayerData.jumpInputBufferTime;
 		}
 
 		public void OnAttackInput()
 		{
-			LastPressedAttackTime = Data.attackInputBufferTime;
+			LastPressedAttackTime = PlayerData.attackInputBufferTime;
 		}
 
 		public void OnBlockInput()
 		{
-			LastPressedBlockTime = Data.blockInputBufferTime;
+			LastPressedBlockTime = PlayerData.blockInputBufferTime;
 		}
 
 		public void OnJumpUpInput()
@@ -173,7 +172,7 @@ namespace CHARACTERS
 
 		public void OnDashInput()
 		{
-			LastPressedDashTime = Data.dashInputBufferTime;
+			LastPressedDashTime = PlayerData.dashInputBufferTime;
 		}
 		#endregion
 
@@ -203,7 +202,7 @@ namespace CHARACTERS
 		protected void Run(float lerpAmount)
 		{
 			//Calculate the direction we want to move in and our desired velocity
-			float targetSpeed = _moveInput.x * Data.runMaxSpeed;
+			float targetSpeed = _moveInput.x * PlayerData.runMaxSpeed;
 			//We can reduce our control using Lerp() this smooths changes to our direction and speed
 			targetSpeed = Mathf.Lerp(RB.velocity.x, targetSpeed, lerpAmount); // a + ( b - a ) * Clamp01(t)
 
@@ -213,23 +212,23 @@ namespace CHARACTERS
 			//Gets an acceleration value based on if we are accelerating (includes turning) 
 			//or trying to decelerate (stop). As well as applying a multiplier if we're in air.
 			if (LastOnGroundTime > 0)
-				accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? Data.runAccelAmount : Data.runDeccelAmount;
+				accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? PlayerData.runAccelAmount : PlayerData.runDeccelAmount;
 			else
-				accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? Data.runAccelAmount * Data.accelInAir : Data.runDeccelAmount * Data.deccelInAir;
+				accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? PlayerData.runAccelAmount * PlayerData.accelInAir : PlayerData.runDeccelAmount * PlayerData.deccelInAir;
 			#endregion
 
 			#region Add Bonus Jump Apex Acceleration
 			//Increase are acceleration and maxSpeed when at the apex of their jump, makes the jump feel a bit more bouncy, responsive and natural
-			if ((IsJumping || IsWallJumping || _isJumpFalling) && Mathf.Abs(RB.velocity.y) < Data.jumpHangTimeThreshold)
+			if ((IsJumping || IsWallJumping || _isJumpFalling) && Mathf.Abs(RB.velocity.y) < PlayerData.jumpHangTimeThreshold)
 			{
-				accelRate *= Data.jumpHangAccelerationMult; // Increases Acceleration Rate Whilst on Jump Apex
-				targetSpeed *= Data.jumpHangMaxSpeedMult; // Increases Max Speed Whilst on Jump Apex
+				accelRate *= PlayerData.jumpHangAccelerationMult; // Increases Acceleration Rate Whilst on Jump Apex
+				targetSpeed *= PlayerData.jumpHangMaxSpeedMult; // Increases Max Speed Whilst on Jump Apex
 			}
 			#endregion
 
 			#region Conserve Momentum
 			//We won't slow the player down if they are moving in their desired direction but at a greater speed than their maxSpeed
-			if (Data.doConserveMomentum && Mathf.Abs(RB.velocity.x) > Mathf.Abs(targetSpeed) && Mathf.Sign(RB.velocity.x) == Mathf.Sign(targetSpeed) && Mathf.Abs(targetSpeed) > 0.01f && LastOnGroundTime < 0)
+			if (PlayerData.doConserveMomentum && Mathf.Abs(RB.velocity.x) > Mathf.Abs(targetSpeed) && Mathf.Sign(RB.velocity.x) == Mathf.Sign(targetSpeed) && Mathf.Abs(targetSpeed) > 0.01f && LastOnGroundTime < 0)
 			{
 				//Prevent any deceleration from happening, or in other words conserve our current momentum
 				//You could experiment with allowing for the player to slightly increae their speed whilst in this "state"
@@ -259,7 +258,7 @@ namespace CHARACTERS
 			#region Perform Jump
 			//We increase the force applied if we are falling
 			//This means we'll always feel like we jump the same amount 
-			float force = Data.jumpForce;
+			float force = PlayerData.jumpForce;
 			if (RB.velocity.y < 0)
 				force -= RB.velocity.y;
 
@@ -278,7 +277,7 @@ namespace CHARACTERS
 			LastOnWallLeftTime = 0;
 
 			#region Perform Wall Jump
-			Vector2 force = new Vector2(Data.wallJumpForce.x, Data.wallJumpForce.y);
+			Vector2 force = new Vector2(PlayerData.wallJumpForce.x, PlayerData.wallJumpForce.y);
 			force.x *= dir; //apply force in opposite direction of wall
 
 			if (Mathf.Sign(RB.velocity.x) != Mathf.Sign(force.x))
@@ -315,9 +314,9 @@ namespace CHARACTERS
 			ANIM.SetBool("IsDashing", _isDashAttacking);
 
 			//We keep the player's velocity at the dash speed during the "attack" phase (in celeste the first 0.15s)
-			while (Time.time - startTime <= Data.dashDragTime)
+			while (Time.time - startTime <= PlayerData.dashDragTime)
 			{
-				RB.velocity = dir.normalized * Data.dashSpeed;
+				RB.velocity = dir.normalized * PlayerData.dashSpeed;
 				//Pauses the loop until the next frame, creating something of a Update loop. 
 				//This is a cleaner implementation opposed to multiple timers and this coroutine approach is actually what is used in Celeste :D
 				yield return null;
@@ -330,10 +329,10 @@ namespace CHARACTERS
 			ANIM.SetBool("IsDashing", _isDashAttacking);
 
 			//Begins the "end" of our dash where we return some control to the player but still limit run acceleration (see Update() and Run())
-			SetGravityScale(Data.gravityScale);
-			RB.velocity = Data.dashEndSpeed * dir.normalized;
+			SetGravityScale(PlayerData.gravityScale);
+			RB.velocity = PlayerData.dashEndSpeed * dir.normalized;
 
-			while (Time.time - startTime <= Data.dashEndTime)
+			while (Time.time - startTime <= PlayerData.dashEndTime)
 			{
 				yield return null;
 			}
@@ -349,9 +348,9 @@ namespace CHARACTERS
 		{
 			//SHoet cooldown, so we can't constantly dash along the ground, again this is the implementation in Celeste, feel free to change it up
 			_dashRefilling = true;
-			yield return new WaitForSeconds(Data.dashRefillTime);
+			yield return new WaitForSeconds(PlayerData.dashRefillTime);
 			_dashRefilling = false;
-			_dashesLeft = Mathf.Min(Data.dashAmount, _dashesLeft + 1);
+			_dashesLeft = Mathf.Min(PlayerData.dashAmount, _dashesLeft + 1);
 		}
 		#endregion
 
@@ -362,7 +361,7 @@ namespace CHARACTERS
 			float startTime = Time.time;
 			_blocksLeft--;
 			//blockHitBox.gameObject.SetActive(true);
-			while (Time.time - startTime <= Data.blockTimeAmount)
+			while (Time.time - startTime <= PlayerData.blockTimeAmount)
 			{
 				yield return null;
 			}
@@ -375,17 +374,17 @@ namespace CHARACTERS
 		{
 
 			_blockRefilling = true;
-			yield return new WaitForSeconds(Data.blockRefillTime);
+			yield return new WaitForSeconds(PlayerData.blockRefillTime);
 			_blockRefilling = false;
-			_blocksLeft = Mathf.Min(Data.blockAmount, _blocksLeft + 1);
+			_blocksLeft = Mathf.Min(PlayerData.blockAmount, _blocksLeft + 1);
 		}
 
 		private IEnumerator RefillAttack()
 		{
 			_attackRefilling = true;
-			yield return new WaitForSeconds(Data.attackRefillTime);
+			yield return new WaitForSeconds(PlayerData.attackRefillTime);
 			_attackRefilling = false;
-			_attacksLeft = Mathf.Min(Data.attackAmount, _attacksLeft + 1);
+			_attacksLeft = Mathf.Min(PlayerData.attackAmount, _attacksLeft + 1);
 		}
 
 		#endregion
@@ -408,7 +407,7 @@ namespace CHARACTERS
 
 			attackSprite.parent = null;
 
-			while (Time.time - startTime <= Data.attackTimeAmount)
+			while (Time.time - startTime <= PlayerData.attackTimeAmount)
 			{
 				//Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
@@ -431,7 +430,6 @@ namespace CHARACTERS
 
 		#endregion
 
-
 		#region CHECK METHODS
 		// LastOnGrounTime refers to the player staying on the ground or if he's fallen from the platform but still is able to jump for some time.
 		protected bool CanJump()
@@ -445,7 +443,7 @@ namespace CHARACTERS
 		}
 		protected bool CanDash()
 		{
-			if (!IsDashing && _dashesLeft < Data.dashAmount && LastOnGroundTime > 0 && !_dashRefilling)
+			if (!IsDashing && _dashesLeft < PlayerData.dashAmount && (LastOnGroundTime > 0 || LastOnWallTime > 0) && !_dashRefilling)
 			{
 				StartCoroutine(nameof(RefillDash)); // StartCoroutine(nameof(RefillDash), 1);
 			}
@@ -455,7 +453,7 @@ namespace CHARACTERS
 
 		protected bool CanAttack()
 		{
-			if (!IsAttacking && _attacksLeft < Data.attackAmount && !_attackRefilling && !IsDashing && !IsWallJumping && !IsBlocking)
+			if (!IsAttacking && _attacksLeft < PlayerData.attackAmount && !_attackRefilling && !IsDashing && !IsWallJumping && !IsBlocking)
 			{
 				StartCoroutine(nameof(RefillAttack));
 			}
@@ -465,7 +463,7 @@ namespace CHARACTERS
 
 		protected bool CanBlock()
 		{
-			if (!IsBlocking && _blocksLeft < Data.blockAmount && !_blockRefilling && !IsDashing)
+			if (!IsBlocking && _blocksLeft < PlayerData.blockAmount && !_blockRefilling && !IsDashing)
 			{
 				StartCoroutine(nameof(RefillBlock));
 			}

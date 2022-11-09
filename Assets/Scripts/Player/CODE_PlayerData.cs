@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "PlayerData", menuName = "ScriptableObjects/PlayerData")]
-public class PlayerData : ScriptableObject
+public class CODE_PlayerData : ScriptableObject
 {
 	#region GRAVITY
 	[HideInInspector] public float gravityStrength; //Downwards force (gravity) needed for the desired jumpHeight and jumpTimeToApex.
@@ -25,9 +25,19 @@ public class PlayerData : ScriptableObject
 	[Header("Attack")]
 	[Tooltip("Time between next attack.")]
 	public float attackInputBufferTime;
+	[Tooltip("Attack Time Delay")]
 	public float attackTimeAmount;
+	[Tooltip("Attack Quantity")]
 	public int attackAmount;
+	[Tooltip("Attack Cooldown.")]
 	public float attackRefillTime;
+
+	[Header ("Attack Knockback Settings")]
+	public Vector2 selfKnockbackAmount;
+	public Vector2 enemyKnockbackAmount;
+
+	public bool selfYAxisKnockback;
+	public bool enemyYAxisKnockback;
 
 	[Space(20)]
 	#endregion
@@ -36,8 +46,11 @@ public class PlayerData : ScriptableObject
 	[Header("Block")]
 	[Tooltip("Time between next block.")]
 	public float blockInputBufferTime;
+	[Tooltip("Block Time Delay")]
 	public float blockTimeAmount;
+	[Tooltip("Block Quantity")]
 	public int blockAmount;
+	[Tooltip("Block Cooldown.")]
 	public float blockRefillTime;
 
 	[Space(20)]

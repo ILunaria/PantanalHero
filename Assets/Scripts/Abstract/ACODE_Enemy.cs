@@ -6,34 +6,22 @@ namespace CHARACTERS
 {
     public abstract class ACODE_Enemy : ACODE_Characters
     {
+        public CODE_EnemyData EnemyData;
+
         public Animator enemyAnimator;
 
         protected Rigidbody2D RB;
 
-        public bool IsGrounded;
-
         #region PATROL SETTINGS
         [Header("Enemy Patrol Settings")]
         public Transform[] patrolPoints;
-        public float waitTime;
         public bool isAtPatrolPoint;
         #endregion
-
-        [Header("Alternative Patrol")]
-        public Transform leftLimit;
-        public Transform rightLimit;
 
         #region CHASE SETTINGS
         [Header("Enemy Chase Settings")]
         public Transform target;
-        public float outOfRadiusDelay;
-        public float outOfRadiusTimer;
-        #endregion
-
-        #region SPEED VARIABLES
-        [Header("Enemy Speed")]
-        public float patrolSpeed;
-        public float chaseSpeed;
+        protected float outOfRadiusTimer;
         #endregion
 
         #region ENEMY STANCE BOOLEANS
@@ -43,21 +31,33 @@ namespace CHARACTERS
         public bool isAttacking = false;
         public bool isCooling = false;
         public bool isInRange = false;
+        public bool isGrounded;
         #endregion
 
         #region CHECK FACE DIRECTION
         protected float checkFaceTime = 0.2f;
         #endregion
 
+        #region CHECK WALL
+        public Transform frontWallCheckPoint;
+        public Transform backWallCheckPoint;
+        public Vector2 wallCheckSize;
+
+        public Transform frontWallRayCastTransform;
+        public Transform backWallRayCastTransform;
+        public LayerMask groundMask;
+        public LayerMask wallMask;
+        public float rayToGroundLength;
+        #endregion
+
         #region ATTACK SETTINGS
-        public float _attackCooldown;
-        public float _attackCooldownTimer;
+        protected float _attackCooldownTimer;
 
         #region RAYCAST PUBLIC VARIABLES
         [Header("Raycast Settings")]
         public Transform raycastTransform;
-        public LayerMask raycastMask;
-        public float raycastLength;
+        public LayerMask playerMask;
+        public float rayToPlayerLength;
 
         [Space(5)]
         #endregion
@@ -67,13 +67,8 @@ namespace CHARACTERS
         public Transform _raycastTarget;
         #endregion
 
-        #region DISTANCE PUBLIC VARIABLES
-        [Header("Attack Settings")]
-        public float attackDistance;
-        #endregion
-
         #region DISTANCE PROTECTED VARIABLES
-        public float _distanceToPlayer;
+        protected float _distanceToPlayer;
         #endregion
         #endregion
 
@@ -88,7 +83,7 @@ namespace CHARACTERS
         }
         protected IEnumerator Wait()
         {
-            yield return new WaitForSeconds(waitTime);
+            yield return new WaitForSeconds(EnemyData.patrolWaitTime);
             if (_currentPatrolPointIndex + 1 < patrolPoints.Length)
                 _currentPatrolPointIndex++;
             else
@@ -97,23 +92,24 @@ namespace CHARACTERS
             }
 
             isAtPatrolPoint = false;
+            enemyAnimator.SetBool("CanWalk", true);
         }
 
         protected void RaycastDebugger()
         {
-            if (_distanceToPlayer > attackDistance)
+            if (_distanceToPlayer > EnemyData.attackDistance)
             {
                 if (_IsFacingRight)
-                    Debug.DrawRay(raycastTransform.position, transform.right * raycastLength, Color.red);
+                    Debug.DrawRay(raycastTransform.position, transform.right * rayToPlayerLength, Color.red);
                 else
-                    Debug.DrawRay(raycastTransform.position, -transform.right * raycastLength, Color.red);
+                    Debug.DrawRay(raycastTransform.position, -transform.right * rayToPlayerLength, Color.red);
             }
-            else if (_distanceToPlayer <= attackDistance)
+            else if (_distanceToPlayer <= EnemyData.attackDistance)
             {
                 if (_IsFacingRight)
-                    Debug.DrawRay(raycastTransform.position, transform.right * raycastLength, Color.green);
+                    Debug.DrawRay(raycastTransform.position, transform.right * rayToPlayerLength, Color.green);
                 else
-                    Debug.DrawRay(raycastTransform.position, -transform.right * raycastLength, Color.green);
+                    Debug.DrawRay(raycastTransform.position, -transform.right * rayToPlayerLength, Color.green);
             }
         }
 
@@ -127,12 +123,12 @@ namespace CHARACTERS
                 AttackCooldown();
             }
 
-            if (_distanceToPlayer > attackDistance)
+            if (_distanceToPlayer > EnemyData.attackDistance)
             {
                 PerformChase();
                 StopAttack();
             }
-            else if (_distanceToPlayer <= attackDistance && !isCooling)
+            else if (_distanceToPlayer <= EnemyData.attackDistance && !isCooling)
             {
                 isChasing = false;
                 isPatrolling = false;
@@ -142,7 +138,7 @@ namespace CHARACTERS
 
         protected void PerformAttack()
         {
-            _attackCooldownTimer = _attackCooldown;
+            _attackCooldownTimer = EnemyData.attackCooldown;
             isAttacking = true;
 
             enemyAnimator.SetBool("Attack", true);
@@ -163,28 +159,29 @@ namespace CHARACTERS
                 isChasing = true;
                 if (isChasing && !isPatrolling && !isAttacking)
                 {
-                    followTarget(target.position.x, chaseSpeed);
+                    followTarget(target.position.x, EnemyData.chaseSpeed);
                 }
             }
 
         }
 
         protected void PerformPatrol()
-        {
-            enemyAnimator.SetBool("CanWalk", true);
+        { 
             if (!enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("EnemyAttackingAnim"))
             {
                 if (isPatrolling && !isAttacking && !isChasing)
                 {
                     if (transform.position.x != patrolPoints[_currentPatrolPointIndex].position.x)
                     {
-                        followTarget(patrolPoints[_currentPatrolPointIndex].position.x, patrolSpeed);
+                        
+                        followTarget(patrolPoints[_currentPatrolPointIndex].position.x, EnemyData.patrolSpeed);
                     }
                     else
                     {
                         if (isAtPatrolPoint == false)
                         {
                             isAtPatrolPoint = true;
+                            enemyAnimator.SetBool("CanWalk", false);
                             StartCoroutine(Wait());
                         }
                     }
@@ -200,11 +197,11 @@ namespace CHARACTERS
             if (_attackCooldownTimer <= 0 && isCooling)
             {
                 isCooling = false;
-                _attackCooldownTimer = _attackCooldown;
+                _attackCooldownTimer = EnemyData.attackCooldown;
             }
             else
             {
-                Debug.DrawRay(new Vector2(raycastTransform.position.x, raycastTransform.position.y + 2f), Vector2.right * raycastLength, Color.yellow);
+                Debug.DrawRay(new Vector2(raycastTransform.position.x, raycastTransform.position.y + 2f), Vector2.right * rayToPlayerLength, Color.yellow);
             }
         }
 
@@ -218,6 +215,25 @@ namespace CHARACTERS
         {
             Vector2 Target = new Vector2(TargetX, transform.position.y);
             transform.position = Vector2.MoveTowards(transform.position, Target, Speed * Time.deltaTime);
+        }
+
+        protected bool checkGroundLimits()
+        {
+            RaycastHit2D Hit = Physics2D.Raycast(frontWallRayCastTransform.position, -transform.up, rayToGroundLength, groundMask);
+
+            return Hit.collider != null ? true : false;
+        }
+
+        protected bool checkWallLimits()
+        {
+            RaycastHit2D Hit;
+            
+            if(_IsFacingRight)
+                Hit = Physics2D.Raycast(this.raycastTransform.position, transform.right, 1f, this.wallMask);
+            else
+                Hit = Physics2D.Raycast(this.raycastTransform.position, -transform.right, 1f, this.wallMask);
+
+            return Hit.collider != null ? true : false;
         }
 
     }

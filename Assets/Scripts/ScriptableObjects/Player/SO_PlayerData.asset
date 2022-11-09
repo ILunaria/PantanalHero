@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f967d7ef514fc4a46be28d5c540bada0, type: 3}
-  m_Name: AltereEsse
+  m_Name: SO_PlayerData
   m_EditorClassIdentifier: 
   gravityStrength: -24
   gravityScale: 2.4464831
@@ -22,6 +22,10 @@ MonoBehaviour:
   attackTimeAmount: 0.1
   attackAmount: 1
   attackRefillTime: 0.5
+  selfKnockbackAmount: {x: 4, y: 4}
+  enemyKnockbackAmount: {x: 4, y: 4}
+  selfYAxisKnockback: 1
+  enemyYAxisKnockback: 1
   blockInputBufferTime: 0.1
   blockTimeAmount: 0.5
   blockAmount: 2
