@@ -1,0 +1,819 @@
+fileFormatVersion: 2
+guid: f52255733d7d5794ba737bb79a65085b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 32
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ponte Base_0
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 2671
+        width: 276
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e774f12e19ab845be079fa54bb2066
+      internalID: 866414409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ponte Base_1
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 2733
+        width: 1301
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a8a38cfd1c80b499b91b69741c04bf
+      internalID: -1779810461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ponte Base_2
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 2440
+        width: 212
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af905f16a24eb8a498b1fa84e7c78427
+      internalID: -1042621565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ponte Base_3
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 2340
+        width: 228
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 187c5dc18dcd8074d889a99cc70ac015
+      internalID: 2011813456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ponte Base_4
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 2380
+        width: 1301
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2988b218a2227ff438f34d316ec68cf1
+      internalID: 964779649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ponte Base_5
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 2249
+        width: 313
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4473bb4c2ccfdf84d9992cd8f09ef68d
+      internalID: -473500984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ponte Base_6
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 2049
+        width: 229
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a5b9626d55bb8e4caf1da0c997f4242
+      internalID: 1520273209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ponte Base_7
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 2147
+        width: 1299
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66a2aee38ee5fde4fa577b8e2ff3230e
+      internalID: 1607854687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ponte Base_8
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 2050
+        width: 313
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a4ffb40cdcdd5b45aa826fa4d0dfeb9
+      internalID: 590633732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ponte Base_9
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 1851
+        width: 312
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4a1a3eb827fb7c4cb8c7338e8ef0e68
+      internalID: 525906005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ponte Base_10
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 1747
+        width: 276
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 582ab2307d1ded94ea81972c0f88b265
+      internalID: 60765056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ponte Base_11
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 1638
+        width: 312
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f6ec4619c4dc884ca144a12e0ea3a75
+      internalID: -573353997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ponte Base_12
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 1447
+        width: 276
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd73af9b85e7ec6479750fe6a5e62356
+      internalID: -532372126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ponte Base_13
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 990
+        width: 784
+        height: 761
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d5503c37d7316e4983e71e84e4b9782
+      internalID: 693123982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ponte Base_14
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 1451
+        width: 312
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e88fbb04e0203a4e8bac6742c1c99fd
+      internalID: -1757906134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ponte Base_15
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 111
+        width: 224
+        height: 1290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e8cac0c523fb247b2f4bca70627c13
+      internalID: 2141936390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ponte Base_16
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 97
+        width: 224
+        height: 1291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e93c8662f8c82a047b999422c4cb0dcd
+      internalID: -1584252522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ponte Base_17
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 92
+        width: 224
+        height: 1291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bd38fd2f29a9044ab1a211b82ab0b1e
+      internalID: -853144200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ponte Base_18
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 109
+        width: 784
+        height: 759
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44cf710ec64a3914dadd98b34f70d3cd
+      internalID: -2130133531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -413.08594, y: -114.25781}
+      - {x: -413.08594, y: -1410.6445}
+      - {x: -187.5, y: -1410.6445}
+      - {x: -184.57031, y: -1404.7852}
+      - {x: -184.57031, y: -114.25781}
+    - - {x: -722.16797, y: -109.86328}
+      - {x: -728.02734, y: -121.58203}
+      - {x: -728.02734, y: -1395.9961}
+      - {x: -726.5625, y: -1404.7852}
+      - {x: -506.83594, y: -1404.7852}
+      - {x: -499.51172, y: -1403.3203}
+      - {x: -499.51172, y: -117.1875}
+      - {x: -509.76562, y: -109.86328}
+    - - {x: 357.42188, y: -629.8828}
+      - {x: -123.046875, y: -1100.0977}
+      - {x: -123.046875, y: -1243.6523}
+      - {x: -118.65234, y: -1379.8828}
+      - {x: -112.79297, y: -1393.0664}
+      - {x: -67.38281, y: -1393.0664}
+      - {x: 665.03906, y: -660.64453}
+      - {x: 665.03906, y: -629.8828}
+    - - {x: -1004.8828, y: -96.67969}
+      - {x: -1004.8828, y: -1391.6016}
+      - {x: -776.3672, y: -1391.6016}
+      - {x: -776.3672, y: -106.93359}
+      - {x: -780.7617, y: -96.67969}
+    - - {x: 364.7461, y: 253.41797}
+      - {x: -98.14453, y: -188.96484}
+      - {x: -98.14453, y: -512.6953}
+      - {x: -62.98828, y: -512.6953}
+      - {x: 689.9414, y: 222.65625}
+      - {x: 689.9414, y: 253.41797}
+    - - {x: -396.97266, y: 186.03516}
+      - {x: -604.98047, y: 186.03516}
+      - {x: -641.60156, y: 124.51172}
+      - {x: -641.60156, y: -21.972656}
+      - {x: -583.0078, y: -55.664062}
+      - {x: -388.1836, y: -55.664062}
+      - {x: -360.35156, y: -16.113281}
+      - {x: -360.35156, y: 155.27344}
+      - {x: -372.0703, y: 181.64062}
+    - - {x: -1018.0664, y: 115.72266}
+      - {x: -1018.0664, y: -51.26953}
+      - {x: -701.66016, y: -51.26953}
+      - {x: -701.66016, y: 115.72266}
+    - - {x: -1018.0664, y: 303.22266}
+      - {x: -1018.0664, y: 145.01953}
+      - {x: -1016.60156, y: 136.23047}
+      - {x: -713.3789, y: 136.23047}
+      - {x: -701.66016, y: 143.55469}
+      - {x: -701.66016, y: 298.82812}
+      - {x: -703.125, y: 303.22266}
+    - - {x: -587.40234, y: 484.86328}
+      - {x: -635.7422, y: 437.98828}
+      - {x: -635.7422, y: 268.0664}
+      - {x: -580.0781, y: 244.6289}
+      - {x: -389.64844, y: 244.6289}
+      - {x: -355.95703, y: 294.4336}
+      - {x: -355.95703, y: 443.84766}
+      - {x: -420.41016, y: 484.86328}
+    - - {x: -1015.1367, y: 514.16016}
+      - {x: -1016.60156, y: 505.3711}
+      - {x: -1016.60156, y: 350.09766}
+      - {x: -1013.6719, y: 348.6328}
+      - {x: -704.58984, y: 348.6328}
+      - {x: -700.1953, y: 355.95703}
+      - {x: -700.1953, y: 514.16016}
+    - - {x: -454.10156, y: 766.1133}
+      - {x: -594.72656, y: 766.1133}
+      - {x: -618.16406, y: 711.91406}
+      - {x: -618.16406, y: 575.6836}
+      - {x: -587.40234, y: 546.3867}
+      - {x: -414.55078, y: 546.3867}
+      - {x: -383.78906, y: 603.5156}
+      - {x: -383.78906, y: 719.2383}
+    - - {x: -1010.7422, y: 714.84375}
+      - {x: -1010.7422, y: 547.85156}
+      - {x: -692.8711, y: 547.85156}
+      - {x: -692.8711, y: 714.84375}
+    - - {x: -140.625, y: 807.1289}
+      - {x: -303.22266, y: 795.41016}
+      - {x: -303.22266, y: 651.85547}
+      - {x: -297.36328, y: 644.53125}
+      - {x: 247.5586, y: 644.53125}
+      - {x: 985.83984, y: 650.3906}
+      - {x: 1000.4883, y: 662.1094}
+      - {x: 1000.4883, y: 807.1289}
+    - - {x: -1000.4883, y: 914.0625}
+      - {x: -1000.4883, y: 754.39453}
+      - {x: -994.6289, y: 747.0703}
+      - {x: -692.8711, y: 747.0703}
+      - {x: -682.6172, y: 755.8594}
+      - {x: -682.6172, y: 906.7383}
+      - {x: -694.33594, y: 914.0625}
+    - - {x: -543.45703, y: 1057.6172}
+      - {x: -603.5156, y: 1022.46094}
+      - {x: -603.5156, y: 864.2578}
+      - {x: -580.0781, y: 837.8906}
+      - {x: -421.875, y: 837.8906}
+      - {x: -370.60547, y: 852.53906}
+      - {x: -370.60547, y: 1028.3203}
+      - {x: -439.45312, y: 1057.6172}
+    - - {x: -8.7890625, y: 1038.5742}
+      - {x: -287.10938, y: 1031.25}
+      - {x: -287.10938, y: 877.4414}
+      - {x: 1018.0664, y: 877.4414}
+      - {x: 1018.0664, y: 1029.7852}
+      - {x: 1016.60156, y: 1038.5742}
+    - - {x: -792.48047, y: 1139.6484}
+      - {x: -871.58203, y: 1139.6484}
+      - {x: -911.1328, y: 1129.3945}
+      - {x: -940.4297, y: 1098.6328}
+      - {x: -940.4297, y: 991.6992}
+      - {x: -911.1328, y: 937.5}
+      - {x: -777.83203, y: 937.5}
+      - {x: -723.6328, y: 984.375}
+      - {x: -723.6328, y: 1088.3789}
+      - {x: -728.02734, y: 1100.0977}
+    - - {x: -928.71094, y: 1410.6445}
+      - {x: -955.0781, y: 1340.332}
+      - {x: -955.0781, y: 1226.0742}
+      - {x: -903.8086, y: 1168.9453}
+      - {x: -735.35156, y: 1168.9453}
+      - {x: -675.29297, y: 1226.0742}
+      - {x: -675.29297, y: 1350.5859}
+      - {x: -738.28125, y: 1410.6445}
+    - - {x: -527.34375, y: 1376.9531}
+      - {x: -527.34375, y: 1230.4688}
+      - {x: 543.45703, y: 1230.4688}
+      - {x: 777.83203, y: 1239.2578}
+      - {x: 777.83203, y: 1384.2773}
+      - {x: 767.5781, y: 1391.6016}
+      - {x: 383.78906, y: 1391.6016}
+      - {x: -512.6953, y: 1382.8125}
+    physicsShape:
+    - - {x: -410.15625, y: -117.1875}
+      - {x: -411.6211, y: -124.51172}
+      - {x: -411.6211, y: -1409.1797}
+      - {x: -186.03516, y: -1409.1797}
+      - {x: -186.03516, y: -117.1875}
+    - - {x: -726.5625, y: -111.328125}
+      - {x: -726.5625, y: -1398.9258}
+      - {x: -716.3086, y: -1403.3203}
+      - {x: -500.97656, y: -1403.3203}
+      - {x: -500.97656, y: -111.328125}
+    - - {x: 342.77344, y: -631.34766}
+      - {x: -121.58203, y: -883.3008}
+      - {x: -121.58203, y: -1379.8828}
+      - {x: -111.328125, y: -1391.6016}
+      - {x: -93.75, y: -1391.6016}
+      - {x: 8.7890625, y: -1297.8516}
+      - {x: 628.41797, y: -713.3789}
+      - {x: 663.5742, y: -656.25}
+      - {x: 663.5742, y: -631.34766}
+    - - {x: -1003.41797, y: -98.14453}
+      - {x: -1003.41797, y: -1390.1367}
+      - {x: -780.7617, y: -1390.1367}
+      - {x: -777.83203, y: -1388.6719}
+      - {x: -777.83203, y: -98.14453}
+    - - {x: -96.67969, y: -219.72656}
+      - {x: -98.14453, y: -229.98047}
+      - {x: -98.14453, y: -496.58203}
+      - {x: -95.21484, y: -511.23047}
+      - {x: -67.38281, y: -511.23047}
+      - {x: 687.0117, y: 213.86719}
+      - {x: 687.0117, y: 246.09375}
+      - {x: 684.08203, y: 251.95312}
+      - {x: 385.2539, y: 251.95312}
+      - {x: 43.945312, y: -45.410156}
+    - - {x: -597.65625, y: 186.03516}
+      - {x: -640.1367, y: 118.65234}
+      - {x: -640.1367, y: -49.804688}
+      - {x: -615.2344, y: -52.734375}
+      - {x: -372.0703, y: -52.734375}
+      - {x: -363.28125, y: -26.367188}
+      - {x: -363.28125, y: 174.3164}
+      - {x: -424.8047, y: 186.03516}
+    - - {x: -1016.60156, y: 114.25781}
+      - {x: -1018.0664, y: 112.79297}
+      - {x: -1018.0664, y: -38.085938}
+      - {x: -1016.60156, y: -49.804688}
+      - {x: -703.125, y: -49.804688}
+      - {x: -703.125, y: 112.79297}
+      - {x: -707.51953, y: 114.25781}
+    - - {x: -1016.60156, y: 301.7578}
+      - {x: -1016.60156, y: 137.69531}
+      - {x: -710.4492, y: 137.69531}
+      - {x: -703.125, y: 153.8086}
+      - {x: -703.125, y: 301.7578}
+    - - {x: 553.71094, y: 161.13281}
+      - {x: 562.5, y: 159.66797}
+      - {x: 556.6406, y: 159.66797}
+      - {x: 556.6406, y: 161.13281}
+    - - {x: -619.6289, y: 483.39844}
+      - {x: -634.27734, y: 461.42578}
+      - {x: -634.27734, y: 312.01172}
+      - {x: -583.0078, y: 246.09375}
+      - {x: -367.67578, y: 246.09375}
+      - {x: -357.42188, y: 275.39062}
+      - {x: -357.42188, y: 483.39844}
+    - - {x: -1010.7422, y: 514.16016}
+      - {x: -1015.1367, y: 505.3711}
+      - {x: -1015.1367, y: 357.42188}
+      - {x: -1006.34766, y: 350.09766}
+      - {x: -708.9844, y: 350.09766}
+      - {x: -701.66016, y: 360.35156}
+      - {x: -701.66016, y: 514.16016}
+    - - {x: -549.3164, y: 764.64844}
+      - {x: -616.6992, y: 722.16797}
+      - {x: -616.6992, y: 599.1211}
+      - {x: -590.33203, y: 547.85156}
+      - {x: -413.08594, y: 547.85156}
+      - {x: -386.71875, y: 556.6406}
+      - {x: -386.71875, y: 764.64844}
+    - - {x: -706.0547, y: 713.3789}
+      - {x: -1000.4883, y: 713.3789}
+      - {x: -1007.8125, y: 703.125}
+      - {x: -1007.8125, y: 555.1758}
+      - {x: -997.5586, y: 549.3164}
+      - {x: -694.33594, y: 549.3164}
+      - {x: -694.33594, y: 710.4492}
+      - {x: -698.73047, y: 711.91406}
+    - - {x: -301.7578, y: 804.1992}
+      - {x: -301.7578, y: 645.9961}
+      - {x: 960.9375, y: 645.9961}
+      - {x: 999.02344, y: 654.78516}
+      - {x: 999.02344, y: 804.1992}
+    - - {x: -999.02344, y: 912.59766}
+      - {x: -999.02344, y: 754.39453}
+      - {x: -988.76953, y: 748.53516}
+      - {x: -689.9414, y: 748.53516}
+      - {x: -684.08203, y: 758.78906}
+      - {x: -684.08203, y: 912.59766}
+    - - {x: -571.28906, y: 1056.1523}
+      - {x: -602.0508, y: 996.09375}
+      - {x: -602.0508, y: 883.3008}
+      - {x: -572.7539, y: 843.75}
+      - {x: -537.59766, y: 839.35547}
+      - {x: -413.08594, y: 839.35547}
+      - {x: -372.0703, y: 870.1172}
+      - {x: -372.0703, y: 1006.34766}
+      - {x: -398.4375, y: 1056.1523}
+    - - {x: 527.34375, y: 1037.1094}
+      - {x: -276.85547, y: 1026.8555}
+      - {x: -285.64453, y: 1018.0664}
+      - {x: -285.64453, y: 884.7656}
+      - {x: -281.25, y: 878.90625}
+      - {x: 590.33203, y: 878.90625}
+      - {x: 1012.20703, y: 884.7656}
+      - {x: 1016.60156, y: 889.16016}
+      - {x: 1016.60156, y: 1037.1094}
+    - - {x: -792.48047, y: 1138.1836}
+      - {x: -889.16016, y: 1138.1836}
+      - {x: -931.6406, y: 1111.8164}
+      - {x: -938.96484, y: 1095.7031}
+      - {x: -938.96484, y: 956.54297}
+      - {x: -900.8789, y: 938.96484}
+      - {x: -771.97266, y: 938.96484}
+      - {x: -726.5625, y: 997.5586}
+      - {x: -726.5625, y: 1072.2656}
+      - {x: -736.8164, y: 1116.2109}
+    - - {x: -886.23047, y: 1409.1797}
+      - {x: -953.6133, y: 1372.5586}
+      - {x: -953.6133, y: 1227.5391}
+      - {x: -919.9219, y: 1170.4102}
+      - {x: -707.51953, y: 1170.4102}
+      - {x: -676.7578, y: 1176.2695}
+      - {x: -676.7578, y: 1384.2773}
+      - {x: -714.84375, y: 1409.1797}
+    - - {x: 776.3672, y: 1387.207}
+      - {x: 774.90234, y: 1390.1367}
+      - {x: -224.1211, y: 1390.1367}
+      - {x: -524.41406, y: 1379.8828}
+      - {x: -524.41406, y: 1236.3281}
+      - {x: -515.625, y: 1231.9336}
+      - {x: -287.10938, y: 1231.9336}
+      - {x: 559.5703, y: 1237.793}
+      - {x: 770.5078, y: 1242.1875}
+      - {x: 776.3672, y: 1248.0469}
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Ponte Base_8: 590633732
+      Ponte Base_16: -1584252522
+      Ponte Base_11: -573353997
+      Ponte Base_18: -2130133531
+      Ponte Base_0: 866414409
+      Ponte Base_4: 964779649
+      Ponte Base_10: 60765056
+      Ponte Base_3: 2011813456
+      Ponte Base_7: 1607854687
+      Ponte Base_13: 693123982
+      Ponte Base_6: 1520273209
+      Ponte Base_5: -473500984
+      Ponte Base_2: -1042621565
+      Ponte Base_1: -1779810461
+      Ponte Base_12: -532372126
+      Ponte Base_9: 525906005
+      Ponte Base_14: -1757906134
+      Ponte Base_15: 2141936390
+      Ponte Base_17: -853144200
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
