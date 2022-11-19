@@ -331,6 +331,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6242596588951106540, guid: f11908849a5059448ad878ea51a0ef00, type: 3}
   m_PrefabInstance: {fileID: 1630643321}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &447803073
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2816052262998779228, guid: 8b4d61f907e176b4393ed9ab2a968e29, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2816052262998779228, guid: 8b4d61f907e176b4393ed9ab2a968e29, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.7918034
+      objectReference: {fileID: 0}
+    - target: {fileID: 2816052262998779228, guid: 8b4d61f907e176b4393ed9ab2a968e29, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0148883015
+      objectReference: {fileID: 0}
+    - target: {fileID: 2816052262998779228, guid: 8b4d61f907e176b4393ed9ab2a968e29, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0684469
+      objectReference: {fileID: 0}
+    - target: {fileID: 2816052262998779228, guid: 8b4d61f907e176b4393ed9ab2a968e29, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2816052262998779228, guid: 8b4d61f907e176b4393ed9ab2a968e29, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2816052262998779228, guid: 8b4d61f907e176b4393ed9ab2a968e29, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2816052262998779228, guid: 8b4d61f907e176b4393ed9ab2a968e29, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2816052262998779228, guid: 8b4d61f907e176b4393ed9ab2a968e29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2816052262998779228, guid: 8b4d61f907e176b4393ed9ab2a968e29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2816052262998779228, guid: 8b4d61f907e176b4393ed9ab2a968e29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613591236515144272, guid: 8b4d61f907e176b4393ed9ab2a968e29, type: 3}
+      propertyPath: m_Name
+      value: "Jacar\xE9_Blindado"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8b4d61f907e176b4393ed9ab2a968e29, type: 3}
 --- !u!1 &642572694
 GameObject:
   m_ObjectHideFlags: 0
