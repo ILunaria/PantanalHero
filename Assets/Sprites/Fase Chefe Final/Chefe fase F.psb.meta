@@ -420,7 +420,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 0
     parentIndex: -1
-    spriteID: 00000000000000000000000000000000
+    spriteID: 44e4e143177b1114f9e6fdfcb241c901
     layerID: 75
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -430,7 +430,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 0
     parentIndex: -1
-    spriteID: 00000000000000000000000000000000
+    spriteID: f6cb62d3a9ff4894ca1d8615a40557e5
     layerID: 125
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -440,7 +440,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 0
     parentIndex: -1
-    spriteID: 00000000000000000000000000000000
+    spriteID: d2848b674177fe7499ff4b6db76b5eb7
     layerID: 126
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -450,7 +450,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 0
     parentIndex: -1
-    spriteID: 00000000000000000000000000000000
+    spriteID: 7275e423ac869f54a99e144f727c71e3
     layerID: 127
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -460,7 +460,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 0
     parentIndex: -1
-    spriteID: 00000000000000000000000000000000
+    spriteID: 255d8d24c3bb04d4493d446844cf58de
     layerID: 128
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -540,7 +540,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 0
     parentIndex: -1
-    spriteID: 00000000000000000000000000000000
+    spriteID: 7a0802b856d4f98459206add7d24e699
     layerID: 92
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -560,7 +560,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 0
     parentIndex: -1
-    spriteID: 00000000000000000000000000000000
+    spriteID: a8d5cbd904ca2c847bf172ba81496f1c
     layerID: 79
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -630,7 +630,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 0
     parentIndex: -1
-    spriteID: 00000000000000000000000000000000
+    spriteID: dc9a6148d7447d344847cf9932971951
     layerID: 2
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
