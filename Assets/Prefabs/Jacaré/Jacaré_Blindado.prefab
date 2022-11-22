@@ -104,8 +104,8 @@ MonoBehaviour:
   - {fileID: 3098848119811499455}
   - {fileID: 4552177315155884468}
   m_Bounds:
-    m_Center: {x: -0.0024599433, y: 0.02529478, z: 0}
-    m_Extent: {x: 0.93542755, y: 2.3332505, z: 0}
+    m_Center: {x: -0.0024604797, y: 0.025294304, z: 0}
+    m_Extent: {x: 0.93542767, y: 2.3332515, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -247,8 +247,8 @@ MonoBehaviour:
   - {fileID: 7998387050941005204}
   - {fileID: 3879060210537937670}
   m_Bounds:
-    m_Center: {x: 0.00038576126, y: 0.08869147, z: 0}
-    m_Extent: {x: 2.8712256, y: 2.3132935, z: 0}
+    m_Center: {x: -0.31234026, y: 1.0193727, z: 0}
+    m_Extent: {x: 3.100979, y: 2.3728356, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -577,8 +577,8 @@ MonoBehaviour:
   - {fileID: 1878035613539739711}
   - {fileID: 975721821404128269}
   m_Bounds:
-    m_Center: {x: -2.2994366, y: 0.09208149, z: 0}
-    m_Extent: {x: 2.2989912, y: 0.84609747, z: 0}
+    m_Center: {x: -2.3739586, y: -0.7798492, z: 0}
+    m_Extent: {x: 1.9087142, y: 1.5195001, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -726,7 +726,7 @@ MonoBehaviour:
   - {fileID: 1591268821483973391}
   m_Bounds:
     m_Center: {x: -0.0006017685, y: -0.0003323555, z: 0}
-    m_Extent: {x: 8.469476, y: 2.191377, z: 0}
+    m_Extent: {x: 8.46948, y: 2.1913776, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -900,8 +900,8 @@ MonoBehaviour:
   - {fileID: 4246202052293904131}
   - {fileID: 5445676307558964735}
   m_Bounds:
-    m_Center: {x: -0.002459824, y: 0.025294304, z: 0}
-    m_Extent: {x: 0.93542814, y: 2.333251, z: 0}
+    m_Center: {x: -0.0024594665, y: 0.025293112, z: 0}
+    m_Extent: {x: 0.9354279, y: 2.3332517, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -1009,8 +1009,8 @@ MonoBehaviour:
   - {fileID: 8694636705685685284}
   - {fileID: 8646665276656840387}
   m_Bounds:
-    m_Center: {x: -0.0005071759, y: 0.03701377, z: 0}
-    m_Extent: {x: 0.9354273, y: 2.3332505, z: 0}
+    m_Center: {x: -0.0005072355, y: 0.03701496, z: 0}
+    m_Extent: {x: 0.9354273, y: 2.3332515, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -1118,8 +1118,8 @@ MonoBehaviour:
   - {fileID: 9069581003621031119}
   - {fileID: 6173759647632643086}
   m_Bounds:
-    m_Center: {x: -0.00050640106, y: 0.03701377, z: 0}
-    m_Extent: {x: 0.93542767, y: 2.3332505, z: 0}
+    m_Center: {x: -0.00050771236, y: 0.03701234, z: 0}
+    m_Extent: {x: 0.935428, y: 2.333251, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -1280,7 +1280,7 @@ TrailRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4928017706811296892}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1600,6 +1600,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2816052262998779228}
+  - component: {fileID: 3355606079486677017}
   m_Layer: 0
   m_Name: "Jacar\xE9_Blindado"
   m_TagString: Untagged
@@ -1616,13 +1617,33 @@ Transform:
   m_GameObject: {fileID: 6613591236515144272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.7918034, y: -0.0148883015, z: 0.0684469}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.19, y: 1.19, z: 1.19}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2945970819935956887}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &3355606079486677017
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6613591236515144272}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9af95bb4867beaf488e1e28587fa7516, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7030237050032995232
 GameObject:
   m_ObjectHideFlags: 0

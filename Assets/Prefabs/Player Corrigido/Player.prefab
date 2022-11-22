@@ -103,8 +103,8 @@ MonoBehaviour:
   - {fileID: 1344016944824375468}
   - {fileID: 9042947973777473534}
   m_Bounds:
-    m_Center: {x: 0.3323542, y: 0.078953505, z: 0}
-    m_Extent: {x: 1.8063258, y: 3.3838146, z: 0}
+    m_Center: {x: 0.3323847, y: 0.07895541, z: 0}
+    m_Extent: {x: 1.8063258, y: 3.3838127, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -393,7 +393,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: -155634644, guid: 762495a64f3525e40ae236d9c20fc451, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -564,8 +564,8 @@ MonoBehaviour:
   - {fileID: 1780450229737251772}
   - {fileID: 5661915513034796484}
   m_Bounds:
-    m_Center: {x: -0.18866754, y: 0.12990081, z: 0}
-    m_Extent: {x: 1.5571128, y: 1.0753424, z: 0}
+    m_Center: {x: -0.18859887, y: 0.12991095, z: 0}
+    m_Extent: {x: 1.5571204, y: 1.0753477, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -802,7 +802,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 986688096, guid: 762495a64f3525e40ae236d9c20fc451, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -831,8 +831,8 @@ MonoBehaviour:
   - {fileID: 26049069230162697}
   - {fileID: 2604604282888953741}
   m_Bounds:
-    m_Center: {x: 0.0008419752, y: 0.08613467, z: 0}
-    m_Extent: {x: 1.8089906, y: 3.3767197, z: 0}
+    m_Center: {x: 0.0008724928, y: 0.08613658, z: 0}
+    m_Extent: {x: 1.8089906, y: 3.3767216, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -1087,8 +1087,8 @@ MonoBehaviour:
   - {fileID: 5484157504462812638}
   - {fileID: 359953616889853996}
   m_Bounds:
-    m_Center: {x: -0.48221016, y: -0.5248103, z: 0}
-    m_Extent: {x: 8.812843, y: 3.3594718, z: 0}
+    m_Center: {x: -0.48224068, y: -0.5248084, z: 0}
+    m_Extent: {x: 8.812874, y: 3.35947, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -1648,7 +1648,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 9
   m_Sprite: {fileID: 1444030936, guid: e9ab3e5bf9b8ba64b884557c2ff09cce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1701,7 +1701,7 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 9
   m_Time: 0.1
   m_Parameters:
     serializedVersion: 3
@@ -2087,8 +2087,8 @@ MonoBehaviour:
   - {fileID: 5864946979476932265}
   - {fileID: 5974231575776650061}
   m_Bounds:
-    m_Center: {x: -1.5256357, y: 2.9951875, z: 0}
-    m_Extent: {x: 2.7704687, y: 3.8645368, z: 0}
+    m_Center: {x: -1.5256395, y: 2.995218, z: 0}
+    m_Extent: {x: 2.7704687, y: 3.864552, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -2364,7 +2364,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 180478149, guid: 762495a64f3525e40ae236d9c20fc451, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2393,8 +2393,8 @@ MonoBehaviour:
   - {fileID: 6719357960607269981}
   - {fileID: 2848740169617914071}
   m_Bounds:
-    m_Center: {x: -0.16298044, y: 0.06906557, z: 0}
-    m_Extent: {x: 1.5199517, y: 1.0716684, z: 0}
+    m_Center: {x: -0.16296518, y: 0.0690763, z: 0}
+    m_Extent: {x: 1.5199517, y: 1.0716654, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -2661,7 +2661,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 408207311, guid: 762495a64f3525e40ae236d9c20fc451, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2710,7 +2710,7 @@ MonoBehaviour:
   - {fileID: 3284280139337204310}
   - {fileID: 3495600925937486423}
   m_Bounds:
-    m_Center: {x: -0.0011076927, y: 0.0066604614, z: 0}
+    m_Center: {x: -0.0011000633, y: 0.0065994263, z: 0}
     m_Extent: {x: 6.1011105, y: 9.717359, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
