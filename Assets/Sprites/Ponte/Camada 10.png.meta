@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fb7fed3e682fc6945a4a7f863446fe3c
+guid: 2d944cd8f8c992d4ea89d53c2135be57
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,70 +103,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Arvores com Sombra.png_0
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 8
-        width: 1047
-        height: 1712
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62101d903ab5bdd4b8f6ae81f9867c2f
-      internalID: 1369412325
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Arvores com Sombra.png_1
-      rect:
-        serializedVersion: 2
-        x: 1226
-        y: 0
-        width: 1313
-        height: 1721
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4c6d604a9f259442aacd800dfa8d40c
-      internalID: -1090519365
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Arvores com Sombra.png_2
-      rect:
-        serializedVersion: 2
-        x: 2728
-        y: 0
-        width: 1022
-        height: 1721
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a7d6b3b737096474688b53c642d4e064
-      internalID: -2128745621
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -177,10 +114,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Arvores com Sombra.png_2: -2128745621
-      Arvores com Sombra.png_1: -1090519365
-      Arvores com Sombra.png_0: 1369412325
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
