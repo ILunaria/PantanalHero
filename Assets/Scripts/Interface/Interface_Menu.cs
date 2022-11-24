@@ -8,7 +8,6 @@ public class Interface_Menu : MonoBehaviour
 {
     private UIDocument rot;
     public Button NovoJogo;
-    public Button Continuar;
     public Button Sair;
     public Button Config;
     public Button Back;  
@@ -25,7 +24,6 @@ public class Interface_Menu : MonoBehaviour
         var rot = GetComponent<UIDocument>();
 
         NovoJogo = rot.rootVisualElement.Q<Button>("Novojogo");
-        Continuar = rot.rootVisualElement.Q<Button>("Continuar");
         Config = rot.rootVisualElement.Q<Button>("Configuracao");
         Sair = rot.rootVisualElement.Q<Button>("Sair");
         Back = rot.rootVisualElement.Q<Button>("Back");
@@ -37,7 +35,6 @@ public class Interface_Menu : MonoBehaviour
  
 
         NovoJogo.clicked += NovoJogoPressed;
-        Continuar.clicked += ContinuarPressed;
         Config.clicked += ConfigPressed;
         Sair.clicked += SairPressed;
         Back.clicked += BackPressed;
@@ -49,11 +46,6 @@ public class Interface_Menu : MonoBehaviour
    void NovoJogoPressed() 
    {
        SceneManager.LoadScene(1,LoadSceneMode.Single);
-   }
-
-   void ContinuarPressed() 
-   {
-       Debug.Log("continua");
    }
 
    void SairPressed()

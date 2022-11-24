@@ -32,12 +32,14 @@
 }
 
 .menubuttom:hover {
-    background-color: rgb(99, 99, 99);
+    background-color: rgba(99, 99, 99, 0);
     scale: 1.1 1.1;
 }
 
 .menubuttom:active {
-    background-color: rgb(56, 56, 56);
+    background-color: rgba(219, 158, 36, 0);
+    color: rgba(219, 158, 36, 255);
+    scale: 1.2 1.2;
 }
 
 .ButtomConfig {
@@ -70,12 +72,14 @@
 }
 
 .ButtomConfig:hover {
-    background-color: rgb(75, 75, 75);
+    background-color: rgba(75, 75, 75, 0);
     scale: 1.1 1.1;
 }
 
 .ButtomConfig:active {
-    background-color: rgb(56, 56, 56);
+    background-color: rgba(255, 0, 0, 0);
+    color: rgba(219, 158, 36, 255);
+    scale: 1.2 1.2;
 }
 
 .Creditos {
@@ -117,12 +121,15 @@
 }
 
 .buttoncred:active {
-    background-color: rgb(58, 106, 116);
+    background-color: rgba(58, 106, 116, 0);
     transition-duration: 0.1s;
+    color: rgba(219, 158, 36, 255);
+    scale: 1.2 1.2;
+    display: flex;
 }
 
 .buttoncred:hover {
-    background-color: rgb(53, 88, 105);
+    background-color: rgba(53, 88, 105, 0);
     transition-duration: 0.1s;
     scale: 1.1 1.1;
 }
@@ -132,4 +139,22 @@
     border-right-color: rgb(38, 38, 38);
     border-top-color: rgb(38, 38, 38);
     border-bottom-color: rgb(38, 38, 38);
+}
+
+.LabelCred {
+    border-left-width: 86px;
+    border-right-width: 86px;
+    border-top-width: 86px;
+    border-bottom-width: 86px;
+}
+
+.backe {
+    border-top-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-left-width: 30px;
+    border-right-width: 0;
+    border-bottom-width: 0;
 }
