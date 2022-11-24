@@ -14,29 +14,32 @@
     padding-right: 0;
     padding-top: 0;
     padding-bottom: 0;
-    border-left-width: 10px;
-    border-right-width: 10px;
-    border-top-width: 10px;
-    border-bottom-width: 10px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
-    border-left-color: rgb(38, 38, 38);
-    border-right-color: rgb(38, 38, 38);
-    border-top-color: rgb(38, 38, 38);
-    border-bottom-color: rgb(38, 38, 38);
+    border-left-color: rgba(38, 38, 38, 0);
+    border-right-color: rgba(38, 38, 38, 0);
+    border-top-color: rgba(38, 38, 38, 0);
+    border-bottom-color: rgba(38, 38, 38, 0);
     -unity-text-outline-color: rgb(51, 51, 51);
-    background-color: rgb(65, 65, 65);
+    background-color: rgba(65, 65, 65, 0);
+    background-image: url('project://database/Assets/Interface/Arts/Tronco%20Pedro.png?fileID=21300000&guid=3c72c68fc40507347a07435efe0f7b21&type=3#Tronco Pedro');
 }
 
 .menubuttom:hover {
-    background-color: rgb(99, 99, 99);
+    background-color: rgba(99, 99, 99, 0);
     scale: 1.1 1.1;
 }
 
 .menubuttom:active {
-    background-color: rgb(56, 56, 56);
+    background-color: rgba(219, 158, 36, 0);
+    color: rgba(219, 158, 36, 255);
+    scale: 1.2 1.2;
 }
 
 .ButtomConfig {
@@ -48,28 +51,35 @@
     -unity-font: url('project://database/Assets/Fonts/Rancho-Regular.ttf?fileID=12800000&guid=907fe4763479a39459019eb9beb695b9&type=3#Rancho-Regular');
     -unity-font-definition: none;
     font-size: 45px;
-    background-color: rgb(31, 44, 50);
-    border-left-width: 5px;
-    border-right-width: 5px;
-    border-top-width: 5px;
-    border-bottom-width: 5px;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-    border-bottom-color: rgb(31, 31, 31);
-    border-top-color: rgb(31, 31, 31);
-    border-right-color: rgb(31, 31, 31);
-    border-left-color: rgb(31, 31, 31);
+    background-color: rgba(31, 44, 50, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-color: rgba(207, 139, 139, 0);
+    border-top-color: rgba(207, 139, 139, 0);
+    border-right-color: rgba(207, 139, 139, 0);
+    border-left-color: rgba(207, 139, 139, 0);
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-image: url('project://database/Assets/Interface/Arts/Tronco%20Pedro.png?fileID=21300000&guid=3c72c68fc40507347a07435efe0f7b21&type=3#Tronco Pedro');
 }
 
 .ButtomConfig:hover {
-    background-color: rgb(75, 75, 75);
+    background-color: rgba(75, 75, 75, 0);
     scale: 1.1 1.1;
 }
 
 .ButtomConfig:active {
-    background-color: rgb(56, 56, 56);
+    background-color: rgba(255, 0, 0, 0);
+    color: rgba(219, 158, 36, 255);
+    scale: 1.2 1.2;
 }
 
 .Creditos {
@@ -111,19 +121,40 @@
 }
 
 .buttoncred:active {
-    background-color: rgb(58, 106, 116);
+    background-color: rgba(58, 106, 116, 0);
     transition-duration: 0.1s;
+    color: rgba(219, 158, 36, 255);
+    scale: 1.2 1.2;
+    display: flex;
 }
 
 .buttoncred:hover {
-    background-color: rgb(53, 88, 105);
+    background-color: rgba(53, 88, 105, 0);
     transition-duration: 0.1s;
     scale: 1.1 1.1;
 }
 
 .backscred {
-    border-left-color: rgba(38, 38, 38, 255);
-    border-right-color: rgba(38, 38, 38, 255);
-    border-top-color: rgba(38, 38, 38, 255);
-    border-bottom-color: rgba(38, 38, 38, 255);
+    border-left-color: rgb(38, 38, 38);
+    border-right-color: rgb(38, 38, 38);
+    border-top-color: rgb(38, 38, 38);
+    border-bottom-color: rgb(38, 38, 38);
+}
+
+.LabelCred {
+    border-left-width: 86px;
+    border-right-width: 86px;
+    border-top-width: 86px;
+    border-bottom-width: 86px;
+}
+
+.backe {
+    border-top-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-left-width: 30px;
+    border-right-width: 0;
+    border-bottom-width: 0;
 }
