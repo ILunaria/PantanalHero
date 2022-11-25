@@ -92,18 +92,18 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Copa A 2
+  - name: nuvens 3
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 3474
+      x: 4108
       y: 4
-      width: 600
-      height: 568
-    spriteID: ce9921629fac2fd409e7b1b75ab6efaa
+      width: 3821
+      height: 653
+    spriteID: f1115c4d8c3972542adfcb9fcc190f91
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -112,19 +112,19 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 3055, y: -1432}
-  - name: Copa A 1
+    uvTransform: {x: 3921, y: -1434}
+  - name: nuvens 2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1423
-      width: 960
-      height: 740
-    spriteID: 1ca9ac4446dafc6499bda26121996920
+      x: 4108
+      y: 665
+      width: 2613
+      height: 644
+    spriteID: 97b686d275aadcf4cad5ec2a6b5d3544
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -133,134 +133,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -109, y: 100}
-  - name: Copa B 2
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 2423
-      y: 4
-      width: 1043
-      height: 433
-    spriteID: 8f848581597569344a434e180e655ba0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 895, y: -1510}
-  - name: Copa B 1
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 1210
-      y: 4
-      width: 1205
-      height: 656
-    spriteID: cdca35f601add1144aa226dbb775307e
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -235, y: -1402}
-  - name: Copa C 2
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 1754
-      y: 668
-      width: 648
-      height: 520
-    spriteID: e9a721defb9337e4ab228b2c9917d0e2
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -1382, y: -795}
-  - name: Copa C 3
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 2962
-      width: 874
-      height: 707
-    spriteID: 2ddc1c4403f32b6488d2c1a7de399e8c
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -2951, y: 1607}
-  - name: Arvore A
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 1210
-      y: 668
-      width: 536
-      height: 1113
-    spriteID: df2af911fdf2955498f7556327c9819e
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 822, y: -132}
-  - name: Arvore B
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 2171
-      width: 874
-      height: 783
-    spriteID: 09b24b8bb82440b4385bb690c57a5f53
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -1683, y: 1202}
-  - name: Arvore C
+    uvTransform: {x: 4043, y: -771}
+  - name: "C\xE9u"
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -269,9 +143,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 1198
-      height: 1411
-    spriteID: c92a9497037e7724f9508bf2e3b91b2e
+      width: 4096
+      height: 2160
+    spriteID: c45865c64beb10e42aca97c5011117c1
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -280,7 +154,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -2518, y: -647}
+    uvTransform: {x: 4, y: 4}
   characterData:
     bones: []
     parts: []
@@ -353,12 +227,12 @@ ScriptedImporter:
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
-    isVisible: 1
+    isVisible: 0
   - name: Copa A
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 00000000000000000000000000000000
+    spriteID: 474b81e4271f7364ab0433236f5dbd0b
     layerID: 94
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -372,7 +246,7 @@ ScriptedImporter:
     layerID: 84
     mosaicPosition: {x: 3474, y: 4}
     flatten: 0
-    isImported: 1
+    isImported: 0
     isVisible: 1
   - name: Copa A 1
     spriteName: Copa A 1
@@ -382,13 +256,13 @@ ScriptedImporter:
     layerID: 83
     mosaicPosition: {x: 4, y: 1423}
     flatten: 0
-    isImported: 1
+    isImported: 0
     isVisible: 1
   - name: Copa B
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 00000000000000000000000000000000
+    spriteID: 355e84cc3b95621499d49599b33a9ce9
     layerID: 96
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -402,7 +276,7 @@ ScriptedImporter:
     layerID: 88
     mosaicPosition: {x: 2423, y: 4}
     flatten: 0
-    isImported: 1
+    isImported: 0
     isVisible: 1
   - name: Copa B 1
     spriteName: Copa B 1
@@ -412,13 +286,13 @@ ScriptedImporter:
     layerID: 87
     mosaicPosition: {x: 1210, y: 4}
     flatten: 0
-    isImported: 1
+    isImported: 0
     isVisible: 1
   - name: Copa C
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 00000000000000000000000000000000
+    spriteID: f4a2f95520c5c78429e5f91b20ce4eec
     layerID: 98
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -432,7 +306,7 @@ ScriptedImporter:
     layerID: 91
     mosaicPosition: {x: 1754, y: 668}
     flatten: 0
-    isImported: 1
+    isImported: 0
     isVisible: 1
   - name: Copa C 3
     spriteName: Copa C 3
@@ -442,7 +316,7 @@ ScriptedImporter:
     layerID: 90
     mosaicPosition: {x: 4, y: 2962}
     flatten: 0
-    isImported: 1
+    isImported: 0
     isVisible: 1
   - name: Arvore A
     spriteName: Arvore A
@@ -452,7 +326,7 @@ ScriptedImporter:
     layerID: 100
     mosaicPosition: {x: 1210, y: 668}
     flatten: 0
-    isImported: 1
+    isImported: 0
     isVisible: 1
   - name: Arvore B
     spriteName: Arvore B
@@ -462,7 +336,7 @@ ScriptedImporter:
     layerID: 102
     mosaicPosition: {x: 4, y: 2171}
     flatten: 0
-    isImported: 1
+    isImported: 0
     isVisible: 1
   - name: Arvore C
     spriteName: Arvore C
@@ -472,7 +346,7 @@ ScriptedImporter:
     layerID: 93
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
-    isImported: 1
+    isImported: 0
     isVisible: 1
   - name: Arvores com Sombra.png
     spriteName: Arvores com Sombra.png
@@ -593,16 +467,16 @@ ScriptedImporter:
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
-    isVisible: 0
+    isVisible: 1
   - name: nuvens 3
     spriteName: nuvens 3
     isGroup: 0
     parentIndex: 24
     spriteID: f1115c4d8c3972542adfcb9fcc190f91
     layerID: 72
-    mosaicPosition: {x: 4, y: 9034}
+    mosaicPosition: {x: 4108, y: 4}
     flatten: 0
-    isImported: 0
+    isImported: 1
     isVisible: 1
   - name: nuvens 2
     spriteName: nuvens 2
@@ -610,9 +484,9 @@ ScriptedImporter:
     parentIndex: 24
     spriteID: 97b686d275aadcf4cad5ec2a6b5d3544
     layerID: 26
-    mosaicPosition: {x: 4, y: 10958}
+    mosaicPosition: {x: 4108, y: 665}
     flatten: 0
-    isImported: 0
+    isImported: 1
     isVisible: 1
   - name: nuvens
     spriteName: nuvens
@@ -623,7 +497,7 @@ ScriptedImporter:
     mosaicPosition: {x: 4, y: 10306}
     flatten: 0
     isImported: 0
-    isVisible: 1
+    isVisible: 0
   - name: "C\xE9u"
     spriteName: "C\xE9u"
     isGroup: 0
@@ -632,7 +506,7 @@ ScriptedImporter:
     layerID: 24
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
-    isImported: 0
+    isImported: 1
     isVisible: 1
   - name: Rio
     spriteName: 
