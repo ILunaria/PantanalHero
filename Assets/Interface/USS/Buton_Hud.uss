@@ -32,12 +32,12 @@
 
 .ButtomHud:active {
     scale: 1.2 1.2;
-    color: rgba(250, 214, 39, 255);
+    color: rgb(250, 214, 39);
 }
 
 .buttomHudCon {
-    width: 200px;
-    height: 70px;
+    width: 350px;
+    height: 90px;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
@@ -61,7 +61,7 @@
     color: rgb(255, 255, 255);
     background-color: rgba(58, 58, 58, 0);
     -unity-background-image-tint-color: rgb(56, 56, 56);
-    font-size: 30px;
+    font-size: 40px;
     top: 50px;
     background-image: url('project://database/Assets/Interface/Arts/Tronco%20Pedro.png?fileID=21300000&guid=3c72c68fc40507347a07435efe0f7b21&type=3#Tronco Pedro');
 }
@@ -72,5 +72,5 @@
 
 .buttomHudCon:active {
     scale: 1.2 1.2;
-    background-color: rgba(233, 168, 25, 255);
+    background-color: rgb(233, 168, 25);
 }
