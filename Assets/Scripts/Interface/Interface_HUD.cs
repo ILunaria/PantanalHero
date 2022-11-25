@@ -23,7 +23,7 @@ public class Interface_HUD : MonoBehaviour
         Sair = Root.rootVisualElement.Q<Button>("Sair");
         Sim = Root.rootVisualElement.Q<Button>("Sim");
         Nao = Root.rootVisualElement.Q<Button>("Nao");
-        HUD = Root.rootVisualElement.Q<VisualElement>("Back");
+        HUD = Root.rootVisualElement.Q<VisualElement>("HUDIngame");
         Confirm = Root.rootVisualElement.Q<VisualElement>("Confirma");
 
         Menu.clicked += MenuPressed;
@@ -57,13 +57,16 @@ public class Interface_HUD : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            HUD.style.display = DisplayStyle.Flex;
+            
+            if(HUD.style.display == DisplayStyle.Flex)
+                {
+                    HUD.style.display = DisplayStyle.None;
+                    Confirm.style.display = DisplayStyle.None;
+                }
+
+            else HUD.style.display = DisplayStyle.Flex;            
         }
-        else if(Input.GetKeyUp(KeyCode.E))
-        {
-            HUD.style.display = DisplayStyle.None;
-            Confirm.style.display = DisplayStyle.None;
-        }
+
     }
     
 }

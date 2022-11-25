@@ -4,7 +4,7 @@
     border-bottom-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    background-color: rgb(94, 94, 94);
+    background-color: rgba(94, 94, 94, 0);
     -unity-text-align: middle-center;
     font-size: 85px;
     -unity-font: url('project://database/Assets/Fonts/Rancho-Regular.ttf?fileID=12800000&guid=907fe4763479a39459019eb9beb695b9&type=3#Rancho-Regular');
@@ -19,12 +19,20 @@
     border-right-width: 10px;
     border-top-width: 10px;
     border-bottom-width: 10px;
+    background-image: url('project://database/Assets/Interface/Arts/Tronco%20Pedro.png?fileID=21300000&guid=3c72c68fc40507347a07435efe0f7b21&type=3#Tronco Pedro');
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
 }
 
 .ButtomHud:hover {
+    scale: 1.1 1.1;
 }
 
 .ButtomHud:active {
+    scale: 1.2 1.2;
+    color: rgba(250, 214, 39, 255);
 }
 
 .buttomHudCon {
@@ -46,13 +54,23 @@
     border-bottom-left-radius: 2.5px;
     border-top-right-radius: 2.5px;
     border-bottom-right-radius: 2.5px;
-    border-left-color: rgba(67, 66, 66, 255);
-    border-right-color: rgba(67, 66, 66, 255);
-    border-top-color: rgba(67, 66, 66, 255);
-    border-bottom-color: rgba(67, 66, 66, 255);
-    color: rgba(255, 255, 255, 255);
-    background-color: rgba(58, 58, 58, 255);
-    -unity-background-image-tint-color: rgba(56, 56, 56, 255);
+    border-left-color: rgba(67, 66, 66, 0);
+    border-right-color: rgba(67, 66, 66, 0);
+    border-top-color: rgba(67, 66, 66, 0);
+    border-bottom-color: rgba(67, 66, 66, 0);
+    color: rgb(255, 255, 255);
+    background-color: rgba(58, 58, 58, 0);
+    -unity-background-image-tint-color: rgb(56, 56, 56);
     font-size: 30px;
     top: 50px;
+    background-image: url('project://database/Assets/Interface/Arts/Tronco%20Pedro.png?fileID=21300000&guid=3c72c68fc40507347a07435efe0f7b21&type=3#Tronco Pedro');
+}
+
+.buttomHudCon:hover {
+    scale: 1.1 1.1;
+}
+
+.buttomHudCon:active {
+    scale: 1.2 1.2;
+    background-color: rgba(233, 168, 25, 255);
 }
