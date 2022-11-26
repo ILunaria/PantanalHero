@@ -130,6 +130,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5116252874564730920, guid: 28a52edf9fbe9be41b8ad5acd91eb082, type: 3}
+      propertyPath: InitialModule.startColor.minColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116252874564730920, guid: 28a52edf9fbe9be41b8ad5acd91eb082, type: 3}
+      propertyPath: InitialModule.startColor.minColor.g
+      value: 0.8960046
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116252874564730920, guid: 28a52edf9fbe9be41b8ad5acd91eb082, type: 3}
+      propertyPath: InitialModule.startColor.minColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116252874564730921, guid: 28a52edf9fbe9be41b8ad5acd91eb082, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 68c9d45b6c42fe647a56ecde3fcd75dd, type: 2}
     - target: {fileID: 5116252874863748866, guid: 28a52edf9fbe9be41b8ad5acd91eb082, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -313,7 +329,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63892d4162a4a274d9ab3174639959a8, type: 2}
+  - {fileID: 2100000, guid: 68c9d45b6c42fe647a56ecde3fcd75dd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -553,7 +569,7 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.6509434, g: 0.36609888, b: 0.027634379, a: 1}
+      minColor: {r: 1, g: 0.8960046, b: 0, a: 1}
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
@@ -5561,7 +5577,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63892d4162a4a274d9ab3174639959a8, type: 2}
+  - {fileID: 2100000, guid: 68c9d45b6c42fe647a56ecde3fcd75dd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5801,7 +5817,7 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.6509434, g: 0.36609888, b: 0.027634379, a: 1}
+      minColor: {r: 1, g: 0.8960046, b: 0, a: 1}
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
