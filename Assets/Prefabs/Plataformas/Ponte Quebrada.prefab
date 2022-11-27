@@ -263,6 +263,7 @@ GameObject:
   - component: {fileID: 4478517630906576123}
   - component: {fileID: 8923839093406531736}
   - component: {fileID: 3069050514255395733}
+  - component: {fileID: 5544437852823173640}
   m_Layer: 7
   m_Name: Ponte Quebrada
   m_TagString: Untagged
@@ -349,6 +350,26 @@ PolygonCollider2D:
       - {x: 2.4733262, y: -0.786342}
       - {x: 4.215776, y: -0.9904163}
       - {x: 4.6924047, y: 0.3543672}
+--- !u!95 &5544437852823173640
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3667358917187831115}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 98a8a78799febbe4d91cf4ccb5c47e51, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3911039305819474027
 GameObject:
   m_ObjectHideFlags: 0
