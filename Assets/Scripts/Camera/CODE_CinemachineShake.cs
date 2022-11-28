@@ -52,7 +52,6 @@ public class CODE_CinemachineShake : MonoBehaviour
    
     private void ShakeCamera()
     {
-        Debug.Log("Shake Started");
         shakeStarted = true;
         shakeTimeRemaining = shakeLength;
         power = shakePower;

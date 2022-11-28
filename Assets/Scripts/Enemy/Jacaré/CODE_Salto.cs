@@ -20,30 +20,14 @@ public class CODE_Salto : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         
-        random = Random.Range(0, 2);
         enemyPos = GameObject.Find("Jacaré_Blindado").GetComponent<Transform>();
-
-
-        saveScale = enemyPos.localScale;
-        switch (random)
-        {
-            case 0:
-                scale = enemyPos.localScale;
-                scale.x *= -1;
-                enemyPos.localScale = scale;
-                isFacingRight = -1;
-                break;
-            case 1:
-                enemyPos.localScale = saveScale;
-                isFacingRight = 1;
-                break;
-        }
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        enemyPos.position = new Vector2(-5f * isFacingRight, -15f);
+        isFacingRight = enemyPos.localScale.x > 0 ? -1 : 1;
+        enemyPos.position = new Vector2(5f * isFacingRight, -15f);
         //if(animator.transform.position.y < - 2f && !hasSpawned)
         //{
         //    Instantiate(splash, new Vector2(-5f, -2f), Quaternion.identity);
@@ -56,9 +40,15 @@ public class CODE_Salto : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        enemyPos.localScale = saveScale;
-
         bool willStun = Random.Range(0, 5) < 3f ? true : false;
+
+        if (enemyPos.localScale.x < 0)
+        {
+            Vector3 scale = enemyPos.localScale;
+            scale.x *= -1;
+            enemyPos.localScale = scale;
+        }
+           
 
         animator.SetBool("Stunned", willStun);
         animator.transform.position = new Vector2(animator.transform.position.x, -25f);

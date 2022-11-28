@@ -11,6 +11,9 @@ public class CODE_StunnedStage : StateMachineBehaviour
         enemyPos = GameObject.Find("Jacaré_Blindado").GetComponent<Transform>();
 
         enemyPos.position = new Vector2(15f, -8f);
+
+        enemyPos.GetChild(2).gameObject.SetActive(true);
+
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -18,11 +21,5 @@ public class CODE_StunnedStage : StateMachineBehaviour
     {
         enemyPos.position = Vector2.MoveTowards(enemyPos.position, new Vector2(15f, -2f), 10f * Time.deltaTime);
     }
-
-    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
 
 }

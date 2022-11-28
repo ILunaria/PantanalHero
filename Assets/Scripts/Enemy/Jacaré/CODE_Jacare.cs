@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CODE_Jacare : MonoBehaviour
+namespace CHARACTERS
 {
-    public void ScreenShake()
+    public class CODE_Jacare : ACODE_Characters
     {
-        CODE_EventManager.current.ScreenShakeCallback();
+        public void ScreenShake()
+        {
+            CODE_EventManager.current.ScreenShakeCallback();
+        }
     }
+
 }
