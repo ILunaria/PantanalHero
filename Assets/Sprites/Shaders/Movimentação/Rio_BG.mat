@@ -38,7 +38,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Wind_Intensity: 0.7
+    - _Wind_Intensity: 0.9
     - _Wind_Velocity: 1
     m_Colors: []
   m_BuildTextureStacks: []
