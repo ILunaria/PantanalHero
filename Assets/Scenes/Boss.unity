@@ -130,6 +130,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 599324944, guid: 8b4d61f907e176b4393ed9ab2a968e29, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 599324946, guid: 8b4d61f907e176b4393ed9ab2a968e29, type: 3}
+      propertyPath: hitCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 599324947, guid: 8b4d61f907e176b4393ed9ab2a968e29, type: 3}
+      propertyPath: m_Radius
+      value: 1.3478584
+      objectReference: {fileID: 0}
+    - target: {fileID: 599324947, guid: 8b4d61f907e176b4393ed9ab2a968e29, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2816052262998779228, guid: 8b4d61f907e176b4393ed9ab2a968e29, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -913,8 +929,8 @@ Transform:
   m_Father: {fileID: 1366466818}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!68 &846788203
-EdgeCollider2D:
+--- !u!60 &846788203
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -927,22 +943,25 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: -17.540672, y: 3.3658516}
-  - {x: -11.716039, y: 2.4490092}
-  - {x: -9.304277, y: 1.8667293}
-  - {x: -5.032217, y: 2.1348271}
-  - {x: 0.96216196, y: 2.4938154}
-  - {x: 3.4621315, y: 2.5046072}
-  - {x: 4.998542, y: 2.5135527}
-  - {x: 7.680247, y: 2.7066805}
-  - {x: 12.485901, y: 2.4502318}
-  - {x: 17.2281, y: 3.4474587}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+    m_Paths:
+    - - {x: -8.470318, y: 1.2308593}
+      - {x: -17.648296, y: 3.9258103}
+      - {x: -17.577103, y: -6.503544}
+      - {x: 19.086184, y: -7.3500276}
+      - {x: 17.219486, y: 3.8599665}
+      - {x: 11.898522, y: 1.2778944}
+      - {x: 4.5308666, y: 2.3460586}
+      - {x: -1.6289835, y: 2.0789382}
 --- !u!1 &1222255729
 GameObject:
   m_ObjectHideFlags: 0

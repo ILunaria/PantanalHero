@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6750206243113341482}
   - component: {fileID: 4263299913562098710}
   m_Layer: 0
-  m_Name: Splash
+  m_Name: Splash_Queda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7498214560965868321}
-  m_LocalRotation: {x: -0.6870519, y: 0.16721168, z: -0.16721173, w: 0.6870519}
+  m_LocalRotation: {x: -0.6870518, y: 0.16721214, z: -0.16721214, w: 0.6870518}
   m_LocalPosition: {x: -11.756303, y: -2.8991594, z: 1.361345}
   m_LocalScale: {x: 0.84033626, y: 0.8403361, z: 0.8403361}
   m_ConstrainProportionsScale: 0
@@ -608,7 +608,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.5
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -1297,7 +1297,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -1306,7 +1306,7 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 1}
+        key1: {r: 1, g: 1, b: 1, a: 0}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
