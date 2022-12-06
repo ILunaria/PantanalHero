@@ -14,8 +14,6 @@ public class CODE_Salto : StateMachineBehaviour
     private Vector3 saveScale;
 
     public int isFacingRight;
-
-    public float random;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -40,7 +38,7 @@ public class CODE_Salto : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        bool willStun = Random.Range(0, 5) < 3f ? true : false;
+        //bool willStun = Random.Range(0, 5) < 3f ? true : false;
 
         if (enemyPos.localScale.x < 0)
         {
@@ -50,7 +48,7 @@ public class CODE_Salto : StateMachineBehaviour
         }
            
 
-        animator.SetBool("Stunned", willStun);
+        animator.SetBool("Stunned", true);
         animator.transform.position = new Vector2(animator.transform.position.x, -25f);
     }
 

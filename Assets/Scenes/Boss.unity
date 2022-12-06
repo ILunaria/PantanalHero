@@ -134,10 +134,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 599324946, guid: 8b4d61f907e176b4393ed9ab2a968e29, type: 3}
-      propertyPath: hitCount
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 599324947, guid: 8b4d61f907e176b4393ed9ab2a968e29, type: 3}
       propertyPath: m_Radius
       value: 1.3478584
@@ -1032,7 +1028,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1222255729}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1

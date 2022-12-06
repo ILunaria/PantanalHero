@@ -12,25 +12,34 @@ public class CODE_IntroStage : StateMachineBehaviour
 
     public float speed;
 
+    private int normalCount = 0;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
 
         Debug.Log("Intro Stage Has Started");
-
-        _random = Random.Range(0, 3);
+        if(normalCount == 3)
+        {
+            animator.SetTrigger("Salto");
+            normalCount = 0;
+            return;
+        }
+        _random = Random.Range(0, 2);
 
         switch (_random)
         {
             case 0:
                 animator.SetTrigger("Rabada");
+                normalCount++;
                 break;
             case 1:
                 animator.SetTrigger("Mordida");
+                normalCount++;
                 break;
-            case 2:
-                animator.SetTrigger("Salto");
-                break;
+            //case 2:
+            //    animator.SetTrigger("Salto");
+            //    break;
         }
     }
 

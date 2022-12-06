@@ -10,6 +10,11 @@ namespace CHARACTERS
         {
             CODE_EventManager.current.ScreenShakeCallback();
         }
+        public void Defeat()
+        {
+            CODE_EventManager.current.OnDefeat();
+            Destroy(gameObject);
+        }
     }
 
 }
