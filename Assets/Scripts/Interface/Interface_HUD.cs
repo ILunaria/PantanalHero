@@ -9,8 +9,11 @@ public class Interface_HUD : MonoBehaviour
     private UIDocument Root;
     public Button Menu;
     public Button Sair;
+    public Button cred;
+    public Button Vol;  
     public VisualElement HUD;
     public VisualElement Confirm;
+    public VisualElement Creditos;
     public Button Sim;
     public Button Nao;
     
@@ -30,6 +33,7 @@ public class Interface_HUD : MonoBehaviour
         Sair.clicked += SairPressed;
         Sim.clicked += SimPressed;
         Nao.clicked += NaoPressed;
+
     }
 
     void MenuPressed()
@@ -68,5 +72,7 @@ public class Interface_HUD : MonoBehaviour
         }
 
     }
+
+
     
 }

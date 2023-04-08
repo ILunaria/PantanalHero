@@ -6,10 +6,10 @@
     font-size: 50px;
     color: rgb(255, 255, 255);
     -unity-text-align: middle-center;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
@@ -29,6 +29,8 @@
     -unity-text-outline-color: rgb(51, 51, 51);
     background-color: rgba(65, 65, 65, 0);
     background-image: url('project://database/Assets/Interface/Arts/Tronco%20Pedro.png?fileID=21300000&guid=3c72c68fc40507347a07435efe0f7b21&type=3#Tronco Pedro');
+    align-items: center;
+    justify-content: center;
 }
 
 .menubuttom:hover {
@@ -38,7 +40,7 @@
 
 .menubuttom:active {
     background-color: rgba(219, 158, 36, 0);
-    color: rgba(219, 158, 36, 255);
+    color: rgb(219, 158, 36);
     scale: 1.2 1.2;
 }
 
@@ -78,7 +80,7 @@
 
 .ButtomConfig:active {
     background-color: rgba(255, 0, 0, 0);
-    color: rgba(219, 158, 36, 255);
+    color: rgb(219, 158, 36);
     scale: 1.2 1.2;
 }
 
@@ -123,7 +125,7 @@
 .buttoncred:active {
     background-color: rgba(58, 106, 116, 0);
     transition-duration: 0.1s;
-    color: rgba(219, 158, 36, 255);
+    color: rgb(219, 158, 36);
     scale: 1.2 1.2;
     display: flex;
 }

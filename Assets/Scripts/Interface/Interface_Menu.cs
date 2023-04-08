@@ -9,10 +9,10 @@ public class Interface_Menu : MonoBehaviour
     private UIDocument rot;
     public Button NovoJogo;
     public Button Sair;
+    public Button cred;
     public Button Config;
-    public Button Back;  
-    public Button Cred;
-    public Button Vol;  
+    public Button Back;
+    public Button Vol;
     public VisualElement configu;
     public VisualElement Menu;
     public VisualElement Credi;
@@ -26,21 +26,23 @@ public class Interface_Menu : MonoBehaviour
         NovoJogo = rot.rootVisualElement.Q<Button>("Novojogo");
         Config = rot.rootVisualElement.Q<Button>("Configuracao");
         Sair = rot.rootVisualElement.Q<Button>("Sair");
-        Back = rot.rootVisualElement.Q<Button>("Back");
+        cred = rot.rootVisualElement.Q<Button>("Credits");
         Vol = rot.rootVisualElement.Q<Button>("Vol");
-        Cred = rot.rootVisualElement.Q<Button>("Credito");
+        Back = rot.rootVisualElement.Q<Button>("Back");
+
         configu = rot.rootVisualElement.Q<VisualElement>("Configurar");
         Credi = rot.rootVisualElement.Q<VisualElement>("Cred");
         Menu = rot.rootVisualElement.Q<VisualElement>("MainMenu");
- 
+
 
         NovoJogo.clicked += NovoJogoPressed;
         Config.clicked += ConfigPressed;
+        cred.clicked += Credpressed;
         Sair.clicked += SairPressed;
         Back.clicked += BackPressed;
         Vol.clicked += VolPressed;
-        Cred.clicked += CredPressed;
-        
+
+
     }
 
    void NovoJogoPressed() 
@@ -67,19 +69,15 @@ public class Interface_Menu : MonoBehaviour
        Menu.style.display = DisplayStyle.Flex;
    }
 
+   private void Credpressed()
+   {
+       Credi.style.display = DisplayStyle.Flex;
+       Menu.style.display = DisplayStyle.None;
+   }
+    
    void VolPressed()
    {
        Credi.style.display = DisplayStyle.None;
-       configu.style.display = DisplayStyle.Flex;
+       Menu.style.display = DisplayStyle.Flex;
    }
-
-   void CredPressed()
-   {
-       Credi.style.display = DisplayStyle.Flex;
-       configu.style.display = DisplayStyle.None;
-   }
-
-
-
-
 }
