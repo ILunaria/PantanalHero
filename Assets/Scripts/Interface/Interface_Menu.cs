@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
+using TMPro;    
 
 public class Interface_Menu : MonoBehaviour
 {
@@ -16,9 +18,11 @@ public class Interface_Menu : MonoBehaviour
     public VisualElement configu;
     public VisualElement Menu;
     public VisualElement Credi;
-    
 
-    // Start is called before the first frame update
+    //------------ Audio ------------//
+    public GameObject slider;
+    
+    
     void Awake()
     {
         var rot = GetComponent<UIDocument>();
@@ -60,6 +64,10 @@ public class Interface_Menu : MonoBehaviour
    {
        configu.style.display = DisplayStyle.Flex;
        Menu.style.display = DisplayStyle.None;
+       if(slider.activeInHierarchy == false)
+        {
+            slider.SetActive(true);
+        }
 
    }
 
@@ -67,6 +75,10 @@ public class Interface_Menu : MonoBehaviour
    {
        configu.style.display = DisplayStyle.None;
        Menu.style.display = DisplayStyle.Flex;
+        if(slider.activeInHierarchy == true)
+        {
+            slider.SetActive(!slider.activeInHierarchy);
+        }
    }
 
    private void Credpressed()
@@ -80,4 +92,6 @@ public class Interface_Menu : MonoBehaviour
        Credi.style.display = DisplayStyle.None;
        Menu.style.display = DisplayStyle.Flex;
    }
+
+   
 }
