@@ -24,6 +24,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: b3a2a0a0847698c4d8ee078ec78e1d6f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainText:
         m_Texture: {fileID: 2800000, guid: 2e8bbd8afc74ec84992bb11cb7493db0, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -41,7 +45,21 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats: []
+    m_Floats:
+    - _AlphaClip: 0.1
+    - _ColorMask: 15
+    - _CullMode: 0
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    - _VoronoiScale: 5
+    - _VoronoiSpeed: 1
     m_Colors:
+    - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
     - _Color: {r: 1.4588236, g: 2.9960785, b: 2.9960785, a: 1}
   m_BuildTextureStacks: []

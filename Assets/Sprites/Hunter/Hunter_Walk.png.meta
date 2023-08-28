@@ -1,0 +1,563 @@
+fileFormatVersion: 2
+guid: 6bfe6a3ab72158d4b98a0764529c2070
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 2
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hunter_Walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1300
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc0d9d530076cb4db1f3698431385f6
+      internalID: 497237757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 0
+        width: 1300
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c8a5cfa6c64f3b4c9fe7d3a907be374
+      internalID: -275906584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 0
+        width: 1300
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ee64c1b5676d144b86dbe8b9f3a425b
+      internalID: 276294342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 0
+        width: 1300
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b82602f8f0f149f43a9aac64b72e4b5c
+      internalID: 370255164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 5200
+        y: 0
+        width: 1300
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa29bfc086ffddb46b4c59ded116d1cc
+      internalID: -1517773576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter_Walk_5
+      rect:
+        serializedVersion: 2
+        x: 6500
+        y: 0
+        width: 1300
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c93ba202f74db684fbd0a3716eb6aaef
+      internalID: -1682152882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter_Walk_6
+      rect:
+        serializedVersion: 2
+        x: 7800
+        y: 0
+        width: 1300
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e313a0d813f370941853027686c81775
+      internalID: 1144440138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter_Walk_7
+      rect:
+        serializedVersion: 2
+        x: 9100
+        y: 0
+        width: 1300
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f39565126545be4cac934cbf8b9b44b
+      internalID: -1960768368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter_Walk_8
+      rect:
+        serializedVersion: 2
+        x: 10400
+        y: 0
+        width: 1300
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07197eb7c9bfb35469181dac914142f4
+      internalID: 1952715707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter_Walk_9
+      rect:
+        serializedVersion: 2
+        x: 11700
+        y: 0
+        width: 1300
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 363d14535cc2b354eaf34deacfbccfdf
+      internalID: 1162307736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter_Walk_10
+      rect:
+        serializedVersion: 2
+        x: 13000
+        y: 0
+        width: 1300
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad231b55cee6439478b3c585fae0244e
+      internalID: -1551167294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter_Walk_11
+      rect:
+        serializedVersion: 2
+        x: 14300
+        y: 0
+        width: 1300
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11ad76d83347edd499a0c59b4112ff40
+      internalID: 1440038487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter_Walk_12
+      rect:
+        serializedVersion: 2
+        x: 15600
+        y: 0
+        width: 1300
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8060ba77c36c1814c94307c4aa941b2e
+      internalID: -315184814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter_Walk_13
+      rect:
+        serializedVersion: 2
+        x: 16900
+        y: 0
+        width: 1300
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da0bf28bd7349ab48bfea011fdf44a11
+      internalID: -1322063693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter_Walk_14
+      rect:
+        serializedVersion: 2
+        x: 18200
+        y: 0
+        width: 1300
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b29bf52eb2b898449019d410dc8b336
+      internalID: -1808003065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter_Walk_15
+      rect:
+        serializedVersion: 2
+        x: 19500
+        y: 0
+        width: 1300
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 381e1f0d0ad20b7429a73afcdfb3bc7c
+      internalID: 1522914376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter_Walk_16
+      rect:
+        serializedVersion: 2
+        x: 20800
+        y: 0
+        width: 1300
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ebefe8051182c4ba90121d2fb9629c
+      internalID: -1850126369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter_Walk_17
+      rect:
+        serializedVersion: 2
+        x: 22100
+        y: 0
+        width: 1300
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2c456b9eef86354999837d9d0d016f5
+      internalID: 2136629245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter_Walk_18
+      rect:
+        serializedVersion: 2
+        x: 23400
+        y: 0
+        width: 1300
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 649c8cbec6f262f40872ac452c2a80a7
+      internalID: -948225936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hunter_Walk_19
+      rect:
+        serializedVersion: 2
+        x: 24700
+        y: 0
+        width: 1300
+        height: 1300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f902aa397e6b8d4aa210d5a983d49a6
+      internalID: 58472336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Hunter_Walk_12: -315184814
+      Hunter_Walk_8: 1952715707
+      Hunter_Walk_9: 1162307736
+      Hunter_Walk_0: 497237757
+      Hunter_Walk_11: 1440038487
+      Hunter_Walk_10: -1551167294
+      Hunter_Walk_1: -275906584
+      Hunter_Walk_5: -1682152882
+      Hunter_Walk_17: 2136629245
+      Hunter_Walk_13: -1322063693
+      Hunter_Walk_2: 276294342
+      Hunter_Walk_18: -948225936
+      Hunter_Walk_4: -1517773576
+      Hunter_Walk_16: -1850126369
+      Hunter_Walk_14: -1808003065
+      Hunter_Walk_15: 1522914376
+      Hunter_Walk_19: 58472336
+      Hunter_Walk_7: -1960768368
+      Hunter_Walk_3: 370255164
+      Hunter_Walk_6: 1144440138
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

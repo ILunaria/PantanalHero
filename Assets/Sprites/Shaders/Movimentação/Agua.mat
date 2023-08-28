@@ -38,8 +38,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Intensity_X: 0.8
-    - _Intensity_Y: 0.25
+    - _Intensity_X: 0.33
+    - _Intensity_Y: 0.038
     - _Water_Intensuty: 0.1
     - _Water_Velocity: 1
     - _Wind_Intensity: 0.8

@@ -1,6 +1,9 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.VFX;
 
 namespace CHARACTERS
 {
@@ -14,15 +17,31 @@ namespace CHARACTERS
 
 		#region COMPONENTS
 		public Rigidbody2D RB { get; protected set; }
-		public Animator ANIM { get; protected set; }
-		//Script to handle all player animations, all references can be safely removed if you're importing into your own project.
-		#endregion
 
-		#region STATE PARAMETERS
-		//Variables control the various actions the player can perform at any time.
-		//These are fields which can are public allowing for other sctipts to read them
-		//but can only be privately written to.
-		public bool IsJumping { get; protected set; }
+		[Header("VFX Components")]
+		[SerializeField] public VolumeProfile volume;
+        private ChromaticAberration myChromaticAberration;
+        [SerializeField] public VisualEffect[] AttackVFX;
+        [SerializeField] public VisualEffect wallJumpVFX;
+        [SerializeField] public VisualEffect jumpVFX;
+        [SerializeField] public VisualEffect blockVFX;
+        [SerializeField] public VisualEffect dashVFX;
+        public Animator ANIM { get; protected set; }
+        //Script to handle all player animations, all references can be safely removed if you're importing into your own project.
+        #endregion
+        protected void Start()
+        {
+			volume.TryGet(out myChromaticAberration);
+			myChromaticAberration.intensity.Override(0);
+            SetGravityScale(PlayerData.gravityScale);
+            this._IsFacingRight = true;
+        }
+
+        #region STATE PARAMETERS
+        //Variables control the various actions the player can perform at any time.
+        //These are fields which can are public allowing for other sctipts to read them
+        //but can only be privately written to.
+        public bool IsJumping { get; protected set; }
 		public bool IsDashing { get; protected set; }
 
 		[Space(20)]
@@ -254,7 +273,7 @@ namespace CHARACTERS
 			//Ensures we can't call Jump multiple times from one press
 			LastPressedJumpTime = 0;
 			LastOnGroundTime = 0;
-
+			jumpVFX.Play();
 			#region Perform Jump
 			//We increase the force applied if we are falling
 			//This means we'll always feel like we jump the same amount 
@@ -270,8 +289,9 @@ namespace CHARACTERS
 
 		protected void WallJump(int dir)
 		{
-			//Ensures we can't call Wall Jump multiple times from one press
-			LastPressedJumpTime = 0;
+            wallJumpVFX.Play();
+            //Ensures we can't call Wall Jump multiple times from one press
+            LastPressedJumpTime = 0;
 			LastOnGroundTime = 0;
 			LastOnWallRightTime = 0;
 			LastOnWallLeftTime = 0;
@@ -289,13 +309,14 @@ namespace CHARACTERS
 			RB.AddForce(force, ForceMode2D.Impulse);
 			#endregion
 		}
-		#endregion
+        #endregion
 
-		#region DASH METHODS
-		//Dash Coroutine
-		protected IEnumerator StartDash(Vector2 dir) // For Multi Direction Dash Use This: private IEnumerator StartDash(Vector2 dir)
+        #region DASH METHODS
+        //Dash Coroutine
+        protected IEnumerator StartDash(Vector2 dir) // For Multi Direction Dash Use This: private IEnumerator StartDash(Vector2 dir)
 		{
-
+			dashVFX.Play();
+			myChromaticAberration.intensity.Override(Mathf.Lerp(myChromaticAberration.intensity.value, 1f,1f));
 			dir = dir.normalized * Vector2.right; // Horizontal Dash Only
 												  //Overall this method of dashing aims to mimic Celeste, if you're looking for
 												  // a more physics-based approach try a method similar to that used in the jump
@@ -321,10 +342,11 @@ namespace CHARACTERS
 				//This is a cleaner implementation opposed to multiple timers and this coroutine approach is actually what is used in Celeste :D
 				yield return null;
 			}
-
-			startTime = Time.time;
+            myChromaticAberration.intensity.Override(Mathf.Lerp(myChromaticAberration.intensity.value, 0f, 1f));
+            startTime = Time.time;
 
 			_isDashAttacking = false;
+
 
 			ANIM.SetBool("IsDashing", _isDashAttacking);
 
@@ -396,7 +418,8 @@ namespace CHARACTERS
 			LastPressedAttackTime = 0f;
 			float startTime = Time.time;
 			_attacksLeft--;
-			IsAttacking = true;
+            ANIM.Play("Capi_Attack");
+            IsAttacking = true;
 
 			Transform attackSprite = Instantiate(_playerAttackSprite, attackPoint.transform.position, attackPoint.transform.rotation).transform;
 			if(transform.localScale.x < 0)
@@ -427,12 +450,29 @@ namespace CHARACTERS
 
 			IsAttacking = false;
 		}
+		protected void AttackVFXOn()
+		{
+			if ((IsAttacking && IsGrounded) && RB.velocity.x > 0)
+			{
+				for(int i = 0; i < AttackVFX.Length; i++)
+				{
+					AttackVFX[i].Play();
+				}
+			}
+		}
+        protected void AttackVFXOff()
+        {
+            for (int i = 0; i < AttackVFX.Length; i++)
+            {
+                AttackVFX[i].Stop();
+            }
+        }
 
-		#endregion
+        #endregion
 
-		#region CHECK METHODS
-		// LastOnGrounTime refers to the player staying on the ground or if he's fallen from the platform but still is able to jump for some time.
-		protected bool CanJump()
+        #region CHECK METHODS
+        // LastOnGrounTime refers to the player staying on the ground or if he's fallen from the platform but still is able to jump for some time.
+        protected bool CanJump()
 		{
 			return LastOnGroundTime > 0 && !IsJumping && !IsBlocking;
 		}
