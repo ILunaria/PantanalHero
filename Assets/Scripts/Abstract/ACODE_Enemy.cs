@@ -84,6 +84,7 @@ namespace CHARACTERS
         protected IEnumerator Wait()
         {
             yield return new WaitForSeconds(EnemyData.patrolWaitTime);
+
             if (_currentPatrolPointIndex + 1 < patrolPoints.Length)
                 _currentPatrolPointIndex++;
             else
@@ -167,13 +168,10 @@ namespace CHARACTERS
 
         protected void PerformPatrol()
         { 
-            if (!enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("EnemyAttackingAnim"))
-            {
-                if (isPatrolling && !isAttacking && !isChasing)
+            if (isPatrolling && !isAttacking && !isChasing)
                 {
                     if (transform.position.x != patrolPoints[_currentPatrolPointIndex].position.x)
                     {
-                        
                         followTarget(patrolPoints[_currentPatrolPointIndex].position.x, EnemyData.patrolSpeed);
                     }
                     else
@@ -181,12 +179,12 @@ namespace CHARACTERS
                         if (isAtPatrolPoint == false)
                         {
                             isAtPatrolPoint = true;
+                            enemyAnimator.Play("Idle");
                             enemyAnimator.SetBool("CanWalk", false);
                             StartCoroutine(Wait());
                         }
                     }
                 }
-            }
 
         }
 

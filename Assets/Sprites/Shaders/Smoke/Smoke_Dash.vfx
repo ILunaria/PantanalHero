@@ -20,7 +20,7 @@ MonoBehaviour:
     x: 504
     y: -190
     width: 861
-    height: 1748
+    height: 1930
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -186,7 +186,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614580}
   - {fileID: 8926484042661614615}
   - {fileID: 8926484042661614669}
-  m_UIPosition: {x: 941.3827, y: 114.57214}
+  m_UIPosition: {x: 941, y: 257}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -1018,7 +1018,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 941, y: 848}
+  m_UIPosition: {x: 941, y: 1030}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
@@ -1056,7 +1056,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614662}
   - {fileID: 8926484042661614589}
   - {fileID: 8926484042661614591}
-  m_UIPosition: {x: 941, y: 979}
+  m_UIPosition: {x: 941, y: 1161}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
