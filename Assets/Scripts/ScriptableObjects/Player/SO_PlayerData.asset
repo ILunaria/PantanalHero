@@ -27,7 +27,7 @@ MonoBehaviour:
   selfYAxisKnockback: 1
   enemyYAxisKnockback: 1
   blockInputBufferTime: 0.1
-  blockTimeAmount: 0.5
+  blockTimeAmount: 1
   blockAmount: 2
   blockRefillTime: 1
   runMaxSpeed: 20

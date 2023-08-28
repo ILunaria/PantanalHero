@@ -323,6 +323,7 @@ namespace CHARACTERS
 				if (IsBlocking)
 				{
 					GameObject enemy = trigger.transform.parent.gameObject;
+					blockVFX.Play();
 
 					while(enemy.tag != "Enemy")
                     {

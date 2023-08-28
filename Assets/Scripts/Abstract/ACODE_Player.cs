@@ -20,6 +20,8 @@ namespace CHARACTERS
 		[SerializeField] public VisualEffect[] AttackVFX;
         [SerializeField] public VisualEffect wallJumpVFX;
         [SerializeField] public VisualEffect jumpVFX;
+        [SerializeField] public VisualEffect blockVFX;
+        [SerializeField] public VisualEffect dashVFX;
         public Animator ANIM { get; protected set; }
 		//Script to handle all player animations, all references can be safely removed if you're importing into your own project.
 		#endregion
@@ -302,7 +304,7 @@ namespace CHARACTERS
 		//Dash Coroutine
 		protected IEnumerator StartDash(Vector2 dir) // For Multi Direction Dash Use This: private IEnumerator StartDash(Vector2 dir)
 		{
-
+			dashVFX.Play();
 			dir = dir.normalized * Vector2.right; // Horizontal Dash Only
 												  //Overall this method of dashing aims to mimic Celeste, if you're looking for
 												  // a more physics-based approach try a method similar to that used in the jump
@@ -332,6 +334,7 @@ namespace CHARACTERS
 			startTime = Time.time;
 
 			_isDashAttacking = false;
+
 
 			ANIM.SetBool("IsDashing", _isDashAttacking);
 

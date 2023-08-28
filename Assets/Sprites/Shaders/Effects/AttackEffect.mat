@@ -7,11 +7,11 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ataque
-  m_Shader: {fileID: -6465566751694194690, guid: 962dda1dce569b34a92992e254774ce0, type: 3}
+  m_Name: AttackEffect
+  m_Shader: {fileID: -6465566751694194690, guid: 1192e7c48cbc5984b8bc7acac58d14e6, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -20,16 +20,12 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Emission:
-        m_Texture: {fileID: 2800000, guid: b3a2a0a0847698c4d8ee078ec78e1d6f, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainText:
-        m_Texture: {fileID: 2800000, guid: 2e8bbd8afc74ec84992bb11cb7493db0, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6c7cbe3ae0962814dbbd5ccf7057857e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -47,19 +43,22 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0.1
-    - _ColorMask: 15
-    - _CullMode: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UseUIAlphaClip: 0
-    - _VoronoiScale: 5
-    - _VoronoiSpeed: 1
-    m_Colors:
-    - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
-    - _Color: {r: 1.4588236, g: 2.9960785, b: 2.9960785, a: 1}
+    - _VoronoiScale: 3
+    - _VoronoiSpeed: 0.1
+    m_Colors: []
   m_BuildTextureStacks: []
+--- !u!114 &5430671414361796422
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5
