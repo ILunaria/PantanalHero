@@ -1,6 +1,8 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.VFX;
 
 namespace CHARACTERS
@@ -17,20 +19,29 @@ namespace CHARACTERS
 		public Rigidbody2D RB { get; protected set; }
 
 		[Header("VFX Components")]
-		[SerializeField] public VisualEffect[] AttackVFX;
+		[SerializeField] public VolumeProfile volume;
+        private ChromaticAberration myChromaticAberration;
+        [SerializeField] public VisualEffect[] AttackVFX;
         [SerializeField] public VisualEffect wallJumpVFX;
         [SerializeField] public VisualEffect jumpVFX;
         [SerializeField] public VisualEffect blockVFX;
         [SerializeField] public VisualEffect dashVFX;
         public Animator ANIM { get; protected set; }
-		//Script to handle all player animations, all references can be safely removed if you're importing into your own project.
-		#endregion
+        //Script to handle all player animations, all references can be safely removed if you're importing into your own project.
+        #endregion
+        protected void Start()
+        {
+			volume.TryGet(out myChromaticAberration);
+			myChromaticAberration.intensity.Override(0);
+            SetGravityScale(PlayerData.gravityScale);
+            this._IsFacingRight = true;
+        }
 
-		#region STATE PARAMETERS
-		//Variables control the various actions the player can perform at any time.
-		//These are fields which can are public allowing for other sctipts to read them
-		//but can only be privately written to.
-		public bool IsJumping { get; protected set; }
+        #region STATE PARAMETERS
+        //Variables control the various actions the player can perform at any time.
+        //These are fields which can are public allowing for other sctipts to read them
+        //but can only be privately written to.
+        public bool IsJumping { get; protected set; }
 		public bool IsDashing { get; protected set; }
 
 		[Space(20)]
@@ -298,13 +309,14 @@ namespace CHARACTERS
 			RB.AddForce(force, ForceMode2D.Impulse);
 			#endregion
 		}
-		#endregion
+        #endregion
 
-		#region DASH METHODS
-		//Dash Coroutine
-		protected IEnumerator StartDash(Vector2 dir) // For Multi Direction Dash Use This: private IEnumerator StartDash(Vector2 dir)
+        #region DASH METHODS
+        //Dash Coroutine
+        protected IEnumerator StartDash(Vector2 dir) // For Multi Direction Dash Use This: private IEnumerator StartDash(Vector2 dir)
 		{
 			dashVFX.Play();
+			myChromaticAberration.intensity.Override(Mathf.Lerp(myChromaticAberration.intensity.value, 1f,1f));
 			dir = dir.normalized * Vector2.right; // Horizontal Dash Only
 												  //Overall this method of dashing aims to mimic Celeste, if you're looking for
 												  // a more physics-based approach try a method similar to that used in the jump
@@ -330,8 +342,8 @@ namespace CHARACTERS
 				//This is a cleaner implementation opposed to multiple timers and this coroutine approach is actually what is used in Celeste :D
 				yield return null;
 			}
-
-			startTime = Time.time;
+            myChromaticAberration.intensity.Override(Mathf.Lerp(myChromaticAberration.intensity.value, 0f, 1f));
+            startTime = Time.time;
 
 			_isDashAttacking = false;
 

@@ -1,20 +1,27 @@
 using System.Collections;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 
 namespace CHARACTERS
 {
 	public class CODE_PlayerMovement : ACODE_Player
 	{
-		private void Awake()
+		private Light2D lightScene;
+		bool isDying;
+
+        private void Awake()
 		{
 			RB = GetComponent<Rigidbody2D>();
 			ANIM = GetComponent<Animator>();
+			lightScene = FindObjectOfType<Light2D>().GetComponent<Light2D>();
+			Time.timeScale = 1f;
+            isDying = false;
+            #region INPUT SYSTEM
 
-			#region INPUT SYSTEM
-
-			_playerInputActions = new PlayerInputActions();
+            _playerInputActions = new PlayerInputActions();
 			_playerInputActions.Player.Enable();
 
 			_playerInputActions.Player.Jump.started += JumpAction_Performed;
@@ -27,12 +34,6 @@ namespace CHARACTERS
 			_playerInputActions.Player.Block.started += BlockAction_Performed;
 
 			#endregion
-		}
-
-		private void Start()
-		{
-			SetGravityScale(PlayerData.gravityScale);
-			this._IsFacingRight = true;
 		}
 
 		private void Update()
@@ -56,11 +57,19 @@ namespace CHARACTERS
 			// Block Timers
 			LastPressedBlockTime -= Time.deltaTime;
 
-			#endregion
+            //Death Timer
 
-			#region INPUT HANDLER
+            if (isDying)
+            {
+				Time.timeScale -= Time.deltaTime*4;
+                lightScene.intensity -= Time.deltaTime*4;
+            }
 
-			_moveInput = _playerInputActions.Player.Movement.ReadValue<Vector2>();
+            #endregion
+
+            #region INPUT HANDLER
+
+            _moveInput = _playerInputActions.Player.Movement.ReadValue<Vector2>();
 
 			if (_moveInput.x != 0)
 				CheckDirectionToFace(_moveInput.x > 0);
@@ -339,11 +348,20 @@ namespace CHARACTERS
 
 				}
 				else if (!IsBlocking)
-				{
-					Debug.Log("You are Dead");
-					SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                {
+                    isDying = true;
+
+                    StartCoroutine(GameOver(isDying));
+
+					//GameOver é aqui
 				}
 			}
 		}
+		IEnumerator GameOver(bool value)
+		{
+			yield return new WaitForSecondsRealtime(0.3f);
+			value = false;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
 	}
 }
