@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Grama
-  m_Shader: {fileID: -6465566751694194690, guid: 2b5464c1c8c21254ca2c242d82460459, type: 3}
+  m_Name: Grass_CloseCam
+  m_Shader: {fileID: -6465566751694194690, guid: 704e1c524d1b55d47af2004cd4be97f9, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -21,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: a57fdc13ab6733c46a701b514082c7bf, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7d9e08b6cb3f0f14f8ac6cff40e476b1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -38,7 +38,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Wind_Intensity: 0.1
-    - _Wind_Velocity: 1
+    - _Intensity_X: 0.46
+    - _Intensity_Y: 0.056
+    - _Water_Velocity: 1.45
+    - _Wind_Intensity: 0.68
+    - _Wind_Velocity: 2.08
     m_Colors: []
   m_BuildTextureStacks: []
