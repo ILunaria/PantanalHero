@@ -396,7 +396,8 @@ namespace CHARACTERS
 			LastPressedAttackTime = 0f;
 			float startTime = Time.time;
 			_attacksLeft--;
-			IsAttacking = true;
+            ANIM.Play("Capi_Attack");
+            IsAttacking = true;
 
 			Transform attackSprite = Instantiate(_playerAttackSprite, attackPoint.transform.position, attackPoint.transform.rotation).transform;
 			if(transform.localScale.x < 0)
