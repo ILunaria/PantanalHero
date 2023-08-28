@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.VFX;
 
 namespace CHARACTERS
 {
@@ -14,7 +15,12 @@ namespace CHARACTERS
 
 		#region COMPONENTS
 		public Rigidbody2D RB { get; protected set; }
-		public Animator ANIM { get; protected set; }
+
+		[Header("VFX Components")]
+		[SerializeField] public VisualEffect[] AttackVFX;
+        [SerializeField] public VisualEffect wallJumpVFX;
+        [SerializeField] public VisualEffect jumpVFX;
+        public Animator ANIM { get; protected set; }
 		//Script to handle all player animations, all references can be safely removed if you're importing into your own project.
 		#endregion
 
@@ -254,7 +260,7 @@ namespace CHARACTERS
 			//Ensures we can't call Jump multiple times from one press
 			LastPressedJumpTime = 0;
 			LastOnGroundTime = 0;
-
+			jumpVFX.Play();
 			#region Perform Jump
 			//We increase the force applied if we are falling
 			//This means we'll always feel like we jump the same amount 
@@ -270,8 +276,9 @@ namespace CHARACTERS
 
 		protected void WallJump(int dir)
 		{
-			//Ensures we can't call Wall Jump multiple times from one press
-			LastPressedJumpTime = 0;
+            wallJumpVFX.Play();
+            //Ensures we can't call Wall Jump multiple times from one press
+            LastPressedJumpTime = 0;
 			LastOnGroundTime = 0;
 			LastOnWallRightTime = 0;
 			LastOnWallLeftTime = 0;
@@ -428,12 +435,29 @@ namespace CHARACTERS
 
 			IsAttacking = false;
 		}
+		protected void AttackVFXOn()
+		{
+			if ((IsAttacking && IsGrounded) && RB.velocity.x > 0)
+			{
+				for(int i = 0; i < AttackVFX.Length; i++)
+				{
+					AttackVFX[i].Play();
+				}
+			}
+		}
+        protected void AttackVFXOff()
+        {
+            for (int i = 0; i < AttackVFX.Length; i++)
+            {
+                AttackVFX[i].Stop();
+            }
+        }
 
-		#endregion
+        #endregion
 
-		#region CHECK METHODS
-		// LastOnGrounTime refers to the player staying on the ground or if he's fallen from the platform but still is able to jump for some time.
-		protected bool CanJump()
+        #region CHECK METHODS
+        // LastOnGrounTime refers to the player staying on the ground or if he's fallen from the platform but still is able to jump for some time.
+        protected bool CanJump()
 		{
 			return LastOnGroundTime > 0 && !IsJumping && !IsBlocking;
 		}
