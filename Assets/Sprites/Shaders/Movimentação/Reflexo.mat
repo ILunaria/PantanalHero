@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Agua
+  m_Name: Reflexo
   m_Shader: {fileID: -6465566751694194690, guid: 704e1c524d1b55d47af2004cd4be97f9, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -38,8 +38,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Intensity_X: 0.33
-    - _Intensity_Y: 0.038
+    - _Intensity_X: 0.25
+    - _Intensity_Y: 0.012
     - _Water_Intensuty: 0.1
     - _Water_Velocity: 1
     - _Wind_Intensity: 0.8

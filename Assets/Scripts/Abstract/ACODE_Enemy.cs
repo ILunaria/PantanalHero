@@ -214,7 +214,10 @@ namespace CHARACTERS
         private void followTarget(float TargetX, float Speed)
         {
             Vector2 Target = new Vector2(TargetX, transform.position.y);
-            transform.position = Vector2.MoveTowards(transform.position, Target, Speed * Time.deltaTime);
+            if(checkWallLimits() == false)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, Target, Speed * Time.deltaTime);
+            }
         }
 
         protected bool checkGroundLimits()
