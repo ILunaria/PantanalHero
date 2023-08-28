@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Rio_BG
-  m_Shader: {fileID: -6465566751694194690, guid: fa8e7c27be0e77140ab6e4c43d313b86, type: 3}
+  m_Name: Reflexos
+  m_Shader: {fileID: -6465566751694194690, guid: 3993bce7935d4814387ea20853fddf3b, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -20,8 +20,20 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 7d9e08b6cb3f0f14f8ac6cff40e476b1, type: 3}
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -38,23 +50,19 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Global_Scale: 7.2
+    - _EnableExternalAlpha: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Scale: 19.2
-    - _Scale_01: 32.7
-    - _Speed: -1.4
-    - _Water_Intesity: 0.05
-    - _Water_Velocity: 0.2
-    - _WindIntensity: 0.79
-    - _WindVelocity: 0.62
-    - _Wind_Intensity: 0.9
-    - _Wind_Velocity: 1
+    - _VoronoiScale: 2
+    - _VoronoiSpeed: 0.5
+    - _WindIntensity: 0.75
+    - _WindVelocity: 0.11
     m_Colors:
-    - _Color: {r: 0, g: 0.68229055, b: 1, a: 0}
-    - _Color_02: {r: 0.22005163, g: 0.4056604, b: 0.30441925, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &6653226613820825104
+--- !u!114 &699267441202012155
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

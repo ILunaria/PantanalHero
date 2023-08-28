@@ -626,6 +626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerData: {fileID: 11400000, guid: b8db773792a6dfb4c98ad72ed5f3bd83, type: 2}
   _playerAttackSprite: {fileID: 4943977620603457183, guid: 3e0cbcbfc308d094b92ff87a2fc56436, type: 3}
+  volume: {fileID: 11400000, guid: 820d4ba939fa22c46a0ec9dbab730830, type: 2}
   AttackVFX:
   - {fileID: 2788236923032831093}
   - {fileID: 4354591547418209087}
