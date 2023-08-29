@@ -8178,6 +8178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Agua
       objectReference: {fileID: 0}
+    - target: {fileID: 8953773363502176396, guid: d0aebbbdd59993147b251b838708d967, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.48
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0aebbbdd59993147b251b838708d967, type: 3}
 --- !u!4 &1569896676 stripped

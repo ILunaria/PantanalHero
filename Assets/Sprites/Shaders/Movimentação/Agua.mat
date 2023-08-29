@@ -55,11 +55,13 @@ Material:
     - _Intensity_Y: 0.038
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _VoronoiScale: 6
+    - _VoronoiSpeed: 0.3
     - _Water_Intensuty: 0.1
     - _Water_Velocity: 1
     - _Wind_Intensity: 0.8
     - _Wind_Velocity: 1.5
     m_Colors:
-    - _Color_01: {r: 0.4431373, g: 0.67058825, b: 0.64705884, a: 0}
-    - _Color_02: {r: 0.10196079, g: 0.2784314, b: 0.28235295, a: 0}
+    - _Color_01: {r: 0.093049124, g: 0.4811321, b: 0.3587266, a: 0}
+    - _Color_02: {r: 0, g: 0.16611978, b: 0.16981131, a: 0}
   m_BuildTextureStacks: []
