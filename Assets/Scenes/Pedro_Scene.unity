@@ -1076,7 +1076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5116252874564730902, guid: 28a52edf9fbe9be41b8ad5acd91eb082, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.08
+      value: 0.3400002
       objectReference: {fileID: 0}
     - target: {fileID: 5116252874564730902, guid: 28a52edf9fbe9be41b8ad5acd91eb082, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15613,9 +15613,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Antonio
-
-'
+  m_text: "Ant\xF4nio C\xE9sar Ferreira Braga"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b796cdd630e20a24e909767f7ecd62bb, type: 2}
   m_sharedMaterial: {fileID: 3505691441979516118, guid: b796cdd630e20a24e909767f7ecd62bb, type: 2}
