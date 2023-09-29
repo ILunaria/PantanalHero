@@ -7,7 +7,7 @@ public class Vol_checker : MonoBehaviour
 {
     public AudioMixer _mixer;
 
-    void Start(){
+    void Awake(){
         _mixer.SetFloat("Music", 1f);
     }
     public void setLevel(float _slideVal)
