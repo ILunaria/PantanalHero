@@ -90,8 +90,7 @@ namespace CHARACTERS
             else
             {
                 _currentPatrolPointIndex = 0;
-            }
-
+            };
             isAtPatrolPoint = false;
             enemyAnimator.SetBool("CanWalk", true);
         }
@@ -167,8 +166,10 @@ namespace CHARACTERS
         }
 
         protected void PerformPatrol()
-        { 
-            if (isPatrolling && !isAttacking && !isChasing)
+        {
+            if (!enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("EnemyAttackingAnim"))
+            {
+                if (isPatrolling && !isAttacking && !isChasing)
                 {
                     if (transform.position.x != patrolPoints[_currentPatrolPointIndex].position.x)
                     {
@@ -185,6 +186,7 @@ namespace CHARACTERS
                         }
                     }
                 }
+            }
 
         }
 

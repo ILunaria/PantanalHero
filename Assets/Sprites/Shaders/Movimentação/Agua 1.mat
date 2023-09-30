@@ -51,17 +51,17 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Intensity_X: 0.33
-    - _Intensity_Y: 0.23
+    - _Intensity_X: 0.43
+    - _Intensity_Y: 0.154
     - _QueueControl: 0
     - _QueueOffset: 0
     - _VoronoiScale: 5.59
     - _VoronoiSpeed: 0.75
     - _Water_Intensuty: 0.1
-    - _Water_Velocity: 1
+    - _Water_Velocity: 1.71
     - _Wind_Intensity: 0.8
     - _Wind_Velocity: 1.5
     m_Colors:
-    - _Color_01: {r: 0.3254902, g: 0.5921569, b: 0.5058824, a: 1}
-    - _Color_02: {r: 0.08139017, g: 0.2924528, b: 0.19677107, a: 1}
+    - _Color_01: {r: 0.49411768, g: 0.85098046, b: 0.64705884, a: 1}
+    - _Color_02: {r: 0.43529415, g: 0.77647066, b: 0.6431373, a: 1}
   m_BuildTextureStacks: []

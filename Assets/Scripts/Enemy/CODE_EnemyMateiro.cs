@@ -49,7 +49,7 @@ namespace CHARACTERS
 
             if(isPatrolling && (!checkGroundLimits() || checkWallLimits()))
             {
-                _currentPatrolPointIndex = 0;
+               _currentPatrolPointIndex = 0;
             }
 
             #endregion
