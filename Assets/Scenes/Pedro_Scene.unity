@@ -6807,7 +6807,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 742206547}
         m_TargetAssemblyTypeName: Conig_Script, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: res1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13481,7 +13481,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 742206547}
         m_TargetAssemblyTypeName: Conig_Script, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: res2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15865,7 +15865,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 742206547}
         m_TargetAssemblyTypeName: Conig_Script, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: res3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
